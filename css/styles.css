@@ -47,8 +47,17 @@ a {
 /* *************************************************************************************CLASSES************************************************************************************************************** */
 
 .bottom-container {
-
+  position: relative;
 }
+
+/* .bottom-container-img {
+  width: 2.5rem;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: -1.5rem;
+} */
 
 /* .bottom-cloud {
   position: absolute;
@@ -65,11 +74,15 @@ a {
 }
 
 .copyright-text {
+  margin: 0;
+}
+
+.copyright-text-container {
   background-color: #393E46;
   padding: 10px 0 10px 0;
-  margin: 2px auto auto auto;
+  margin: auto;
   position: relative;
-  top: 1.2rem;
+  top: 1.3rem;
 }
 
 .footer-area {
@@ -83,20 +96,19 @@ a {
   padding: 15px 0 3px 0;
 }
 
-.main-text-secondary /* a web developer text */ {
+/* .main-text-secondary a web developer text  {
   font-family: 'Rubik', sans-serif;
   position: absolute;
   left: 0;
   right: 0;
   top: 10.5rem;
   font-size: 1.75rem;
-}
+} */
 
 .middle-container {
   background-color: #222831;
   padding-bottom: 20px;
   position: relative;
-  z-index: 1;
 }
 
 /* .mountain-img {
@@ -142,22 +154,19 @@ a {
 
 .top-container {
   background-color: #393E46;
-  padding-top: 350px;
+  padding-top: 35px;
   position: relative;
-  z-index: 1;
 }
 
-.top-container-img {
-  width: 250px;
+.top-container-text {
+  margin: 0;
   position: absolute;
-  margin: auto;
   left: 0;
   right: 0;
-  top: 15rem;
-  z-index: -1;
+  top: 8px;
 }
 
-.web-underlined {
+/* .web-underlined {
   text-decoration: underline;
   color: #00989e;
-}
+} */
