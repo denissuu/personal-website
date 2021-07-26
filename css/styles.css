@@ -49,8 +49,8 @@ a {
 
 .bottom-cloud {
   position: absolute;
-  top: 625px;
-  left: 500px;
+  top: 39rem;
+  left: 31.25rem;
 }
 
 .contact-text > :first-child {
@@ -64,7 +64,7 @@ a {
 .copyright-text {
   background-color: #393E46;
   padding: 10px 0 10px 0;
-  margin: 10px auto auto auto;
+  margin: 2px auto auto auto;
   position: relative;
   top: 1.2rem;
 }
@@ -92,13 +92,16 @@ a {
 
 }
 
-.mountain-img{
-  position: relative;
-  top: 3px;
+.mountain-img {
+  position: absolute;
+  bottom: 0;
+}
+.mountain-img-hidden {
+  visibility: hidden;
 }
 
 .my-skills-text {
-  margin: 1.5rem auto 0 auto;
+  margin: 1.5rem auto auto auto;
 }
 
 .profile-picture {
@@ -121,13 +124,14 @@ a {
 
 .top-cloud {
   position: absolute;
-  top: 320px;
-  right: 450px;
+  top: 16.875rem;
+  right: 28.125rem;
 }
 
 .top-container {
   background-color: #00ADB5;
   padding-top: 222px;
+  position: relative;
 }
 
 .web-underlined {
