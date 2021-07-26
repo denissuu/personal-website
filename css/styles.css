@@ -1,18 +1,86 @@
-body {
-  background-color: #90C2E7;
-}
 
-hr {
-  border-style: none;
-  border-top-style: solid;
-  border-color: white;
-  border-width: 5px;
+
+
+/* *************************************************************************************FONTS************************************************************************************************************** */
+
+/* font-family: 'Ubuntu', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Sacramento', cursive;
+font-size: 16px = 100% = 1em
+ */
+
+/* ****************************************************************************************TAGS************************************************************************************************************** */
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
-  color: #56E39F;
+  font-size: 7.5rem;
+  margin: 120px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+}
+
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2.5rem;
 }
 
 h3 {
-  color: #725AC1;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+/* *************************************************************************************CLASSES************************************************************************************************************** */
+
+.top-container {
+  background-color: #00ADB5;
+  padding-top: 222px;
+}
+
+.middle-container {
+
+}
+
+.bottom-container {
+
+}
+
+.bottom-cloud {
+  position: absolute;
+  top: 625px;
+  left: 500px;
+}
+
+.main-text-secondary /* a web developer text */ {
+  font-family: 'Rubik', sans-serif;
+  position: relative;
+  bottom: 45px;
+  font-size: 2rem;
+}
+
+.mountain-img{
+  position: relative;
+  top: 3px;
+}
+
+.top-cloud {
+  position: absolute;
+  top: 320px;
+  right: 450px;
+}
+
+.web-underlined {
+  text-decoration: underline;
+}
+
+.profile-picture {
+  width: 250px;
+  padding-top: 35px;
+}
+
+.skill-image {
+  width: 300px;
 }
