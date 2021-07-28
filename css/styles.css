@@ -41,6 +41,7 @@ h3 {
 
 a {
   color: #393E46;
+  text-decoration: none;
 }
 
 
@@ -50,33 +51,20 @@ a {
   position: relative;
 }
 
-/* .bottom-container-img {
-  width: 2.5rem;
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom: -1.5rem;
-} */
-
-/* .bottom-cloud {
-  position: absolute;
-  top: 39rem;
-  left: 31.25rem;
-} */
-
 .contact-icon {
-  width: 12rem;
+  width: 9rem;
   padding: 10px 5px 0 5px;
   position: relative;
 }
 
 .contact-text > :first-child {
   margin: 10px auto 3px auto;
+  font-size: 1rem;
 }
 
 .contact-text > p {
   margin: auto auto 12px auto;
+  font-size: 0.8rem;
 }
 
 .copyright-text {
@@ -99,23 +87,20 @@ a {
   width: 2rem;
   position: relative;
   top: 5px;
-  padding: 10px 5px 0px 5px;
+  padding: 10px 4px 0 5px;
+}
+
+.footer-text {
+  position: relative;
+  bottom: 0.35rem;
 }
 
 .get-in-touch {
   color: #EEEEEE;
   margin: 0;
   padding: 15px 0 3px 0;
+  font-size: 1.5rem;
 }
-
-/* .main-text-secondary a web developer text  {
-  font-family: 'Rubik', sans-serif;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 10.5rem;
-  font-size: 1.75rem;
-} */
 
 .middle-container {
   background-color: #222831;
@@ -123,26 +108,17 @@ a {
   position: relative;
 }
 
-/* .mountain-img {
-  position: absolute;
-  bottom: 0;
-}
-.mountain-img-hidden {
-  visibility: hidden;
-} */
-
 .my-skills-text {
   margin: 1.5rem auto auto auto;
+}
+
+.profile {
+  margin: auto auto 3rem auto;
 }
 
 .profile-picture {
   width: 250px;
   padding-top: 35px;
-}
-
-.section-separator-container {
-  background-color: #222831;
-  padding: 45px 0 30px 0;
 }
 
 .section-separator {
@@ -154,12 +130,26 @@ a {
   display: block;
 }
 
+.skills {
+  padding: 10px 0 5px 0;
+}
+
+.skill-text {
+  margin: auto;
+  font-size: 0.9rem;
+}
+
 .skill-code {
   width: 12rem;
   margin-right: 30px;
+  margin-bottom: 7px;
   float: left;
   position: relative;
-  top: 0.5rem;
+  bottom: 0.4rem;
+}
+
+.skill-heading {
+  margin: auto;
 }
 
 .skill-video-editing {
@@ -167,7 +157,7 @@ a {
   margin-left: 30px;
   float: right;
   position: relative;
-  bottom: 1rem;
+  bottom: 2rem;
 }
 
 .skill-row {
@@ -177,13 +167,7 @@ a {
   line-height: 2;
 }
 
-/* .top-cloud {
-  position: absolute;
-  top: 16.875rem;
-  right: 28.125rem;
-} */
-
-.top-container {
+/* .top-container {
   background-color: #393E46;
   padding-top: 35px;
   position: relative;
@@ -195,9 +179,4 @@ a {
   left: 0;
   right: 0;
   top: 8px;
-}
-
-/* .web-underlined {
-  text-decoration: underline;
-  color: #00989e;
 } */
