@@ -4,26 +4,6 @@
 font-size: 16px = 100% = 1rem
  */
 
-@font-face {
-    font-family: "Segoe UI";
-    src: url("/fonts/Segoe UI.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Segoe UI Light";
-    src: url("/fonts/Segoe UI Light.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Segoe UI Bold";
-    src: url("/fonts/Segoe UI Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Segoe UI Semibold";
-    src: url("/fonts/Segoe UI Semibold.woff") format("woff");
-}
-
 /* ****************************************************************************************TAGS************************************************************************************************************** */
 
 html {
@@ -33,7 +13,7 @@ html {
 
 body {
     background-color: #202125;
-    font-family: "Segoe UI";
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     min-height: 100%;
     text-align: center;
@@ -179,7 +159,7 @@ body {
 .main-heading {
     font-size: 2rem;
     color: white;
-    font-family: "Segoe UI Semibold";
+    font-family: 'Segoe UI Semibold', Arial, sans-serif;
     letter-spacing: 7px;
     margin-top: 6.25rem;
 }
