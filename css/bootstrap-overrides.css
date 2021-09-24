@@ -1,0 +1,44 @@
+/* Bootstrap Overrides */
+
+/* ******************************************* Container & Layout Styles ******************************************** */
+
+/* Default padding for website structure */
+.container-fluid {
+  padding: 2% 5%;
+}
+
+
+/******************************************** Reusable Classes *****************************************/
+
+.align-center {
+  text-align: center !important;
+}
+
+/* **************************************** Buttons Styles ********************************************** */
+
+
+/* Makes bootstrap buttons rounded */
+.btn-rounded {
+  border-radius: 40px;
+}
+
+/* Button with no border radius */
+
+.btn-square {
+  border-radius: 0;
+}
+
+/* Considerably bigger button */
+.btn-xl {
+  padding: 10px 30px;
+  font-size: 2rem;
+}
+
+.nav-link {
+  padding: 0 10px 5px 10px;
+}
+
+.nav-link.active {
+  color: #DB8E00 !important;
+  border-bottom: 2px solid #DB8E00;
+}
