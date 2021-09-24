@@ -1,185 +1,223 @@
-
-
-
 /* *************************************************************************************FONTS************************************************************************************************************** */
 
-/* font-family: 'Ubuntu', sans-serif;
-font-family: 'Rubik', sans-serif;
-font-family: 'Sacramento', cursive;
-font-size: 16px = 100% = 1em
+/*
+font-size: 16px = 100% = 1rem
  */
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("/fonts/Segoe UI.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Segoe UI Light";
+    src: url("/fonts/Segoe UI Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Segoe UI Bold";
+    src: url("/fonts/Segoe UI Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Segoe UI Semibold";
+    src: url("/fonts/Segoe UI Semibold.woff") format("woff");
+}
 
 /* ****************************************************************************************TAGS************************************************************************************************************** */
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
-  margin: 0;
-  text-align: center;
-  font-family: 'Ubuntu', sans-serif;
-  color: #EEEEEE;
-  background-color: #222831;
+    background-color: #202125;
+    font-family: "Segoe UI";
+    margin: 0;
+    min-height: 100%;
+    text-align: center;
 }
 
-h1 {
-  color: #00989e;
-  font-family: 'Sacramento', cursive;
-  font-size: 7.5rem;
-  margin: auto auto auto auto;
-  left: 0;
-  right: 0;
-  top: 4rem;
-  position: absolute;
+/**********************************************************ANIMATIONS*****************************************************/
+
+@keyframes fadein {
+    from { opacity: 0;
+    visibility: hidden; }
+    to { opacity: 1;
+    visibility: visible; }
 }
 
-h2 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 2.5rem;
-  color: #00ADB5;
+@keyframes fadein-70 {
+    from { opacity: 0;
+    visibility: hidden; }
+    to { opacity: 0.7;
+    visibility: visible; }
 }
 
-h3 {
-  font-family: 'Rubik', sans-serif;
+@keyframes fadein-fadeout {
+    30% { opacity: 0; }
+    60% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
 }
 
-a {
-  color: #393E46;
-  text-decoration: none;
+.welcome-section {
+    opacity: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 7rem;
+    animation: fadein-fadeout 4s forwards;
+}
+
+/************************************************************CLASSES***********************************************************/
+
+/*Page body arguments*/
+
+.background-container {
+    opacity: 0;
+    animation: fadein-70 3s 4s forwards;
+    margin: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+/*Socials*/
+
+.social-text {
+    border-bottom: 1px solid #DB8E00;
+    color: white;
+    left: -15%;
+    letter-spacing: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    transform: rotate(-90deg);
+    transition: color 0.3s;
+    width: 40%;
+    opacity: 0;
+    animation: fadein 1s 7s forwards;
+    font-size: 1.2rem;
+}
+
+.social-text:hover {
+    color: #DB8E00;
 }
 
 
-/* *************************************************************************************CLASSES************************************************************************************************************** */
+/*Responsiveness*/
 
-.bottom-container {
-  position: relative;
+
+/*Navigation area*/
+
+.navbar .navbar-nav {
+    opacity: 0;
+    animation: fadein 1s 6s forwards;
+    letter-spacing: 4px;
+    margin: 0 auto 0 auto;
+    position: relative;
+    background-color: rgba(32, 33, 37, 0.8);
 }
 
-.contact-icon {
-  width: 9rem;
-  padding: 10px 5px 0 5px;
-  position: relative;
+
+/*Main Body - Main Page*/
+
+
+/*Headings styling*/
+
+
+/*Main body responsiveness*/
+
+@media (max-width: 1200px) {
+    .main-headings-body {
+        margin-left: 7rem;
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    .footer-text {
+        margin-left: 7rem;
+        text-align: center;
+    }
 }
 
-.contact-text > :first-child {
-  margin: 10px auto 3px auto;
-  font-size: 1rem;
+@media (min-width: 1200px) {
+    .main-headings-body {
+        margin-top: 2rem;
+        margin-left: 12rem;
+        text-align: left;
+    }
+
+    .footer-text {
+        margin-left: 12rem;
+        text-align: left;
+    }
 }
 
-.contact-text > p {
-  margin: auto auto 12px auto;
-  font-size: 0.8rem;
+.main-heading-1 .main-heading {
+    opacity: 0;
+    animation: fadein 1s 8s forwards;
 }
 
-.copyright-text {
-  margin: 0;
+.main-heading-1 .secondary-heading {
+    opacity: 0;
+    animation: fadein 1s 10s forwards;
 }
 
-.copyright-text-container {
-  background-color: #393E46;
-  padding: 10px 0 10px 0;
-  margin: auto;
-  position: relative;
-  top: 1.3rem;
+.main-heading-2 {
+    opacity: 0;
+    animation: fadein 1s 12s forwards;
 }
+
+.main-heading-3 {
+    opacity: 0;
+    animation: fadein 1s 13s forwards;
+}
+
+
+
+.main-heading {
+    font-size: 2rem;
+    color: white;
+    font-family: "Segoe UI Semibold";
+    letter-spacing: 7px;
+    margin-top: 6.25rem;
+}
+
+.main-heading.no-margins {
+    margin:0;
+}
+
+.secondary-heading {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.main-button {
+    color: #DB8E00;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3.5px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-button:hover {
+    color: #bd7a00;
+}
+
+/*Footer Area*/
 
 .footer-area {
-  background-color: #00ADB5;
-}
-
-.footer-icon {
-  width: 2rem;
-  position: relative;
-  top: 5px;
-  padding: 10px 4px 0 5px;
+    animation: fadein 1s 14s forwards;
+    opacity: 0;
 }
 
 .footer-text {
-  position: relative;
-  bottom: 0.35rem;
+    color: white;
+    font-family: "Segoe UI Light";
+    font-size: 0.6rem;
+    letter-spacing: 5px;
+    margin-top: 4rem;
 }
-
-.get-in-touch {
-  color: #EEEEEE;
-  margin: 0;
-  padding: 15px 0 3px 0;
-  font-size: 1.5rem;
-}
-
-.middle-container {
-  background-color: #222831;
-  padding-top: 150px;
-  padding-bottom: 40px;
-  position: relative;
-}
-
-.my-skills-text {
-  margin: 1.5rem auto auto auto;
-}
-
-.profile {
-  margin: auto auto 3rem auto;
-}
-
-.profile-picture {
-  width: 250px;
-  padding-top: 35px;
-  padding-bottom: 120px;
-}
-
-.section-separator {
-  border: dotted;
-  border-width: 0.5rem 0 0 0;
-  margin: auto;
-  color: #393E46;
-  width: 9rem;
-  display: block;
-}
-
-.skills {
-  padding: 10px 0 5px 0;
-}
-
-.skill-text {
-  margin: auto;
-  font-size: 0.9rem;
-}
-
-.skill-code {
-  width: 12rem;
-  margin-right: 30px;
-  margin-bottom: 7px;
-  float: left;
-  position: relative;
-  bottom: 0.4rem;
-}
-
-.skill-heading {
-  margin: auto;
-}
-
-.skill-video-editing {
-  width: 10rem;
-  margin-left: 30px;
-  float: right;
-  position: relative;
-  bottom: 2rem;
-}
-
-.skill-row {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-  line-height: 2;
-}
-
-/* .top-container {
-  background-color: #393E46;
-  padding-top: 35px;
-  position: relative;
-}
-
-.top-container-text {
-  margin: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 8px;
-} */
