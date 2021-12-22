@@ -53,14 +53,6 @@ body {
 
 /*Page body arguments*/
 
-.background-container {
-    opacity: 0;
-    animation: fadein-70 3s 4s forwards;
-    margin: 0;
-    position: fixed;
-    z-index: -1;
-}
-
 /*Socials*/
 
 .social-text {
@@ -96,7 +88,6 @@ body {
     letter-spacing: 4px;
     margin: 0 auto 0 auto;
     position: relative;
-    background-color: rgba(32, 33, 37, 0.8);
 }
 
 
@@ -109,21 +100,44 @@ body {
 /*Main body responsiveness*/
 
 @media (max-width: 1200px) {
+
     .main-headings-body {
         margin-left: 7rem;
-        margin-top: 5rem;
+        margin-top: 10rem;
         text-align: center;
     }
 
     .footer-text {
         margin-left: 7rem;
         text-align: center;
+    }
+
+    .footer-logo {
+        margin-top: 1rem;
+    }
+
+    .form-area {
+        width: 70%;
+    }
+
+    .projects-text {
+        text-align: center;
+    }
+
+    .carousel-container {
+        margin: 3rem 0 0 0;
+    }
+
+    .carousel {
+        width: 60%;
+        margin: 10rem 0 0 0 !important;
     }
 }
 
 @media (min-width: 1200px) {
+
     .main-headings-body {
-        margin-top: 2rem;
+        margin-top: 3rem;
         margin-left: 12rem;
         text-align: left;
     }
@@ -131,6 +145,28 @@ body {
     .footer-text {
         margin-left: 12rem;
         text-align: left;
+    }
+
+    .footer-logo {
+        margin-top: 0;
+    }
+
+    .form-area {
+        width: 25%;
+    }
+
+    .projects-text {
+        margin-left: 12rem;
+        text-align: left;
+    }
+
+    .carousel-container {
+        margin: 7rem 0 0 0;
+    }
+
+    .carousel {
+        width: 45%;
+        margin: 10rem 0 0 0 !important;
     }
 }
 
@@ -152,6 +188,16 @@ body {
 .main-heading-3 {
     opacity: 0;
     animation: fadein 1s 13s forwards;
+}
+
+.projects-section {
+    opacity: 0;
+    animation: fadein 1s 15s forwards;
+}
+
+.contact-section {
+    opacity: 0;
+    animation: fadein 1s 15s forwards;
 }
 
 
@@ -187,10 +233,115 @@ body {
     color: #bd7a00;
 }
 
+/* Projects Section */
+
+.projects-section {
+    margin: 17.5rem 0 0 0;
+    background-color: #DB8E00;
+}
+
+.box-shadow-effect {
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.projects-text {
+    font-size: 2rem;
+    color: white;
+    font-family: 'Segoe UI Semibold', Arial, sans-serif;
+    letter-spacing: 7px;
+    margin-top: 3rem;
+}
+
+.carousel-text {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*Benefits Section*/
+
+.benefits-header {
+    font-size: 2rem;
+    font-family: 'Segoe UI Semibold', Arial, sans-serif;
+    color: white;
+    letter-spacing: 7px;
+    margin-bottom: 5rem;
+}
+
+.benefits-section {
+    background-color: #DB8E00;
+    animation: fadein 1s 15s forwards;
+    opacity: 0;
+    padding: 0 3% 7rem 3%;
+}
+
+.image-benefits {
+    color: white;
+    font-size: 5rem;
+    transition: color ease 0.7s;
+}
+
+.image-benefits:hover {
+    color: #202125;
+}
+
+.benefits-text-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    margin: 1rem 0 1rem 0;
+}
+
+.benefits-text {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/*Contact Area*/
+
+.contact-section {
+    padding: 10% 0 5% 0;
+}
+
+.contact-text {
+    font-size: 2.5rem;
+    color: white;
+    font-family: 'Segoe UI Semibold', Arial, sans-serif;
+    letter-spacing: 7px;
+    margin: 0 0 5rem 0;
+}
+
+.form-area {
+    margin: auto;
+    background-color: #1c1c21;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.form-label {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.form-button {
+    color: white;
+    background-color: #DB8E00;
+    border: none;
+}
+
+.form-button:hover {
+    background-color: #bd7a00;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /*Footer Area*/
 
 .footer-area {
-    animation: fadein 1s 14s forwards;
+    animation: fadein 1s 15s forwards;
     opacity: 0;
 }
 
@@ -199,5 +350,20 @@ body {
     font-family: "Segoe UI Light";
     font-size: 0.6rem;
     letter-spacing: 5px;
-    margin-top: 4rem;
+    margin: 4rem 0 4rem 0;
+}
+
+.footer-logo {
+    color: #DB8E00;
+}
+
+.social-media {
+    width: 24px;
+    height: 24px;
+    color: white;
+    transition: color ease 0.7s;
+}
+
+.social-media:hover {
+    color: #DB8E00;
 }

@@ -36,9 +36,12 @@
 
 .nav-link {
   padding: 0 10px 5px 10px;
+  background: linear-gradient(rgb(190, 123, 0), rgb(190, 123, 0)) bottom / 0 0.1em no-repeat;
+  transition: 0.3s background-size;
+  background-position: left bottom;
 }
 
-.nav-link.active {
-  color: #DB8E00 !important;
-  border-bottom: 2px solid #DB8E00;
+.nav-link:hover {
+  background-size: 100% 0.1em;
 }
+
