@@ -94,20 +94,22 @@
   <script>
     // Inițializează EmailJS cu User ID-ul tău
     emailjs.init("KLLAReCi5FQO8UTNL"); // Înlocuiește cu user ID-ul tău
-
+  
     // Adaugă un eveniment submit pentru formular
     document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
+      e.preventDefault(); // Previne trimiterea formularului standard
+  
       const form = e.target;
       
       // Colectează datele din formular
       const formData = new FormData(form);
       const formObject = {};
-      formData.forEach((value, key) => 
+      
+      // Populează obiectul cu datele formularului
+      formData.forEach((value, key) => {
         formObject[key] = value;
       });
-
+  
       // Trimite formularul prin EmailJS
       emailjs.send("service_7tlj2us", "template_caymigt", formObject)
         .then(function(response) {
@@ -118,9 +120,6 @@
           alert("A apărut o eroare. Te rugăm să încerci mai târziu.");
         });
     });
-  </script>
-
-  <script>
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       const email = document.getElementById('email').value;
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -129,7 +128,6 @@
         e.preventDefault();
       }
     });
-    console.log("Website încărcat cu succes!");
   </script>
 </body>
 </html>
