@@ -9,12 +9,12 @@
     content="Agenție de marketing digital specializată în Facebook & Instagram Ads, Google Ads, TikTok Ads, Content Marketing, Copywriting și Graphic Design. Creștem brandul tău online!">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/master.css">
-  <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
 </head>
 
 <body>
+  <div id="toast-container"></div>
   <header>
     <img src="./img/logo.png" width="150px" class="logo"></img>
   </header>
@@ -77,7 +77,7 @@
         <label for="prenume">Prenume *</label>
         <input type="text" id="prenume" name="prenume" required>
 
-        <label for="website">Website Companie / Pagina social media / Numele Companiei *</label>
+        <label for="website">Website Companie / Pagină social media / Numele Companiei *</label>
         <input type="text" id="website" name="website" required>
 
         <label for="email">Adresă de email *</label>
@@ -96,43 +96,67 @@
   </section>
 
   <footer>
-    &copy; 2025 IDL Media. Toate drepturile rezervate.
+    &copy; 2025 @ IDL Media. Toate drepturile rezervate.
   </footer>
 
   <script>
+function showToast(message, type = "success", position = "bottom-right") {
+  let container = document.querySelector(`.toast-container.${position}`);
+  
+  // Dacă nu există containerul, îl creăm
+  if (!container) {
+    container = document.createElement("div");
+    container.classList.add("toast-container", position);
+    document.body.appendChild(container);
+  }
+
+  const toast = document.createElement("div");
+  toast.classList.add("toast", type);
+  toast.innerText = message;
+
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.remove();
+    // Ștergem containerul dacă nu mai are copii
+    if (container.children.length === 0) container.remove();
+  }, 4000);
+}
+
+
     // Inițializează EmailJS
     emailjs.init("KLLAReCi5FQO8UTNL"); // ← pune aici user ID-ul tău real
-  
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
-  
+
       const email = document.getElementById('email').value;
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
-        alert('Te rugăm să introduci o adresă de email validă.');
+        showToast("Te rugăm să introduci o adresă de email validă.", "error", "bottom-right");
         return;
       }
-  
+
       const form = e.target;
       const formData = new FormData(form);
       const formObject = {};
       formData.forEach((value, key) => {
         formObject[key] = value;
       });
-  
+
       emailjs.send("service_7tlj2us", "template_caymigt", formObject)
-        .then(function(response) {
+        .then(function (response) {
           console.log("Mesaj trimis cu succes", response);
-          alert("Mulțumim! Mesajul tău a fost trimis.");
+          showToast("Mulțumim! Mesajul tău a fost trimis.", "success", "bottom-right");
           form.reset();
-        }, function(error) {
+        }, function (error) {
           console.error("Eroare la trimiterea formularului", error);
-          alert("A apărut o eroare. Te rugăm să încerci mai târziu.");
+          showToast("A apărut o eroare. Te rugăm să încerci mai târziu.", "error", "bottom-right");
         });
     });
   </script>
-  
-  
+
+
 </body>
 
 </html>
