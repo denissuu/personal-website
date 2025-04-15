@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenție de Marketing Digital | Contactează-ne</title>
+  <meta name="description" content="Completează formularul pentru a intra în contact cu agenția noastră și pentru a discuta despre cum putem să-ți ajutăm afacerea să crească.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="./css/master.css">
+  <link rel="stylesheet" href="./css/contact.css">
+  
+  <!-- Favicon pentru desktop -->
+  <link rel="icon" href="./icons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" href="./icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="./icons/favicon.ico">
+
+  <!-- Favicon pentru iOS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-icon-120x120.png">
+
+  <!-- Favicon pentru Android -->
+  <link rel="icon" sizes="192x192" href="./icons/android-chrome-192x192.png">
+  <link rel="icon" sizes="128x128" href="./icons/android-icon-128x128.png">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+  <!-- Toast pentru mesaje -->
+  <div id="toast-container"></div>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html"><img src="./img/logo.png" width="150px" class="logo"></img></a>
+  </header>
+
+  <!-- Secțiune Contact -->
+  <section class="contact-section">
+    <div class="container contact-wrapper">
+      <div class="contact-text">
+        <h2>Hai să vorbim despre cum îți putem crește afacerea</h2>
+        <p>Completează formularul de mai jos sau rezervă direct o întâlnire.<br> Ești pregătit pentru o transformare?</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Formular de contact -->
+        <form id="contactForm" class="contact-form">
+          <label for="nume">Nume *</label>
+          <input type="text" id="nume" name="nume" required>
+
+          <label for="prenume">Prenume *</label>
+          <input type="text" id="prenume" name="prenume" required>
+
+          <label for="website">Website / Social Media / Nume Companie *</label>
+          <input type="text" id="website" name="website" required>
+
+          <label for="email">Adresă de email *</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="telefon">Număr de telefon *</label>
+          <input type="text" id="telefon" name="telefon" required>
+
+          <label for="mesaj">Mesaj</label>
+          <textarea id="mesaj" name="mesaj" rows="5"></textarea>
+
+          <p class="form-note">* Câmpurile marcate sunt obligatorii</p>
+          <button type="submit">Trimite</button>
+        </form>
+
+        <!-- Container pentru Calendly -->
+        <div class="calendly-container calendly-inline-widget">
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <iframe 
+            src="https://calendly.com/denisilie2/meeting" 
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            scrolling="no">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 <a href="index.html">IDL Media.</a> Toate drepturile rezervate.
+  </footer>
+
+  <script>
+    function showToast(message, type = "success", position = "bottom-right") {
+      let container = document.querySelector(`.toast-container.${position}`);
+      // Dacă nu există containerul, îl creăm
+      if (!container) {
+        container = document.createElement("div");
+        container.classList.add("toast-container", position);
+        document.body.appendChild(container);
+      }
+
+      const toast = document.createElement("div");
+      toast.classList.add("toast", type);
+      toast.innerText = message;
+
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.remove();
+        // Ștergem containerul dacă nu mai are copii
+        if (container.children.length === 0) container.remove();
+      }, 4000);
+    }
+
+    // Inițializează EmailJS
+    emailjs.init("KLLAReCi5FQO8UTNL"); // ← pune aici user ID-ul tău real
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showToast("Te rugăm să introduci o adresă de email validă.", "error", "bottom-right");
+        return;
+      }
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const formObject = {};
+      formData.forEach((value, key) => {
+        formObject[key] = value;
+      });
+
+      emailjs.send("service_7tlj2us", "template_caymigt", formObject)
+        .then(function (response) {
+          console.log("Mesaj trimis cu succes", response);
+          showToast("Mulțumim! Mesajul tău a fost trimis.", "success", "bottom-right");
+          form.reset();
+        }, function (error) {
+          console.error("Eroare la trimiterea formularului", error);
+          showToast("A apărut o eroare. Te rugăm să încerci mai târziu.", "error", "bottom-right");
+        });
+    });
+  </script>
+</body>
+
+</html>
