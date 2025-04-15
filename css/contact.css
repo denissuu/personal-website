@@ -1,0 +1,58 @@
+/* Stiluri pentru layout-ul paginii de contact */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .contact-text {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    align-items: stretch; /* Asigură că elementele sunt aliniate la aceeași înălțime */
+  }
+  
+  .contact-form {
+    flex: 1 1 48%;
+    max-width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asigură că elementele din formular sunt distribuite uniform */
+  }
+  
+  .calendly-container {
+    flex: 1 1 48%;
+    max-width: 48%;
+    height: 87%; /* Asigură că iframe-ul ocupă întreaga înălțime disponibilă */
+    margin-top: 65px;
+  }
+  
+  form input, form textarea, form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form button:hover {
+    background-color: #000940;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .contact-grid {
+      flex-direction: column;
+    }
+  
+    .contact-form, .calendly-container {
+      max-width: 100%;
+    }
+  }
