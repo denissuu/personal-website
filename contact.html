@@ -48,7 +48,7 @@
   const loadCalendlyScript = () => {
     const script = document.createElement('script');
     script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
+    script.defer = true;
     script.onload = function() {
       console.log('Calendly script loaded');
     };
@@ -115,7 +115,8 @@
             width="100%" 
             height="100%" 
             frameborder="0" 
-            scrolling="no">
+            scrolling="no"
+            title="Calendly - Book a Meeting">
           </iframe>
         </div>
       </div>

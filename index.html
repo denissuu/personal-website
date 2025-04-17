@@ -33,7 +33,8 @@
   const loadCalendlyScript = () => {
     const script = document.createElement('script');
     script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
+    // script.async = true;
+    script.defer = true;
     script.onload = function() {
       console.log('Calendly script loaded');
     };
@@ -127,7 +128,7 @@
       <h2>Programează o întâlnire</h2>
       <p>Ai neclarități sau vrei să discutăm mai multe detalii? Programează o întâlnire mai jos.</p>
       <!-- Înlocuiește cu link-ul tău de Calendly -->
-      <iframe src="https://calendly.com/denisilie2/meeting" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
+      <iframe src="https://calendly.com/denisilie2/meeting" width="100%" height="650" frameborder="0" scrolling="no" title="Calendly - Book a Meeting"></iframe>
     </div>
   </section>
 
