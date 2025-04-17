@@ -289,3 +289,51 @@ a > img .logo:hover {
   .heading-section-1 {
     margin-bottom: 100px;
   }
+
+  /* Stiluri pentru layout-ul paginii de contact */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-text {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  align-items: stretch; /* Asigură că elementele sunt aliniate la aceeași înălțime */
+}
+
+.contact-form {
+  flex: 1 1 48%;
+  max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asigură că elementele din formular sunt distribuite uniform */
+}
+
+.calendly-container {
+  flex: 1 1 48%;
+  max-width: 48%;
+  height: 87%; /* Asigură că iframe-ul ocupă întreaga înălțime disponibilă */
+  margin-top: 65px;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .contact-form, .calendly-container {
+    max-width: 100%;
+  }
+}
