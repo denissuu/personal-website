@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agenție de Marketing Digital | Contactează-ne</title>
-  <meta name="description" content="Completează formularul pentru a intra în contact cu agenția noastră și pentru a discuta despre cum putem să-ți ajutăm afacerea să crească.">
+  <meta name="description"
+    content="Completează formularul pentru a intra în contact cu agenția noastră și pentru a discuta despre cum putem să-ți ajutăm afacerea să crească.">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" as="style">
-  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async></script>
+
   <!-- CSS principal -->
   <link rel="stylesheet" href="./css/master.css">
-  
+
   <!-- Favicon pentru desktop -->
   <link rel="icon" href="./icons/favicon-16x16.png" sizes="16x16">
   <link rel="icon" href="./icons/favicon-32x32.png" sizes="32x32">
@@ -25,7 +27,7 @@
   <link rel="icon" sizes="192x192" href="./icons/android-chrome-192x192.png">
   <link rel="icon" sizes="128x128" href="./icons/android-icon-128x128.png">
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async></script>
+
 </head>
 
 <body>
@@ -41,34 +43,34 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-  // Selectează div-ul placeholder unde va fi încărcat scriptul
-  const scriptPlaceholder = document.getElementById('calendly-script-placeholder');
+      // Selectează div-ul placeholder unde va fi încărcat scriptul
+      const scriptPlaceholder = document.getElementById('calendly-script-placeholder');
 
-  // Funcție care va adăuga scriptul Calendly în pagina ta
-  const loadCalendlyScript = () => {
-    const script = document.createElement('script');
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    script.onload = function() {
-      console.log('Calendly script loaded');
-    };
-    scriptPlaceholder.appendChild(script);
-  };
+      // Funcție care va adăuga scriptul Calendly în pagina ta
+      const loadCalendlyScript = () => {
+        const script = document.createElement('script');
+        script.src = "https://assets.calendly.com/assets/external/widget.js";
+        script.async = true;
+        script.onload = function () {
+          console.log('Calendly script loaded');
+        };
+        scriptPlaceholder.appendChild(script);
+      };
 
-  // Crează un IntersectionObserver pentru a observa când secțiunea este vizibilă
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      // Dacă secțiunea devine vizibilă (pe ecran)
-      if (entry.isIntersecting) {
-        loadCalendlyScript(); // Încarcă scriptul Calendly
-        observer.unobserve(entry.target); // Oprește observarea
-      }
+      // Crează un IntersectionObserver pentru a observa când secțiunea este vizibilă
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          // Dacă secțiunea devine vizibilă (pe ecran)
+          if (entry.isIntersecting) {
+            loadCalendlyScript(); // Încarcă scriptul Calendly
+            observer.unobserve(entry.target); // Oprește observarea
+          }
+        });
+      });
+
+      // Observă div-ul care conține placeholder-ul pentru script
+      observer.observe(scriptPlaceholder);
     });
-  });
-
-  // Observă div-ul care conține placeholder-ul pentru script
-  observer.observe(scriptPlaceholder);
-});
 
   </script>
 
@@ -77,7 +79,8 @@
     <div class="container contact-wrapper">
       <div class="contact-text">
         <h2>Hai să vorbim despre cum îți putem crește afacerea</h2>
-        <p>Completează formularul de mai jos sau rezervă direct o întâlnire.<br> Ești pregătit pentru o transformare?</p>
+        <p>Completează formularul de mai jos sau rezervă direct o întâlnire.<br> Ești pregătit pentru o transformare?
+        </p>
       </div>
 
       <div class="contact-grid">
@@ -102,7 +105,7 @@
           <textarea id="mesaj" name="mesaj" rows="5"></textarea>
 
           <p class="form-note">* Câmpurile marcate sunt obligatorii</p>
-          
+
           <button type="submit">Trimite</button>
         </form>
 
@@ -110,13 +113,8 @@
         <div class="calendly-container calendly-inline-widget">
           <div id="calendly-script-placeholder"></div>
           <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
-          <iframe 
-            src="https://calendly.com/denisilie2/meeting" 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            scrolling="no"
-            title="Calendly - Book a Meeting">
+          <iframe src="https://calendly.com/denisilie2/meeting" width="100%" height="100%" frameborder="0"
+            scrolling="no" title="Calendly - Book a Meeting">
           </iframe>
         </div>
       </div>
@@ -151,8 +149,10 @@
       }, 4000);
     }
 
-    // Inițializează EmailJS
-    emailjs.init("KLLAReCi5FQO8UTNL"); // ← pune aici user ID-ul tău real
+    window.addEventListener('load', function () {
+      emailjs.init("KLLAReCi5FQO8UTNL"); // Folosește ID-ul tău real pentru EmailJS
+    });
+
 
     document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
