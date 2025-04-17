@@ -30,13 +30,48 @@
 </head>
 
 <body>
+
+
   <!-- Toast pentru mesaje -->
   <div id="toast-container"></div>
 
   <!-- Header -->
   <header>
-    <a href="index.html"><img src="./img/logo.png" width="150px" class="logo"></img></a>
+    <a href="index.html"><img src="./img/logo.png" width="150px" alt="IDL Media Logo" class="logo"></img></a>
   </header>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  // Selectează div-ul placeholder unde va fi încărcat scriptul
+  const scriptPlaceholder = document.getElementById('calendly-script-placeholder');
+
+  // Funcție care va adăuga scriptul Calendly în pagina ta
+  const loadCalendlyScript = () => {
+    const script = document.createElement('script');
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    script.onload = function() {
+      console.log('Calendly script loaded');
+    };
+    scriptPlaceholder.appendChild(script);
+  };
+
+  // Crează un IntersectionObserver pentru a observa când secțiunea este vizibilă
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      // Dacă secțiunea devine vizibilă (pe ecran)
+      if (entry.isIntersecting) {
+        loadCalendlyScript(); // Încarcă scriptul Calendly
+        observer.unobserve(entry.target); // Oprește observarea
+      }
+    });
+  });
+
+  // Observă div-ul care conține placeholder-ul pentru script
+  observer.observe(scriptPlaceholder);
+});
+
+  </script>
 
   <!-- Secțiune Contact -->
   <section class="contact-section">
@@ -68,12 +103,14 @@
           <textarea id="mesaj" name="mesaj" rows="5"></textarea>
 
           <p class="form-note">* Câmpurile marcate sunt obligatorii</p>
+          
           <button type="submit">Trimite</button>
         </form>
 
         <!-- Container pentru Calendly -->
         <div class="calendly-container calendly-inline-widget">
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <div id="calendly-script-placeholder"></div>
+          <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
           <iframe 
             src="https://calendly.com/denisilie2/meeting" 
             width="100%" 

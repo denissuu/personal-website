@@ -14,11 +14,40 @@ body {
     color: #404040;
   }
 
+  /* Media query pentru dispozitive mobile */
+@media (max-width: 767px) {
+  .calendly-inline-widget iframe {
+    width: 100% !important;  /* Asigură-te că iframe-ul va ocupa 100% din lățimea containerului */
+    max-width: 100% !important; /* Previne depășirea lățimii containerului */
+    height: 600px; /* Poți ajusta înălțimea după necesitate */
+  }
+}
+
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-  }
+    box-sizing: border-box;
+}
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+footer > a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s linear;
+}
+
+footer > a:hover {
+  color: #36449C;
+  transition: color 0.2s linear;
+}
+
 
 a > img .logo:hover {
   cursor: pointer;
