@@ -33,8 +33,7 @@
   const loadCalendlyScript = () => {
     const script = document.createElement('script');
     script.src = "https://assets.calendly.com/assets/external/widget.js";
-    // script.async = true;
-    script.defer = true;
+    script.async = true;
     script.onload = function() {
       console.log('Calendly script loaded');
     };
