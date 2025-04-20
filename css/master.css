@@ -337,3 +337,28 @@ a > img .logo:hover {
     max-width: 100%;
   }
 }
+
+.services-subheading {
+  margin-bottom: 40px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in--early {
+  animation-delay: 0.2s;
+}
+
+.fade-in--late {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
