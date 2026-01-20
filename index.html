@@ -16,6 +16,12 @@
     .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
     .gradient-text { background-clip: text; -webkit-background-clip: text; color: transparent; background-image: linear-gradient(to right, #2563eb, #1e40af); }
     .disclaimer { font-size: 10px; color: #888; }
+    
+    /* Checkmark Styles */
+    .check-icon { color: #16a34a; margin-right: 0.5rem; flex-shrink: 0; } /* Green check */
+    .cross-icon { color: #9ca3af; margin-right: 0.5rem; flex-shrink: 0; } /* Grey cross */
+    .feature-item { display: flex; align-items: flex-start; font-size: 0.875rem; color: #4b5563; margin-bottom: 0.5rem; }
+    .feature-item strong { color: #1f2937; font-weight: 600; }
   </style>
     <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32" />
@@ -115,12 +121,14 @@
             <p class="text-sm text-gray-500 mt-1">Lansare rapidă & rebranding</p>
             <div class="mt-4 text-3xl font-bold text-blue-600">600€ - 850€</div>
           </div>
-          <ul class="space-y-3 mb-8 text-gray-600 text-sm flex-grow">
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Ideal pentru afaceri la început de drum</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> One-page 3 secțiuni sau până la 3 pagini</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Design Profesinist</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Lansare în 72h</li>
-          </ul>
+          <div class="space-y-2 mb-8 flex-grow">
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>One-Page cu 3 secțiuni sau 3 pagini</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Prima versiune în 5 zile</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Optimizare SEO inclusă</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 cross-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-400">Funcționalitate Blog</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 cross-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-400">Copywriting inclus</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 cross-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-400">Funcționalitate Ecommerce</span></div>
+          </div>
           <div class="bg-blue-50 p-4 rounded-xl mt-auto">
             <h4 class="font-bold text-xs text-blue-800 uppercase mb-2">💡 De ce merită investiția?</h4>
             <p class="text-xs text-blue-900 leading-relaxed">
@@ -139,16 +147,17 @@
             <p class="text-sm text-gray-500 mt-1">Prezență online  & Structură</p>
             <div class="mt-4 text-3xl font-bold text-blue-600">1.200€ - 1.500€</div>
           </div>
-          <ul class="space-y-3 mb-8 text-gray-600 text-sm flex-grow">
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Potrivit pentru afaceri stabilite</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Până la 5-7 secțiuni/pagini + Blog</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Copywriting persuasiv inclus</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Structură SEO optimizată</li>
-          </ul>
+          <div class="space-y-2 mb-8 flex-grow">
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>5-7 Pagini/Secțiuni</b> distincte</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Funcționalitate Blog</b> cu CMS</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Copywriting inclus</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Optimizare SEO inclusă</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 cross-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-400">Funcționalitate E-commerce</span></div>
+          </div>
           <div class="bg-blue-50 p-4 rounded-xl mt-auto">
             <h4 class="font-bold text-xs text-blue-800 uppercase mb-2">💡 De ce merită investiția?</h4>
             <p class="text-xs text-blue-900 leading-relaxed">
-              <strong>Economie de Timp.</strong> Site-ul preia rolul unui consultant digital disponibil non-stop. Prin structurarea strategică a informațiilor (meniu, facilități, FAQ), reducem semnificativ volumul apelurilor de suport și filtrăm audiența, livrând către tine doar prospecți calificați și deciși să cumpere. Astfel, resursele tale umane sunt direcționate către activități cu valoare adăugată.</p>
+              <strong>Economie de Timp.</strong> Site-ul preia rolul unui consultant digital disponibil non-stop. Prin structurarea strategică a informațiilor (meniu, facilități,FAQ), reducem semnificativ volumul apelurilor de suport și filtrăm audiența, livrând către tine doar prospecți calificați și deciși să cumpere. Astfel, resursele tale umane sunt direcționate către activități cu valoare adăugată.</p>
           </div>
           <div class="mt-6">
             <a href="#schedule-call" class="block w-full py-3 bg-blue-600 text-white font-semibold rounded-full text-center hover:bg-blue-700 transition custom-shadow">Vreau Business</a>
@@ -161,12 +170,16 @@
             <p class="text-sm text-gray-500 mt-1">Experiență de Brand Unică</p>
             <div class="mt-4 text-3xl font-bold text-blue-600">2.600€+</div>
           </div>
-          <ul class="space-y-3 mb-8 text-gray-600 text-sm flex-grow">
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Gândit în jurul afacerii tale</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Design Personalizat + Branding</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Ecommerce</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Integrări (Facturare/Curieri/Stoc)</li>
-          </ul>
+          <div class="space-y-2 mb-8 flex-grow">
+                        <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Design personalizat</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Număr configurabil de pagini</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Funcționalitate E-commerce</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Configurare 20 de produse</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Integrări cu partenerii</b></span></div>
+                        <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Funcționalitate Blog</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Optimizare SEO inclusă</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Copywriting inclus</span></div>
+          </div>
           <div class="bg-blue-50 p-4 rounded-xl mt-auto">
             <h4 class="font-bold text-xs text-blue-800 uppercase mb-2">💡 De ce merită investiția?</h4>
             <p class="text-xs text-blue-900 leading-relaxed">
@@ -193,12 +206,13 @@
           <h3 class="text-xl font-bold text-gray-800">SMM Start</h3>
           <p class="text-xs text-gray-500 uppercase tracking-wide font-semibold mt-1 mb-4">Mentenanță & Prezență</p>
           <div class="text-2xl font-bold text-blue-600 mb-4">800€ <span class="text-sm font-normal text-gray-500">/lună</span></div>
-          <ul class="text-sm space-y-2 text-gray-600 mb-6 flex-grow">
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> 12 Postări (Static/Carusel)</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> 4 Story-uri / săptămână</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Community Management</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Fără vizite la locație (Remote)</li>
-          </ul>
+          <div class="space-y-2 mb-6 flex-grow">
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>12 Postări Grafice</b> (Static/Carusel)</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>16 Story-uri/lună</b> (4/săptămână)</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Optimizare profil Social Media</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 cross-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-400">Clipuri Short-form</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 cross-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-400">Shooting la Locație</span></div>
+          </div>
 
           <div class="bg-blue-50 p-4 rounded-xl mt-auto">
             <h4 class="font-bold text-xs text-blue-800 uppercase mb-2">💡 De ce merită investiția?</h4>
@@ -215,12 +229,14 @@
           <h3 class="text-xl font-bold text-gray-800">SMM Scale</h3>
           <p class="text-xs text-blue-600 uppercase tracking-wide font-semibold mt-1 mb-4">Creștere Organică</p>
           <div class="text-2xl font-bold text-blue-600 mb-4">1.200€ <span class="text-sm font-normal text-gray-500">/lună</span></div>
-          <ul class="text-sm space-y-2 text-gray-600 mb-6 flex-grow">
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> 12 Postări Grafice</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> <strong>4 Reels-uri cu Montaj Profesional</strong></li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Story-uri zilnice</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Strategie Hashtags & Trends</li>
-          </ul>
+          <div class="space-y-2 mb-6 flex-grow">
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>12 Postări Grafice</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>4 Clipuri Short-form</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Story-uri <b>zilnice</b> (Luni-Duminică)</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Optimizare profil Social Media</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <b>Strategie Hashtags & Trends</b></div>
+            <div class="feature-item"><svg class="w-5 h-5 cross-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-400">Shooting la Locație</span></div>
+          </div>
           <div class="bg-blue-50 p-4 rounded-xl mt-auto">
             <h4 class="font-bold text-xs text-blue-800 uppercase mb-2">💡 De ce merită investiția?</h4>
             <p class="text-xs text-blue-900 leading-relaxed">
@@ -236,16 +252,20 @@
           <h3 class="text-xl font-bold">SMM Studio</h3>
           <p class="text-xs text-gray-400 uppercase tracking-wide font-semibold mt-1 mb-4">Dominare Vizuală</p>
           <div class="text-2xl font-bold text-white mb-4">2.200€ <span class="text-sm font-normal text-gray-400">/lună</span></div>
-          <ul class="text-sm space-y-2 text-gray-300 mb-6 flex-grow">
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> 10 Postări Grafice + 10 Reels-uri</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> <strong>O zi de shooting la locație</strong></li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Storytelling zilnic & Regie</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Consultanță de Brand lunară</li>
-          </ul>
+          <div class="space-y-2 mb-6 flex-grow text-gray-300">
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="text-white"><b>10 Postări Grafice</b></span></div>
+                        <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="text-white"><b>10 Clipuri Short-form</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="text-white"><b>O sesiune de Shooting la locație lunară</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="text-white"><b>Deplasare Inclusă în aria standard</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="text-white"><b>Strategie zilnică de Storytelling & Regie</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="text-white"><b>Consultanță de Brand</b></span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="text-white">Strategie Hashtags & Trends</span></div>
+            <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="text-white">Optimizare profil Social Media</span></div>
+          </div>
           <div class="bg-white p-4 rounded-xl mt-auto">
             <h4 class="font-bold text-xs text-blue-800 uppercase mb-2">💡 De ce merită investiția?</h4>
             <p class="text-xs text-blue-900 leading-relaxed">
-              Omniprezență în mediul Social media. Scurtăm ciclul de vânzare. Clientul este deja educat și convins de calitatea oferită de afacerea ta dinainte să viziteze.
+              Omniprezență în mediul Social media. Scurtăm ciclul de vânzare. Clientul este deja educat și convins de calitatea oferită de afacerea ta dinainte să te viziteze.
             </p>
           </div>
            <div class="mt-6">
@@ -272,10 +292,12 @@
             <h3 class="text-2xl font-bold text-gray-900">Growth Starter</h3>
             <p class="text-gray-600 mt-2">Maximizarea retenției și a recurenței clienților.</p>
             <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="flex items-center text-sm text-gray-700"><span class="text-green-500 mr-2">✔</span> Include tot din SMM Scale</div>
-              <div class="flex items-center text-sm text-gray-700"><span class="text-green-500 mr-2">✔</span> Acces la Loialisimo, produsul nostru software custom de loializare.</div>
-              <div class="flex items-center text-sm text-gray-700"><span class="text-green-500 mr-2">✔</span> Paid Ads Setup (Buget client < 1000€)</div>
-              <div class="flex items-center text-sm text-gray-700"><span class="text-green-500 mr-2">✔</span> DM Automation (Răspunsuri automate)</div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Tot ce include <b>SMM Scale</b></span></div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Acces la <b>Loialisimo,</b> platforma noastră internă de fidelizare a clienților</span></div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Ads Setup</b> (Buget până la 1000€)</span></div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>DM Automation</b> (Răspunsuri automate la DM-uri)</span></div>
+              <div class="feature-item"><svg class="w-5 h-5 cross-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-400">Email Marketing + Landing Pages pentru campanii</span></div>
+              <div class="feature-item"><svg class="w-5 h-5 cross-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span class="text-gray-400">Acces la CRM și pipeline-ul nostru de vânzări avansat</span></div>
             </div>
             <p class="mt-6 text-sm text-gray-500 bg-gray-50 p-3 rounded border-l-4 border-green-500">
                Statistic vorbind, o creștere de 5% a retenției poate dubla profitul. Sistemul de puncte îi face pe clienți să revină mai des la restaurantul sau magazinul tău, în loc să meargă la concurență.
@@ -295,11 +317,12 @@
               <span class="ml-3 bg-yellow-400 text-blue-900 text-xs font-bold px-2 py-1 rounded">BEST VALUE</span>
             </div>
             <p class="text-blue-100 mt-2">Achiziție predictibilă & optimizare de costuri.</p>
-            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="flex items-center text-sm text-blue-100"><span class="text-yellow-400 mr-2">✔</span> Include tot din SMM Studio (Shooting inclus)</div>
-              <div class="flex items-center text-sm text-blue-100"><span class="text-yellow-400 mr-2">✔</span> Acces la Loialisimo + Email Marketing</div>
-              <div class="flex items-center text-sm text-blue-100"><span class="text-yellow-400 mr-2">✔</span> Paid Ads Management (Buget 1k-3k)</div>
-              <div class="flex items-center text-sm text-blue-100"><span class="text-yellow-400 mr-2">✔</span> Funnel Vânzări automat pentru Social Media cu Landing Page dedicat</div>
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-blue-50">
+              <div class="feature-item text-blue-100"><svg class="w-5 h-5 text-yellow-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Tot ce include <b>SMM Studio</b></span></div>
+              <div class="feature-item text-blue-100"><svg class="w-5 h-5 text-yellow-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Email Marketing</b> + Landing Pages pentru campanii</span></div>
+              <div class="feature-item text-blue-100"><svg class="w-5 h-5 text-yellow-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Ads Management</b> (Administrare buget între 1000€ - 3000€)</span></div>
+              <div class="feature-item text-blue-100"><svg class="w-5 h-5 text-yellow-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Funnel automat de vânzări</b> în DM-uri</span></div>
+              <div class="feature-item text-blue-300"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> <span>Acces la CRM și pipeline-ul nostru de vânzări avansat</span></div>
             </div>
             <p class="mt-6 text-sm text-blue-200 bg-blue-800 bg-opacity-50 p-3 rounded border border-blue-700">
                 Transformăm marketingul din centru de cost în centru de profit. Prin reclame targetate și Funnel-uri optimizate, aducem noi clienți în afacerea ta. Cu ajutorul sistemului de loializare, scădem costul de achiziție, retargetând clienții existenți gratuit.
@@ -317,10 +340,12 @@
             <h3 class="text-2xl font-bold text-gray-900">Market Leader</h3>
             <p class="text-gray-600 mt-2">Dominarea cotei de piață & Automatizare completă.</p>
             <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="flex items-center text-sm text-gray-700"><span class="text-green-500 mr-2">✔</span> SMM Studio + Filmări Locație</div>
-              <div class="flex items-center text-sm text-gray-700"><span class="text-green-500 mr-2">✔</span> Acces la Loialisimo + Email/Sms Marketing</div>
-              <div class="flex items-center text-sm text-gray-700"><span class="text-green-500 mr-2">✔</span> Omnichannel Ads (Meta, Google, TikTok)</div>
-              <div class="flex items-center text-sm text-gray-700"><span class="text-green-500 mr-2">✔</span> CRO & Consultanță Săptămânală</div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span>Tot ce include <b>SMM Studio</b></span></div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Acces la CRM și pipeline-ul nostru de vânzări avansat</b></span></div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Funnel specializat de vânzări</b> pentru Social Media</span></div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>SMS & Email Marketing</b> + Landing Pages pentru campanii</span></div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Campanii specializate în paralel</b> (Meta, Google, TikTok)</span></div>
+              <div class="feature-item"><svg class="w-5 h-5 check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><b>Optimizarea ratei de conversie a afacerii tale și ședințe săptămânale de consultanță</b></span></div>
             </div>
             <p class="mt-6 text-sm text-gray-500 bg-gray-50 p-3 rounded border-l-4 border-gray-800">
               Tu te ocupi doar de operațional, noi ne concentrăm pe creșterea cifrelor afacerii tale. Prezența online impunătoare împreună cu ecosistemul nostru de loializare și automatizare reprezintă soluția personalizată perfectă pentru afaceri ce au nevoie de optimizare la nivel înalt.
