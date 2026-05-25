@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.idl-media.com/</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-05-25T10:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.idl-media.com/img/logo.webp</image:loc>
+      <image:title>IDL Media - Agentie Marketing Stomatologie si Optica Medicala</image:title>
+      <image:caption>Sisteme automatizate de achizitie pacienti pentru clinici</image:caption>
+    </image:image>
   </url>
 </urlset>
