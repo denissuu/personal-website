@@ -1,4 +1,6 @@
 import {
+  CAPACITY_NOTICE,
+  SHOW_CAPACITY_NOTICE,
   _ as e,
   d as t,
   f as n,
@@ -11,7 +13,7 @@ import {
   p as l,
   r as u,
   t as d,
-} from "./MobileStickyCta-gpDGisQf.js";
+} from "./MobileStickyCta-V6a1uGv5.js";
 var f = e(r(), 1),
   p = (e) => e?.replace(/([a-z0-9])([A-Z])/g, `$1-$2`).toLowerCase();
 function m(e, t, n = []) {
@@ -500,9 +502,9 @@ function de() {
                   transition: { delay: 0.1 },
                   className: `text-4xl md:text-5xl font-bold mb-6 text-ink tracking-tight font-display text-balance`,
                   children: [
-                    `Pe Meta întrerupi oameni.`,
+                    `Meta creează cerere.`,
                     ` `,
-                    (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `Pe ChatGPT răspunzi celor care caută.` }),
+                    (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `ChatGPT prinde cererea deja formulată.` }),
                   ],
                 }),
                 (0, Q.jsx)(t.p, {
@@ -544,7 +546,7 @@ function de() {
                           children: [
                             (0, Q.jsx)(`span`, {
                               className: `text-[10px] font-bold uppercase tracking-widest text-red-700 bg-red-50 px-3 py-1.5 rounded-full border border-red-200`,
-                              children: `Canale saturate`,
+                              children: `Canale mature`,
                             }),
                             (0, Q.jsx)(`h3`, { className: `text-2xl font-bold text-ink mt-3`, children: `Meta / TikTok Ads` }),
                           ],
@@ -559,16 +561,16 @@ function de() {
                       className: `space-y-6`,
                       children: [
                         {
-                          title: `Atenție întreruptă`,
-                          desc: `Oamenii intră pe Meta și TikTok ca să se relaxeze. Reclama ta le întrerupe scroll-ul și pornește cu rezistență.`,
+                          title: `Omul nu caută încă`,
+                          desc: `Oamenii intră pe Meta și TikTok ca să se relaxeze sau să vadă ce fac alții. Reclama ta le apare în feed și poate stârni interes înainte ca ei să caute ceva.`,
                         },
                         {
-                          title: `Licitații aglomerate`,
-                          desc: `Sute de advertiseri concurează pe aceleași audiențe, iar costul atenției crește de la an la an.`,
+                          title: `Licitații cu mulți advertiseri`,
+                          desc: `Mulți advertiseri concurează pe aceleași audiențe, iar costul atenției poate crește de la an la an.`,
                         },
                         {
-                          title: `Oboseala reclamelor`,
-                          desc: `Aceleași formate, văzute de zeci de ori pe zi, ajung să fie ignorate automat.`,
+                          title: `Formate cunoscute`,
+                          desc: `Formatele sunt familiare și apar des în feed, așa că mesajele și creațiile trebuie reînnoite periodic.`,
                         },
                       ].map((e, t) =>
                         (0, Q.jsxs)(
@@ -685,6 +687,13 @@ function de() {
             }),
           ],
         }),
+        (0, Q.jsx)(t.p, {
+          initial: { opacity: 0, y: 20 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: !0 },
+          className: `text-center text-lg font-semibold text-ink mt-16 max-w-2xl mx-auto`,
+          children: `Cele mai bune rezultate vin când le folosești împreună.`,
+        }),
       ],
     }),
   });
@@ -723,7 +732,7 @@ function fe() {
               viewport: { once: !0 },
               transition: { delay: 0.2 },
               className: `text-lg text-steel leading-relaxed font-sans`,
-              children: `Google Ads la început de drum, Facebook Ads în 2012, TikTok în 2020: la fiecare canal nou, primii advertiseri au plătit mai puțin pentru aceeași atenție. ChatGPT Ads este acum în prima fază.`,
+              children: `Google Ads la început de drum, Facebook Ads în 2012, TikTok în 2020: la fiecare canal nou, primii advertiseri au avut timp să învețe canalul înainte ca licitațiile să se aglomereze. ChatGPT Ads este acum în prima fază.`,
             }),
           ],
         }),
@@ -829,40 +838,41 @@ function fe() {
             ),
           ),
         }),
-        (0, Q.jsxs)(t.div, {
-          initial: { opacity: 0, y: 20 },
-          whileInView: { opacity: 1, y: 0 },
-          viewport: { once: !0 },
-          className: `mt-16 p-8 rounded-[2rem] bg-surface border border-black/5 shadow-[0_15px_35px_-10px_rgba(0,0,0,0.05)] max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left`,
-          children: [
-            (0, Q.jsxs)(`div`, {
-              className: `flex items-center gap-4`,
-              children: [
-                (0, Q.jsx)(`div`, {
-                  className: `w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0`,
-                  children: (0, Q.jsx)(Z, { className: `w-6 h-6 text-blue-600` }),
-                }),
-                (0, Q.jsxs)(`div`, {
-                  children: [
-                    (0, Q.jsx)(`h4`, {
-                      className: `text-base font-bold text-ink`,
-                      children: `Capacitate limitată: maximum 2 clienți noi pe lună`,
-                    }),
-                    (0, Q.jsx)(`p`, {
-                      className: `text-sm text-steel mt-1`,
-                      children: `Implementăm fiecare campanie cap-coadă, așa că lucrăm cu puțini clienți în același timp.`,
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            (0, Q.jsx)(`a`, {
-              href: `#booking`,
-              className: `shrink-0 px-6 py-3 rounded-full text-xs font-bold bg-ink text-white hover:bg-black transition-colors uppercase tracking-wider shadow-sm`,
-              children: `Aplică pentru analiză`,
-            }),
-          ],
-        }),
+        SHOW_CAPACITY_NOTICE &&
+          (0, Q.jsxs)(t.div, {
+            initial: { opacity: 0, y: 20 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: !0 },
+            className: `mt-16 p-8 rounded-[2rem] bg-surface border border-black/5 shadow-[0_15px_35px_-10px_rgba(0,0,0,0.05)] max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left`,
+            children: [
+              (0, Q.jsxs)(`div`, {
+                className: `flex items-center gap-4`,
+                children: [
+                  (0, Q.jsx)(`div`, {
+                    className: `w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0`,
+                    children: (0, Q.jsx)(Z, { className: `w-6 h-6 text-blue-600` }),
+                  }),
+                  (0, Q.jsxs)(`div`, {
+                    children: [
+                      (0, Q.jsx)(`h4`, {
+                        className: `text-base font-bold text-ink`,
+                        children: `Capacitate limitată: ${CAPACITY_NOTICE.toLowerCase()}`,
+                      }),
+                      (0, Q.jsx)(`p`, {
+                        className: `text-sm text-steel mt-1`,
+                        children: `Implementăm fiecare campanie cap-coadă, așa că lucrăm cu puțini clienți în același timp.`,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, Q.jsx)(`a`, {
+                href: `#booking`,
+                className: `shrink-0 px-6 py-3 rounded-full text-xs font-bold bg-ink text-white hover:bg-black transition-colors uppercase tracking-wider shadow-sm`,
+                children: `Aplică pentru analiză`,
+              }),
+            ],
+          }),
       ],
     }),
   });
@@ -1037,7 +1047,7 @@ function me() {
               desc: `Aflăm ce întreabă clienții tăi ideali în ChatGPT înainte să cumpere și unde apare intenția reală de cumpărare în nișa ta.`,
               deliverables: [
                 `Lista întrebărilor cu intenție mare din nișa ta`,
-                `Analiza concurenței care rulează deja reclame`,
+                `Verificarea eligibilității domeniului tău și a site-ului (acces pentru boții OpenAI, tracking)`,
                 `Unghiuri de mesaj pentru fiecare tip de întrebare`,
               ],
             },
@@ -1055,14 +1065,14 @@ function me() {
             },
             {
               num: `03`,
-              title: `Optimizare & scalare`,
-              timeline: `Lunar`,
-              badge: `Creștere`,
-              desc: `Oprim ce nu aduce clienți, creștem bugetul pe ce funcționează și îți arătăm lunar rezultatele în lead-uri și vânzări, nu în impresii.`,
+              title: `Sprint de test 14 zile`,
+              timeline: `Săptămâna 2 – 4`,
+              badge: `Decizie`,
+              desc: `Rulăm un test cu buget mic și structură completă. La final primești un raport cu cifre reale: câte afișări, câte clickuri, câte lead-uri și cât a costat fiecare. Plus recomandarea noastră clară: continuăm sau oprim.`,
               deliverables: [
-                `Testare continuă pe mesaje și pagini`,
-                `Optimizare pe costul per lead`,
-                `Raportare transparentă pe vânzări și programări`,
+                `Cifre reale din contul tău, nu estimări`,
+                `Comparație cu Google și Meta pe aceeași ofertă`,
+                `Recomandare de continuare sau oprire`,
               ],
             },
           ].map((e, n) =>
@@ -1142,7 +1152,7 @@ function he() {
     i = [
       {
         q: `Chiar se pot face reclame în ChatGPT?`,
-        a: `Da. Reclamele apar direct în conversații, marcate clar ca sponsorizate, separat de răspunsul ChatGPT. Formatul este foarte nou în România, așa că majoritatea afacerilor nu îl folosesc încă.`,
+        a: `Da, pentru domeniile eligibile. Reclamele apar direct în conversații, marcate clar ca sponsorizate, separat de răspunsul ChatGPT. Formatul este nou în România, iar disponibilitatea și regulile se pot schimba.`,
       },
       {
         q: `Ce domenii nu pot face reclame în ChatGPT?`,
@@ -1150,15 +1160,15 @@ function he() {
       },
       {
         q: `Cum diferă de o reclamă pe Google Search?`,
-        a: `Pe Google, omul primește o listă de linkuri și reclame pe care a învățat să le ocolească. În ChatGPT, descrie în detaliu ce are nevoie, iar reclama ta apare în contextul acelei conversații. Mesajul tău ajunge la cineva care și-a formulat deja problema.`,
+        a: `Pe Google, omul primește o listă de linkuri și reclame și compară singur. În ChatGPT, descrie în detaliu ce are nevoie, iar reclama ta apare în contextul acelei conversații. Mesajul tău ajunge la cineva care și-a formulat deja problema.`,
       },
       {
         q: `Cât timp mai durează perioada cu concurență mică?`,
-        a: `Nimeni nu poate spune exact. La Google și Facebook, perioada avantajoasă a durat până când agențiile mari și bugetele corporate au intrat în masă. Regula e simplă: cu cât mai mulți advertiseri din nișa ta intră, cu atât costurile cresc.`,
+        a: `Nimeni nu știe exact. Estimarea noastră e de câteva luni, până când agențiile mari își mută bugetele de test.`,
       },
       {
         q: `Ce buget minim este necesar?`,
-        a: `Recomandăm minimum 1.000 – 1.500 € pe lună pentru reclame, ca să strângem suficiente date pentru optimizare. Bugetele de 3.000 – 5.000 € permit testare mai rapidă și scalare din prima lună. La analiza gratuită îți spunem ce buget are sens pentru nișa ta.`,
+        a: `Minimul zilnic pentru România nu e publicat de OpenAI; apare în cont după aprobare. Pentru un prim test de 14 zile îți recomandăm un buget cu care să strângi date reale, pe care îl stabilim împreună după analiză.`,
       },
       {
         q: `Lucrați doar cu ChatGPT Ads?`,
@@ -1166,7 +1176,7 @@ function he() {
       },
       {
         q: `Ce se întâmplă după ce completez formularul?`,
-        a: `Analizăm afacerea și nișa ta, apoi te contactăm pentru o discuție de 15 minute. Îți spunem sincer dacă ChatGPT Ads are sens pentru tine acum. Dacă nu are, îți spunem și asta.`,
+        a: `Verificăm dacă domeniul tău e eligibil, analizăm afacerea și nișa ta, apoi te contactăm pentru o discuție de 15 minute. Îți spunem sincer dacă ChatGPT Ads are sens pentru tine acum. Dacă nu are, îți spunem și asta.`,
       },
     ],
     a = (t) => {
@@ -1335,7 +1345,7 @@ function ge() {
                   (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `are sens pentru afacerea ta.` }),
                 ],
               }),
-              text: `Completează formularul în circa un minut. Analizăm nișa ta înainte de apel și îți spunem direct ce potențial vedem, ce buget e realist și cum am porni.`,
+              text: `Completează formularul în circa un minut. Verificăm dacă domeniul tău e eligibil și, înainte de apel, îți analizăm nișa. Îți spunem direct ce potențial vedem și cum am porni.`,
               form: $,
             }),
           ],
