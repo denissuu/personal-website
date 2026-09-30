@@ -1,4 +1,5 @@
 import {
+  FounderSection,
   _ as e,
   a as t,
   c as n,
@@ -16,7 +17,7 @@ import {
   s as m,
   t as h,
   u as g,
-} from "./MobileStickyCta-V6a1uGv5.js";
+} from "./MobileStickyCta-RgiL2usR.js";
 var _ = e(a(), 1),
   v = new Map([
     [
@@ -569,10 +570,10 @@ function H() {
                 transition: { duration: 0.6, ease: [0.32, 0.72, 0, 1] },
                 className: `text-3xl md:text-5xl font-bold text-ink mb-12 tracking-tight max-w-3xl`,
                 children: [
-                  `Majoritatea agențiilor îți vând "Vanity Metrics". Noi îți vindem `,
+                  `Like-urile nu plătesc salariile. `,
                   (0, V.jsx)(`span`, {
                     className: `text-red-600 underline decoration-red-200 underline-offset-8`,
-                    children: `Lichiditate.`,
+                    children: `Programările, da.`,
                   }),
                 ],
               }),
@@ -591,7 +592,7 @@ function H() {
                         (0, V.jsx)(`br`, {}),
                         (0, V.jsx)(`span`, {
                           className: `text-sm font-medium not-italic mt-4 block text-steel/70 uppercase tracking-widest`,
-                          children: `— Fraza pe care o auzim de la 9 din 10 antreprenori care vin la noi.`,
+                          children: `— Fraza pe care o auzim cel mai des de la cei care vin la noi.`,
                         }),
                       ],
                     }),
@@ -702,7 +703,7 @@ function W() {
       id: `02`,
       icon: (0, V.jsx)(T, { weight: `duotone`, className: `w-10 h-10 text-teal-500` }),
       title: `Convertește`,
-      desc: `Landing Page-uri hiper-personalizate care acționează ca un filtru inteligent.`,
+      desc: `Pagini făcute pentru un singur tratament, care separă pacienții serioși de curioși.`,
       bg: `bg-teal-50/50`,
       border: `border-teal-100`,
     },
@@ -716,7 +717,7 @@ function W() {
     },
   ];
   return (0, V.jsx)(`section`, {
-    id: `ecosistem`,
+    id: `cum-aducem`,
     className: `py-32 px-6 bg-canvas`,
     children: (0, V.jsxs)(`div`, {
       className: `max-w-[1200px] mx-auto`,
@@ -729,7 +730,7 @@ function W() {
             viewport: { once: !0 },
             className: `text-4xl md:text-5xl font-bold text-ink inline-flex items-center justify-center gap-4 flex-wrap`,
             children: [
-              `Ecosistemul`,
+              `Cum aducem pacienți noi`,
               (0, V.jsx)(`span`, {
                 className: `relative top-1`,
                 children: (0, V.jsx)(`img`, { src: `./img/flow-logo.webp`, alt: `IDL Flow`, className: `h-8 md:h-10 object-contain` }),
@@ -774,9 +775,86 @@ function W() {
     }),
   });
 }
+// Studiu de caz: ascuns până există date reale, cu acordul clinicii.
+// TODO(IDL): completează CASE_STUDY cu date reale și setează SHOW_CASE_STUDY = true. Până atunci nu se afișează.
+var SHOW_CASE_STUDY = !1,
+  CASE_STUDY = {
+    clinic: `[TODO(IDL): nume clinică]`,
+    city: `[TODO(IDL): oraș]`,
+    before: `[TODO(IDL): situația inițială]`,
+    done: `[TODO(IDL): ce am făcut]`,
+    result: `[TODO(IDL): rezultat în cifre, reale]`,
+    period: `[TODO(IDL): perioada]`,
+    quote: `[TODO(IDL): citat, cu acordul clinicii]`,
+    photo: ``, // TODO(IDL): URL poză, cu acordul clinicii
+  };
+function CaseStudy() {
+  let e = CASE_STUDY;
+  return (0, V.jsx)(`div`, {
+    className: `double-bezel relative max-w-6xl mx-auto mt-8 text-left`,
+    children: (0, V.jsxs)(`div`, {
+      className: `double-bezel-inner p-10 flex flex-col md:flex-row gap-8`,
+      children: [
+        e.photo && (0, V.jsx)(`img`, { src: e.photo, alt: e.clinic, className: `idl-avatar shrink-0` }),
+        (0, V.jsxs)(`div`, {
+          className: `text-steel space-y-4 leading-relaxed`,
+          children: [
+            (0, V.jsx)(`h3`, { className: `font-bold text-2xl text-ink`, children: `${e.clinic} · ${e.city}` }),
+            (0, V.jsxs)(`p`, { children: [(0, V.jsx)(`strong`, { className: `text-ink`, children: `Situația inițială:` }), ` ${e.before}`] }),
+            (0, V.jsxs)(`p`, { children: [(0, V.jsx)(`strong`, { className: `text-ink`, children: `Ce am făcut:` }), ` ${e.done}`] }),
+            (0, V.jsxs)(`p`, {
+              className: `text-blue-600 font-semibold`,
+              children: [`Rezultat (${e.period}): `, e.result],
+            }),
+            (0, V.jsx)(`p`, { className: `italic`, children: `"${e.quote}"` }),
+          ],
+        }),
+      ],
+    }),
+  });
+}
 function G() {
+  let idlCard = (e) =>
+    (0, V.jsx)(r.div, {
+      initial: { opacity: 0, x: e.side * 30 },
+      whileInView: { opacity: 1, x: 0 },
+      viewport: { once: !0, margin: `-100px` },
+      transition: { type: `spring`, damping: 20, stiffness: 80, delay: e.delay },
+      className: `double-bezel relative group`,
+      children: (0, V.jsxs)(`div`, {
+        className: `double-bezel-inner p-10 h-full flex flex-col transition-colors duration-500 ${e.hover}`,
+        children: [
+          (0, V.jsxs)(`div`, {
+            className: `flex flex-col mb-8`,
+            children: [
+              (0, V.jsx)(`span`, {
+                className: `${e.badgeClass} px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] w-max mb-4`,
+                children: e.badge,
+              }),
+              (0, V.jsx)(`h3`, { className: `font-bold text-2xl text-ink`, children: e.title }),
+            ],
+          }),
+          (0, V.jsx)(`div`, {
+            className: `text-steel space-y-6 flex-grow leading-relaxed`,
+            children: [
+              [`Problema:`, e.problem],
+              [`Ce construim:`, e.build],
+            ].map(([t, n]) =>
+              (0, V.jsxs)(`p`, { children: [(0, V.jsx)(`strong`, { className: `text-ink`, children: t }), ` `, n] }, t),
+            ),
+          }),
+          (0, V.jsx)(`div`, {
+            className: `mt-8 pt-6 border-t border-black/5`,
+            children: (0, V.jsxs)(`p`, {
+              className: `${e.measureClass} font-semibold text-sm leading-relaxed`,
+              children: [`Ce măsurăm: `, e.measure],
+            }),
+          }),
+        ],
+      }),
+    });
   return (0, V.jsx)(`section`, {
-    id: `rezultate`,
+    id: `pe-nise`,
     className: `scroll-mt-24 py-32 px-6 bg-canvas border-t border-white/10`,
     children: (0, V.jsxs)(`div`, {
       className: `max-w-[1400px] mx-auto text-center`,
@@ -786,7 +864,7 @@ function G() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `text-3xl md:text-5xl font-bold mb-6 text-ink tracking-tight`,
-          children: `Arhitectura Profitului pe Nișe Specifice`,
+          children: `Ce construim pentru fiecare tip de clinică`,
         }),
         (0, V.jsx)(r.p, {
           initial: { opacity: 0, y: 20 },
@@ -794,112 +872,38 @@ function G() {
           viewport: { once: !0 },
           transition: { delay: 0.1 },
           className: `text-steel mb-20 max-w-2xl mx-auto text-lg leading-relaxed`,
-          children: `Nu ghicim strategii. Acestea sunt benchmark-urile și sistemele validate pe care le implementăm pentru a scala clinicile din România.`,
+          children: `Fiecare nișă pierde pacienți în alt loc. Iată unde ne uităm și ce construim.`,
         }),
         (0, V.jsxs)(`div`, {
           className: `grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-6xl mx-auto`,
           children: [
-            (0, V.jsx)(r.div, {
-              initial: { opacity: 0, x: -30 },
-              whileInView: { opacity: 1, x: 0 },
-              viewport: { once: !0, margin: `-100px` },
-              transition: { type: `spring`, damping: 20, stiffness: 80 },
-              className: `double-bezel relative group`,
-              children: (0, V.jsxs)(`div`, {
-                className: `double-bezel-inner p-10 h-full flex flex-col transition-colors duration-500 hover:bg-blue-50/20`,
-                children: [
-                  (0, V.jsxs)(`div`, {
-                    className: `flex flex-col mb-8`,
-                    children: [
-                      (0, V.jsx)(`span`, {
-                        className: `bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] w-max mb-4`,
-                        children: `Stomatologie`,
-                      }),
-                      (0, V.jsx)(`h3`, { className: `font-bold text-2xl text-ink`, children: `Benchmark: Modelul de +30 Pacienți/Lună` }),
-                    ],
-                  }),
-                  (0, V.jsxs)(`div`, {
-                    className: `text-steel space-y-6 flex-grow leading-relaxed`,
-                    children: [
-                      (0, V.jsxs)(`p`, {
-                        children: [
-                          (0, V.jsx)(`strong`, { className: `text-ink`, children: `Situația inițială tipică:` }),
-                          ` Cost uriaș per lead pe implanturi (doar curioși) și dependență totală de recomandări.`,
-                        ],
-                      }),
-                      (0, V.jsxs)(`p`, {
-                        children: [
-                          (0, V.jsx)(`strong`, { className: `text-ink`, children: `Arhitectura Implementată:` }),
-                          ` Landing Page dedicat ofertei + Campanii Ads optimizate pe intenție (Google și Meta) + Sistem de Follow-up automat (SMS în 60 de secunde) + Retargeting.`,
-                        ],
-                      }),
-                    ],
-                  }),
-                  (0, V.jsx)(`div`, {
-                    className: `mt-8 pt-6 border-t border-black/5`,
-                    children: (0, V.jsx)(`p`, {
-                      className: `text-blue-600 font-semibold text-sm leading-relaxed`,
-                      children: `Benchmark Rezultat (90 Zile): Scăderea costului per programare cu până la 76% și flux predictibil de 30-45 pacienți noi.`,
-                    }),
-                  }),
-                ],
-              }),
+            idlCard({
+              side: -1,
+              delay: 0,
+              hover: `hover:bg-blue-50/20`,
+              badgeClass: `bg-blue-100 text-blue-700`,
+              badge: `Stomatologie`,
+              title: `Stomatologie: de la curioși la programări`,
+              problem: `Multe cereri pe implanturi vin de la oameni care întreabă doar de preț, iar clinica depinde aproape doar de recomandări.`,
+              build: `Pagină dedicată ofertei, reclame Google și Meta pe oamenii care caută tratamentul, SMS automat în 60 de secunde după fiecare cerere, retargeting pentru cei nehotărâți.`,
+              measureClass: `text-blue-600`,
+              measure: `Cost per programare, rata cerere → programare, rata de prezentare la consultație.`,
             }),
-            (0, V.jsx)(r.div, {
-              initial: { opacity: 0, x: 30 },
-              whileInView: { opacity: 1, x: 0 },
-              viewport: { once: !0, margin: `-100px` },
-              transition: { type: `spring`, damping: 20, stiffness: 80, delay: 0.1 },
-              className: `double-bezel relative group`,
-              children: (0, V.jsxs)(`div`, {
-                className: `double-bezel-inner p-10 h-full flex flex-col transition-colors duration-500 hover:bg-teal-50/20`,
-                children: [
-                  (0, V.jsxs)(`div`, {
-                    className: `flex flex-col mb-8`,
-                    children: [
-                      (0, V.jsx)(`span`, {
-                        className: `bg-teal-100 text-teal-700 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] w-max mb-4`,
-                        children: `Optică Medicală`,
-                      }),
-                      (0, V.jsx)(`h3`, { className: `font-bold text-2xl text-ink`, children: `Proiecție: Conversie +48% din Consultații` }),
-                    ],
-                  }),
-                  (0, V.jsxs)(`div`, {
-                    className: `text-steel space-y-6 flex-grow leading-relaxed`,
-                    children: [
-                      (0, V.jsxs)(`p`, {
-                        children: [
-                          (0, V.jsx)(`strong`, { className: `text-ink`, children: `Provocarea din Piață:` }),
-                          ` Pacienții vin pentru consultații, dar cumpără ramele și lentilele din altă parte.`,
-                        ],
-                      }),
-                      (0, V.jsxs)(`p`, {
-                        children: [
-                          (0, V.jsx)(`strong`, { className: `text-ink`, children: `Sistemul de Conversie:` }),
-                          ` Infrastructură axată pe autoritate + Garanție Digitală + Retargeting Ads pe produse high-ticket (lentile progresive/rame brand).`,
-                        ],
-                      }),
-                    ],
-                  }),
-                  (0, V.jsx)(`div`, {
-                    className: `mt-8 pt-6 border-t border-black/5`,
-                    children: (0, V.jsx)(`p`, {
-                      className: `text-teal-600 font-semibold text-sm leading-relaxed`,
-                      children: `Benchmark Rezultat (60 Zile): Creșterea conversiei de la consultație la vânzare de ochelari cu aproximativ 48%.`,
-                    }),
-                  }),
-                ],
-              }),
+            idlCard({
+              side: 1,
+              delay: 0.1,
+              hover: `hover:bg-teal-50/20`,
+              badgeClass: `bg-teal-100 text-teal-700`,
+              badge: `Optică Medicală`,
+              title: `Optică medicală: vânzarea după consultație`,
+              problem: `Pacienții vin pentru consultații, dar cumpără ramele și lentilele din altă parte.`,
+              build: `Pagină care explică oferta (lentile progresive, rame de brand), reclame Google și Meta pe cei care caută, retargeting pentru cei care au fost la consultație și n-au cumpărat.`,
+              measureClass: `text-teal-600`,
+              measure: `Cost per consultație, rata consultație → vânzare, valoarea medie a unei vânzări.`,
             }),
           ],
         }),
-        (0, V.jsx)(r.p, {
-          initial: { opacity: 0 },
-          whileInView: { opacity: 1 },
-          viewport: { once: !0 },
-          className: `text-center text-xs text-steel/50 mt-16 max-w-3xl mx-auto italic`,
-          children: `*Cifrele prezentate reprezintă proiecții și benchmark-uri medii din industrie bazate pe arhitectura sistemului nostru de conversie. Rezultatele exacte variază în funcție de o multitudine de factori precum bugetul alocat și stadiul inițial al afacerii.`,
-        }),
+        SHOW_CASE_STUDY && (0, V.jsx)(CaseStudy, {}),
       ],
     }),
   });
@@ -929,18 +933,18 @@ function K() {
           children: [
             {
               num: `01`,
-              title: `Audit Financiar & Digital`,
+              title: `Audit: unde pierzi pacienți acum`,
               desc: `Nu începem fără cifre. Analizăm afacerea ta și identificăm unde se pierd banii acum.`,
             },
             {
               num: `02`,
-              title: `Infrastructură de Conversie`,
-              desc: `Ne asigurăm că prezența online și canalele de vânzare sunt optimizate pentru conversia traficului.`,
+              title: `Site și pagini care transformă vizitele în programări`,
+              desc: `Ne asigurăm că site-ul și paginile tale îi fac pe vizitatori să ceară o programare, nu să plece.`,
             },
             {
               num: `03`,
-              title: `Sistem Educațional (Nurturing)`,
-              desc: `Nu facem "postări". Construim un ecosistem de conținut care educă prospectul ÎNAINTE ca el să ia decizia. Transformăm traficul rece în lead-uri gata să cumpere, eliminând obiecțiile de preț.`,
+              title: `Conținut care răspunde la întrebări înainte de consultație`,
+              desc: `Pacientul ajunge la tine știind deja ce tratament vrea și de ce costă cât costă. Mai puține discuții despre preț, mai multe programări.`,
             },
             {
               num: `04`,
@@ -950,8 +954,8 @@ function K() {
             },
             {
               num: `05`,
-              title: `Loializare & Recurență`,
-              desc: `Implementăm sistemul de loializare pentru a transforma clienții unici în venit recurent.`,
+              title: `Pacienți care revin`,
+              desc: `Remindere și reactivarea pacienților care n-au mai venit de mult.`,
             },
           ].map((e, t) =>
             (0, V.jsxs)(
@@ -1058,8 +1062,8 @@ function q() {
           viewport: { once: !0 },
           className: `text-3xl md:text-5xl font-bold mb-20 text-ink tracking-tight`,
           children: [
-            `Diferența dintre "Marketing" și `,
-            (0, V.jsx)(`span`, { className: `text-blue-600`, children: `Arhitectură de Profit` }),
+            `Ce faci cu o agenție clasică și `,
+            (0, V.jsx)(`span`, { className: `text-blue-600`, children: `ce faci cu noi` }),
           ],
         }),
         (0, V.jsx)(r.div, {
@@ -1085,7 +1089,7 @@ function q() {
                     }),
                     (0, V.jsx)(`th`, {
                       className: `p-3 md:p-8 font-semibold uppercase text-[10px] md:text-xs tracking-[0.2em] text-blue-800 bg-blue-50/50 w-1/3`,
-                      children: `IDL Media (Ecosistem)`,
+                      children: `IDL Media`,
                     }),
                   ],
                 }),
@@ -1093,9 +1097,17 @@ function q() {
               (0, V.jsx)(`tbody`, {
                 className: `divide-y divide-black/5`,
                 children: [
-                  { feature: `Obiectiv Principal`, classic: `Reach, Like-uri, Impresii`, idl: `ROI, LTV, Cash-flow Predictibil` },
-                  { feature: `Model de Lucru`, classic: `Execuție reactivă (la cerere)`, idl: `Parteneriat Strategic (Rezultate Directe)` },
-                  { feature: `Tehnologie`, classic: `Postări pe Facebook`, idl: `Funnel-uri, CRM, Loyalty, AI Chatbots, Automatizări` },
+                  { feature: `Obiectiv Principal`, classic: `Reach, Like-uri, Impresii`, idl: `Programări și încasări` },
+                  {
+                    feature: `Model de Lucru`,
+                    classic: `Execuție reactivă (la cerere)`,
+                    idl: `Lucrăm pe obiective de programări, nu pe task-uri`,
+                  },
+                  {
+                    feature: `Tehnologie`,
+                    classic: `Postări pe Facebook`,
+                    idl: `Pagini dedicate, CRM, remindere automate, chatbot pentru programări`,
+                  },
                   { feature: `Comunicare`, classic: `Rapoarte lunare pe care nu le înțelegi`, idl: `Transparență totală pe vânzări` },
                 ].map((e, t) =>
                   (0, V.jsxs)(
@@ -1141,7 +1153,7 @@ function J() {
               whileInView: { opacity: 1, y: 0 },
               viewport: { once: !0 },
               className: `text-4xl md:text-5xl font-bold mb-6 text-ink tracking-tight`,
-              children: `Arhitecturi de Implementare`,
+              children: `Trei variante de colaborare`,
             }),
             (0, V.jsx)(r.p, {
               initial: { opacity: 0, y: 20 },
@@ -1149,7 +1161,7 @@ function J() {
               viewport: { once: !0 },
               transition: { delay: 0.1 },
               className: `text-lg text-steel leading-relaxed`,
-              children: `Fiecare clinică pornește din alt punct. După analiza gratuită îți recomandăm unul dintre aceste 3 sisteme, în funcție de obiectivul tău de creștere.`,
+              children: `Fiecare clinică pornește din alt punct. După analiza gratuită îți recomandăm una dintre aceste 3 variante, în funcție de obiectivul tău de creștere.`,
             }),
           ],
         }),
@@ -1160,8 +1172,8 @@ function J() {
               title: `Fundația de Conversie`,
               desc: `Pentru clinicile care au trafic, dar pierd pacienți din cauza unei prezențe online slabe.`,
               features: [
-                `Landing Page hiper-optimizat pentru conversie`,
-                `Sistem de calificare inteligentă a clienților`,
+                `Pagină dedicată, făcută pentru programări`,
+                `Formular care separă pacienții serioși de curioși`,
                 `Optimizare Google Business Profile`,
                 `Integrare tracking și Analytics de bază`,
               ],
@@ -1183,15 +1195,15 @@ function J() {
             },
             {
               title: `Dominare Locală`,
-              desc: `Ecosistem complet pentru scalare agresivă și acapararea cotei de piață.`,
+              desc: `Pentru clinicile care vor să devină prima alegere în orașul lor.`,
               features: [
                 `Tot ce include Sistemul de Achiziție`,
-                `Sistem Educațional (Content Nurturing)`,
+                `Conținut care răspunde la întrebările pacienților`,
                 `Automatizări CRM & Email Marketing`,
-                `Scalare bugete publicitare (Google și Meta)`,
+                `Creșterea bugetelor pe ce funcționează`,
                 `Raportare avansată și consultanță strategică lunară`,
               ],
-              btn: `Discută planul de scalare`,
+              btn: `Discută planul de creștere`,
               popular: !1,
             },
           ].map((e, t) =>
@@ -1304,7 +1316,7 @@ function Y() {
                 (0, V.jsx)(`ul`, {
                   className: `space-y-6`,
                   children: [
-                    `Antreprenori care vor scalare predictibilă`,
+                    `Antreprenori care vor creștere predictibilă`,
                     `Clinici care doresc un flux predictibil de pacienți noi`,
                     `Branduri care apreciază automatizarea`,
                     `Echipe care vor reducerea no-show și creșterea recurenței`,
@@ -1421,10 +1433,10 @@ function X() {
             whileInView: { opacity: 1, y: 0 },
             viewport: { once: !0 },
             transition: { delay: 0.2 },
-            className: `inline-block p-6 rounded-2xl border border-white/10 bg-white/5`,
+            className: `inline-block max-w-2xl p-6 rounded-2xl border border-white/10 bg-white/5`,
             children: (0, V.jsx)(`span`, {
-              className: `font-bold uppercase tracking-[0.2em] text-sm md:text-base bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent`,
-              children: `Riscul este 100% la noi. Tu plătești doar pentru performanță.`,
+              className: `font-bold text-base md:text-lg leading-relaxed bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent`,
+              children: `Bugetul de reclame îl plătești tu direct platformelor, ca să ai control total. Riscul nostru e munca: dacă nu atingem pragul agreat, lucrăm o lună fără taxa de management.`,
             }),
           }),
         ],
@@ -1434,32 +1446,32 @@ function X() {
 }
 var Z = [
   {
-    q: `Am nevoie de cunoștințe tehnice pentru a gestiona funnel-ul de vânzări?`,
-    a: `Nu. Predăm o infrastructură optimizată unde gestionarea fluxului de clienți și a produselor este intuitivă. Pentru arhitectura de conversie, ne concentrăm pe viteză și performanță maximă, motiv pentru care partea tehnică rămâne în grija noastră, iar tu te ocupi doar de business.`,
+    q: `Am nevoie de cunoștințe tehnice ca să folosesc sistemul?`,
+    a: `Nu. Partea tehnică rămâne în grija noastră: pagini, reclame, tracking, automatizări. Tu te ocupi de pacienți, noi de sistemul care ți-i aduce.`,
   },
   {
-    q: `Există o perioadă contractuală minimă pentru implementarea ecosistemului?`,
-    a: `Colaborăm pe baza performanței lunare, însă optimizarea funnel-ului și a sistemului de loializare necesită o perioadă minimă de calibrare. Natura strategiilor noastre presupune un angajament inițial pentru a permite algoritmilor și sistemelor automate să genereze rezultate predictibile și scalabile.`,
+    q: `Există o perioadă contractuală minimă?`,
+    a: `Colaborăm lunar, dar reclamele și automatizările au nevoie de o perioadă de calibrare ca să strângă date reale. De aceea cerem un angajament inițial, pe care îl stabilim împreună după analiza gratuită.`,
   },
   {
     q: `Ce se întâmplă dacă am deja o prezență online, dar nu generează profit?`,
-    a: `Realizăm un audit al funnel-ului actual. Dacă structura existentă permite, implementăm optimizări pentru creșterea ratei de conversie. În cazul în care tehnologia este depășită și limitează potențialul de profitabilitate, recomandăm tranziția către un ecosistem modern.`,
+    a: `Facem un audit al ce ai acum. Dacă site-ul și paginile existente pot fi îmbunătățite, le optimizăm ca mai mulți vizitatori să ceară o programare. Dacă sunt prea vechi sau îți limitează rezultatele, îți recomandăm să le refaci.`,
   },
   {
-    q: `Cât de repede se activează funnel-ul de achiziție clienți?`,
-    a: `Componentele organice de autoritate se construiesc în timp prin consistență. Totuși, odată ce funnel-ul de achiziție prin accelerare este activat, primele date relevante și interacțiuni calificate apar, de regulă, la scurt timp după lansarea strategică a sistemului.`,
+    q: `În cât timp pornește totul?`,
+    a: `Conținutul organic se construiește în timp. Reclamele, odată lansate, dau primele date și primele cereri, de regulă, la scurt timp după lansare. La analiza gratuită îți spunem cum arată calendarul pentru clinica ta.`,
   },
   {
-    q: `Am nevoie de buget mare pentru accelerarea funnel-ului de creștere?`,
-    a: `Nu neapărat. Recomandăm un buget corelat cu obiectivele tale de profitabilitate. Avantajul major al ecosistemului nostru este integrarea sistemului de loializare, care ne permite să generăm venituri din baza de clienți existenți cu costuri de achiziție minime.`,
+    q: `Am nevoie de buget mare de reclame?`,
+    a: `Nu neapărat. Stabilim un buget potrivit cu obiectivele tale, după analiza gratuită. În plus, remindere și reactivarea pacienților existenți aduc programări fără să plătești pentru o reclamă nouă de fiecare dată.`,
   },
   {
     q: `Pe ce platforme rulați reclamele? Faceți și reclame în ChatGPT pentru clinici?`,
     a: `Pentru clinici lucrăm pe Google și Meta (Facebook și Instagram). Reclamele în ChatGPT nu sunt disponibile acum pentru servicii medicale în România: politica OpenAI interzice în general reclamele pentru servicii de sănătate în afara SUA. Dacă regulile se schimbă, îți spunem noi primii. Nu-ți vindem un canal pe care nu-l poți folosi.`,
   },
   {
-    q: `De ce un funnel bazat pe claritate și nu o structură web complexă?`,
-    a: `Pentru viteză și eliminarea fricțiunilor. Un funnel strategic concentrează atenția vizitatorului pe o singură acțiune profitabilă (rezervare sau achiziție), eliminând elementele care distrag atenția.`,
+    q: `De ce o pagină simplă și nu un site mare?`,
+    a: `Pentru viteză și mai puține distrageri. O pagină simplă duce vizitatorul spre o singură acțiune: programarea. Fără meniuri și secțiuni care îl fac să plece.`,
   },
 ];
 function Q() {
@@ -1570,7 +1582,7 @@ function ne() {
         (0, V.jsx)(d, {
           links: [
             { href: `#cum-functioneaza`, label: `Cum funcționează` },
-            { href: `#rezultate`, label: `Rezultate` },
+            { href: `#pe-nise`, label: `Pe nișe` },
             { href: `#pachete`, label: `Pachete` },
             { href: `#faq`, label: `Întrebări` },
           ],
@@ -1583,8 +1595,8 @@ function ne() {
               eyebrow: `Sisteme de achiziție pentru clinici`,
               title: (0, V.jsxs)(V.Fragment, {
                 children: [
-                  `Transformăm traficul rece în `,
-                  (0, V.jsx)(`span`, { className: `text-blue-600`, children: `pacienți programați.` }),
+                  `Pacienți noi programați în fiecare săptămână. `,
+                  (0, V.jsx)(`span`, { className: `text-blue-600`, children: `Nu doar din recomandări.` }),
                 ],
               }),
               text: `Nu vindem like-uri sau postări. Construim sistemul complet care duce omul de la prima reclamă până la programare: campanii pe Google și Meta, pagini care convertesc și follow-up automat.`,
@@ -1606,6 +1618,7 @@ function ne() {
             (0, V.jsx)(Y, {}),
             (0, V.jsx)(X, {}),
             (0, V.jsx)(Q, {}),
+            (0, V.jsx)(FounderSection, {}),
             (0, V.jsx)(p, {
               id: `schedule-call`,
               title: (0, V.jsxs)(V.Fragment, {

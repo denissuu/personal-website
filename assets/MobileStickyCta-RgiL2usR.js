@@ -638,8 +638,78 @@ function Sp({ id: e, title: t, text: n, form: r }) {
     }),
   });
 }
+// Secțiunea "Cine lucrează la campania ta" (pe ambele pagini, înainte de booking).
+// TODO(IDL): completează FOUNDER: numele real, poza reală (URL) și 2-3 rânduri reale (cine ești, de ce faci asta, oraș).
+var FOUNDER = {
+  name: `[NUME]`, // TODO(IDL): numele fondatorului
+  photo: ``, // TODO(IDL): poză reală fondator (URL). Gol = placeholder neutru, nu poză stock.
+  bio: ``, // TODO(IDL): 2-3 rânduri reale: cine ești, de ce faci asta, oraș
+};
+function FounderSection() {
+  return (0, E.jsx)(`section`, {
+    id: `cine-lucreaza`,
+    className: `py-24 px-6 bg-canvas border-t border-black/5`,
+    children: (0, E.jsxs)(`div`, {
+      className: `max-w-4xl mx-auto`,
+      children: [
+        (0, E.jsx)(Iu.h2, {
+          initial: { opacity: 0, y: 20 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: !0 },
+          className: `text-3xl md:text-5xl font-bold mb-12 text-center text-ink tracking-tight text-balance`,
+          children: `Cine lucrează la campania ta`,
+        }),
+        (0, E.jsxs)(Iu.div, {
+          initial: { opacity: 0, y: 20 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: !0 },
+          transition: { duration: 0.6, ease: [0.32, 0.72, 0, 1] },
+          className: `idl-founder`,
+          children: [
+            FOUNDER.photo
+              ? (0, E.jsx)(`img`, { src: FOUNDER.photo, alt: FOUNDER.name, className: `idl-avatar` })
+              : (0, E.jsx)(`div`, {
+                  className: `idl-avatar idl-avatar-ph`,
+                  role: `img`,
+                  "aria-label": `Poza fondatorului urmează să fie adăugată`,
+                  children: (0, E.jsxs)(`svg`, {
+                    viewBox: `0 0 24 24`,
+                    width: 56,
+                    height: 56,
+                    fill: `none`,
+                    stroke: `currentColor`,
+                    strokeWidth: 1.5,
+                    strokeLinecap: `round`,
+                    strokeLinejoin: `round`,
+                    "aria-hidden": `true`,
+                    children: [(0, E.jsx)(`circle`, { cx: 12, cy: 8, r: 4 }), (0, E.jsx)(`path`, { d: `M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8` })],
+                  }),
+                }),
+            (0, E.jsxs)(`div`, {
+              className: `idl-founder-text`,
+              children: [
+                (0, E.jsxs)(`p`, { className: `text-lg md:text-xl font-semibold text-ink`, children: [FOUNDER.name, `, fondator IDL Media.`] }),
+                FOUNDER.bio && (0, E.jsx)(`p`, { className: `text-steel leading-relaxed mt-3`, children: FOUNDER.bio }),
+                (0, E.jsx)(`a`, {
+                  href: `#date-fiscale`,
+                  onClick: () => window.dispatchEvent(new Event(`idl-open-fiscal`)),
+                  className: `idl-link inline-block mt-4 text-sm text-steel transition-colors underline underline-offset-4`,
+                  children: `Date Fiscale`,
+                }),
+              ],
+            }),
+          ],
+        }),
+      ],
+    }),
+  });
+}
 function Cp({ link: e, text: idlFooterText }) {
   let [t, n] = (0, D.useState)(!1);
+  (0, D.useEffect)(() => {
+    let e = () => n(!0);
+    return (window.addEventListener(`idl-open-fiscal`, e), () => window.removeEventListener(`idl-open-fiscal`, e));
+  }, []);
   return (0, E.jsx)(`footer`, {
     className: `bg-ink text-steel py-20 pb-28 md:pb-20 border-t border-white/10`,
     children: (0, E.jsxs)(`div`, {
@@ -660,6 +730,7 @@ function Cp({ link: e, text: idlFooterText }) {
           children: [
             (0, E.jsx)(`p`, { className: `text-sm`, children: `© 2026 IDL Media. Toate drepturile rezervate.` }),
             (0, E.jsxs)(`div`, {
+              id: `date-fiscale`,
               className: `mt-6`,
               children: [
                 (0, E.jsx)(`button`, {
@@ -724,6 +795,7 @@ function wp({ href: e, label: t }) {
   );
 }
 export {
+  FounderSection,
   CAPACITY_NOTICE,
   SHOW_CAPACITY_NOTICE,
   u as _,

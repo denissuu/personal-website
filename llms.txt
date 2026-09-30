@@ -1,35 +1,38 @@
-# IDL Media - Sisteme Automatizate de Achiziție Pacienți
+# IDL Media - Sisteme de achiziție pacienți pentru clinici
 
-> Partener strategic de creștere pentru Clinici Stomatologice și Optici Medicale din România.
+> Partener de creștere pentru clinici stomatologice și optici medicale din România.
 
-IDL Media nu este o agenție clasică de marketing sau social media. Nu vindem doar postări, "like-uri" sau metrici de vanitate (vanity metrics). Construim ecosisteme complete de conversie, arhitecturi de profit și sisteme de preluare automată a pacienților, folosind strategii avansate de marketing digital, AI și automatizări pentru a scala clinicile medicale.
+IDL Media nu este o agenție clasică de social media. Nu vindem postări sau like-uri. Construim sistemul care duce omul de la prima reclamă până la programare: reclame pe Google și Meta, pagini dedicate fiecărui tratament, SMS automat după fiecare cerere și remindere pentru pacienți.
 
-## Servicii Principale și Expertiză (Sistemul IDL Flow):
+## Ce facem pentru clinici:
 
-1. **Atracție și Generare de Lead-uri (Lead Generation):**
-   - Campanii PPC Targetate pe Intenție (Google Ads, Meta Ads și nou-lansatul ChatGPT Ads în România) pentru stomatologii și optici medicale.
-   - Atragerea de trafic super-calificat, pregătit să se programeze.
+1. **Reclame pe Google și Meta:**
+   - Campanii pe Google (oameni care caută deja tratamentul) și pe Facebook și Instagram (oameni din zona clinicii).
+   - Reclamele în ChatGPT nu sunt disponibile pentru servicii medicale în România: politica OpenAI interzice în general reclamele pentru servicii de sănătate în afara SUA.
 
-2. **Infrastructură de Conversie (Optimizare Rata de Conversie - CRO):**
-   - Creare Landing Page-uri hiper-optimizate care acționează ca filtre inteligente.
-   - Formulare inteligente de calificare a pacienților și integrare tracking avansat (Analytics).
-   - Optimizare profil Google Business Profile pentru SEO local (Local SEO).
+2. **Site și pagini care transformă vizitele în programări:**
+   - Pagini făcute pentru un singur tratament, care separă pacienții serioși de curioși.
+   - Formulare de calificare, tracking și optimizare Google Business Profile pentru căutări locale.
 
-3. **Sisteme de Nurturing și Follow-up Automatizat:**
-   - Ecosisteme de conținut educațional care elimină obiecțiile de preț înainte de vizită.
-   - Preluare automată a pacienților prin follow-up prin SMS în sub 60 de secunde (eliminarea "no-show-urilor" și a leadurilor pierdute).
-   - Integrare CRM, AI Chatbots și automatizări complexe de Email Marketing.
+3. **Follow-up automat și conținut:**
+   - SMS automat în 60 de secunde după fiecare cerere.
+   - Conținut care răspunde la întrebări înainte de consultație, ca să fie mai puține discuții despre preț.
+   - CRM, automatizări de email și chatbot pentru programări.
 
-4. **Loializare, Recurență și Retargeting:**
-   - Retargeting strategic pentru pacienții nehotărâți (ex. produse high-ticket precum implanturi dentare sau lentile progresive).
-   - Sisteme de loializare pentru a transforma pacienții unici în surse de venit recurent și recomandări.
+4. **Pacienți care revin:**
+   - Remindere și reactivarea pacienților care n-au mai venit de mult.
+   - Retargeting pentru pacienții nehotărâți (de exemplu la implanturi dentare sau lentile progresive).
 
-## Nișe de Expertiză:
-- **Clinici Stomatologice:** Scăderea costului per programare și generarea unui flux predictibil de pacienți noi lunar.
-- **Optici Medicale:** Creșterea ratei de conversie de la consultație simplă la achiziția de ochelari / rame brand.
+## Nișe:
+- **Clinici stomatologice:** de la cereri de preț la programări, cu măsurare pe cost per programare.
+- **Optici medicale:** de la consultație la vânzarea de ochelari sau rame.
 
-## Filosofia IDL Media:
-Competiția noastră nu este la preț, ci la PROFITABILITATE. Oferim rezultate măsurabile, LTV crescut (Life-Time Value), cash-flow predictibil și o Garanție de Performanță Condiționată (dacă nu atingem targetul de lead-uri calificate asumat în 90 de zile, lucrăm gratuit până îl atingem).
+## Garanție:
+Bugetul de reclame îl plătește clientul direct platformelor. Dacă în primele 90 de zile nu atingem pragul de lead-uri calificate agreat, lucrăm o lună fără taxa de management.
+
+## Alte domenii: ChatGPT Ads
+Pentru turism și cazare, magazine online, servicii locale, cursuri și software B2B: https://www.idl-media.com/chatgpt-ads
+Domeniile medical, financiar, juridic, pariuri, alcool și tutun nu sunt eligibile acum pentru reclame în ChatGPT în România.
 
 **Contact:** https://calendly.com/denisilie2/meeting
-**Website:** https://www.idl-media.com/ (sau https://denissuu.github.io/personal-website/)
+**Website:** https://www.idl-media.com/
