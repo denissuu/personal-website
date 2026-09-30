@@ -1,4 +1,5 @@
 import {
+  ConsentBanner,
   FounderSection,
   CAPACITY_NOTICE,
   SHOW_CAPACITY_NOTICE,
@@ -14,7 +15,7 @@ import {
   p as l,
   r as u,
   t as d,
-} from "./MobileStickyCta-RgiL2usR.js";
+} from "./MobileStickyCta-qVdntK23.js";
 var f = e(r(), 1),
   p = (e) => e?.replace(/([a-z0-9])([A-Z])/g, `$1-$2`).toLowerCase();
 function m(e, t, n = []) {
@@ -1286,6 +1287,7 @@ var $ = {
   services: [`Landing page-uri pentru conversii`, `Servicii de producție & strategie de marketing`, `Paid traffic (Google, Meta, ChatGPT Ads)`],
   otherNote: `Unele domenii nu pot face acum reclame în ChatGPT în România (medical, financiar, juridic, pariuri, alcool și tutun). Verificăm eligibilitatea gratuit înainte de orice discuție despre buget.`,
   otherExample: `imobiliare, transport`,
+  leadName: `chatgpt-ads`,
 };
 function ge() {
   return (
@@ -1357,6 +1359,7 @@ function ge() {
           text: `Sisteme de achiziție clienți: reclame în ChatGPT, Google și Meta, pagini dedicate și follow-up automat.`,
         }),
         (0, Q.jsx)(d, { href: `#booking`, label: `Verifică nișa ta în circa un minut` }),
+        (0, Q.jsx)(ConsentBanner, {}),
       ],
     })
   );

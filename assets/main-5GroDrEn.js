@@ -1,4 +1,5 @@
 import {
+  ConsentBanner,
   FounderSection,
   _ as e,
   a as t,
@@ -17,7 +18,7 @@ import {
   s as m,
   t as h,
   u as g,
-} from "./MobileStickyCta-RgiL2usR.js";
+} from "./MobileStickyCta-qVdntK23.js";
 var _ = e(a(), 1),
   v = new Map([
     [
@@ -1561,6 +1562,7 @@ var $ = {
   title: `Solicită analiza gratuită a afacerii tale`,
   niches: [`Clinică stomatologică`, `Optică medicală`, `Clinică de estetică`, `Salon / beauty`, `Altă clinică medicală`, `Alt domeniu`],
   services: [`Landing page-uri pentru conversii`, `Servicii de producție & strategie de marketing`, `Paid traffic (Google, Meta)`],
+  leadName: `clinici`,
 };
 function ne() {
   return (
@@ -1637,6 +1639,7 @@ function ne() {
           text: `Sisteme de achiziție pentru clinici: reclame pe Google și Meta, pagini dedicate și follow-up automat.`,
         }),
         (0, V.jsx)(h, { href: `#schedule-call`, label: `Durează circa un minut` }),
+        (0, V.jsx)(ConsentBanner, {}),
       ],
     })
   );

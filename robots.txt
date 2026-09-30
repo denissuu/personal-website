@@ -1,0 +1,15 @@
+# Boții OpenAI au acces complet la tot site-ul: o agenție care vinde vizibilitate în ChatGPT trebuie să fie citibilă de ChatGPT.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: OAI-AdsBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# TODO(IDL): decizie GPTBot (antrenarea modelelor OpenAI). Nu există regulă separată, deci e permis implicit prin regula de mai jos. Dacă vrei să-l blochezi, adaugă "User-agent: GPTBot" + "Disallow: /".
+User-agent: *
+Allow: /
+
+Sitemap: https://www.idl-media.com/sitemap.xml

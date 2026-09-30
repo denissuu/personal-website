@@ -21,6 +21,103 @@ Error generating stack: `+e.message+`
 // TODO(IDL): confirmă că e adevărat; dacă nu, setează false.
 var CAPACITY_NOTICE = `Maximum 2 clienți noi pe lună`,
   SHOW_CAPACITY_NOTICE = !0;
+
+// --- Meta Pixel, consimțământ (GDPR) și UTM ---
+// TODO(IDL): pune ID-ul Meta Pixel (Events Manager > Surse de date). Gol = nu se încarcă nimic, iar bannerul de cookie-uri nu apare.
+// În proiectul sursă Vite valoarea ar veni din import.meta.env.VITE_META_PIXEL_ID; în acest repo nu există build, deci e constantă.
+var META_PIXEL_ID = ``,
+  CONSENT_KEY = `idl_consent`,
+  UTM_KEYS = [`utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `fbclid`];
+function getConsent() {
+  try {
+    return localStorage.getItem(CONSENT_KEY);
+  } catch {
+    return null;
+  }
+}
+function setConsent(e) {
+  try {
+    localStorage.setItem(CONSENT_KEY, e);
+  } catch {}
+}
+// UTM-urile se păstrează în sessionStorage și pleacă cu formularul ca "câmpuri ascunse". Nu ajung niciodată în URL.
+function saveUtm() {
+  try {
+    let e = new URLSearchParams(location.search);
+    UTM_KEYS.forEach((t) => {
+      let n = e.get(t);
+      n && sessionStorage.setItem(t, n);
+    });
+  } catch {}
+}
+function getUtm() {
+  let e = {};
+  try {
+    UTM_KEYS.forEach((t) => {
+      let n = sessionStorage.getItem(t);
+      n && (e[t] = n);
+    });
+  } catch {}
+  return e;
+}
+saveUtm();
+// Pixelul se încarcă doar după "Accept". PageView pleacă imediat după inițializare.
+function loadPixel() {
+  if (!META_PIXEL_ID || window.fbq) return;
+  (function (e, t, n, r) {
+    if (e.fbq) return;
+    let i = (e.fbq = function () {
+      i.callMethod ? i.callMethod.apply(i, arguments) : i.queue.push(arguments);
+    });
+    (e._fbq || (e._fbq = i), (i.push = i), (i.loaded = !0), (i.version = `2.0`), (i.queue = []));
+    let a = t.createElement(n);
+    ((a.async = !0), (a.src = r));
+    let o = t.getElementsByTagName(n)[0];
+    o.parentNode.insertBefore(a, o);
+  })(window, document, `script`, `https://connect.facebook.net/en_US/fbevents.js`);
+  (window.fbq(`init`, META_PIXEL_ID), window.fbq(`track`, `PageView`));
+}
+// Lead: doar după trimiterea reușită a formularului. contentName = "clinici" sau "chatgpt-ads".
+// TODO(IDL): Conversions API (CAPI) se face server-side sau prin integrarea platformei de formular (eveniment Lead cu același event_id, ca Meta să deduplice).
+function trackLead(e) {
+  window.fbq && window.fbq(`track`, `Lead`, { content_name: e });
+}
+function ConsentBanner() {
+  let [e, t] = (0, D.useState)(!1);
+  if (
+    ((0, D.useEffect)(() => {
+      if (!META_PIXEL_ID) return;
+      let e = getConsent();
+      e === `granted` ? loadPixel() : e !== `denied` && t(!0);
+      let n = () => t(!0);
+      return (window.addEventListener(`idl-consent-open`, n), () => window.removeEventListener(`idl-consent-open`, n));
+    }, []),
+    !e)
+  )
+    return null;
+  let n = (e) => {
+    (setConsent(e), e === `granted` ? loadPixel() : window.fbq && window.fbq(`consent`, `revoke`), t(!1));
+  };
+  return (0, E.jsxs)(`div`, {
+    className: `idl-consent`,
+    role: `dialog`,
+    "aria-label": `Cookie-uri`,
+    children: [
+      // TODO(IDL): adaugă link spre politica de cookie-uri / confidențialitate când există pagina (acum nu există).
+      (0, E.jsx)(`p`, {
+        className: `text-sm text-ink leading-relaxed`,
+        children: `Folosim Meta Pixel ca să măsurăm de unde vin cererile și să îmbunătățim reclamele. Îl pornim doar dacă accepți.`,
+      }),
+      (0, E.jsxs)(`div`, {
+        className: `idl-consent-actions`,
+        children: [
+          (0, E.jsx)(`button`, { type: `button`, className: `idl-consent-btn`, onClick: () => n(`granted`), children: `Accept` }),
+          (0, E.jsx)(`button`, { type: `button`, className: `idl-consent-btn`, onClick: () => n(`denied`), children: `Refuz` }),
+        ],
+      }),
+    ],
+  });
+}
 var ap = `https://calendly.com/denisilie2/meeting`,
   op = `Alt domeniu`,
   sp = `Mă mai interesează și…`,
@@ -56,7 +153,7 @@ async function hp(e) {
 }
 var gp = `w-full px-4 py-3 rounded-xl bg-canvas border border-black/10 text-base text-ink placeholder:text-steel/50 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/10 transition-colors`;
 // Props (vin din pagină): services = opțiunile pasului 2; otherNote = notă sub "Alt domeniu"; otherExample = exemplul din câmpul "Alt domeniu".
-function _p({ source: e, title: t, niches: n, services: idlServices, otherNote: idlOtherNote, otherExample: idlOtherExample }) {
+function _p({ source: e, title: t, niches: n, services: idlServices, otherNote: idlOtherNote, otherExample: idlOtherExample, leadName: idlLeadName }) {
   let [r, i] = (0, D.useState)(0),
     [a, o] = (0, D.useState)({
       niche: ``,
@@ -126,12 +223,15 @@ function _p({ source: e, title: t, niches: n, services: idlServices, otherNote: 
         goal: a.goal.trim(),
         source: e,
         submission_date: new Date().toLocaleString(`ro-RO`),
+        ...getUtm(),
       };
       try {
         (await hp({
           ...n,
-          message: `Lead nou (${e}):\nNume: ${n.from_name}\nCompanie: ${n.company}\nEmail: ${n.from_email}\nTelefon: ${n.phone}\nWebsite: ${n.website}\nDomeniu: ${n.niche}\nServicii: ${n.services}\nCifră de afaceri: ${n.turnover}\nBuget: ${n.budget}\nObiectiv 6 luni: ${n.goal}`,
+          message: `Lead nou (${e}):\nNume: ${n.from_name}\nCompanie: ${n.company}\nEmail: ${n.from_email}\nTelefon: ${n.phone}\nWebsite: ${n.website}\nDomeniu: ${n.niche}\nServicii: ${n.services}\nCifră de afaceri: ${n.turnover}\nBuget: ${n.budget}\nObiectiv 6 luni: ${n.goal}${Object.entries(getUtm()).map(([e, t]) => `
+${e}: ${t}`).join(``)}`,
         }),
+          trackLead(idlLeadName),
           f(`sent`));
       } catch (e) {
         (console.error(`[EmailJS Error]`, e), f(`error`));
@@ -729,6 +829,12 @@ function Cp({ link: e, text: idlFooterText }) {
           className: `border-t border-white/10 pt-10 flex flex-col items-center`,
           children: [
             (0, E.jsx)(`p`, { className: `text-sm`, children: `© 2026 IDL Media. Toate drepturile rezervate.` }),
+            META_PIXEL_ID &&
+              (0, E.jsx)(`button`, {
+                onClick: () => window.dispatchEvent(new Event(`idl-consent-open`)),
+                className: `mt-4 text-sm text-steel hover:text-white transition-colors underline underline-offset-4 focus:outline-none`,
+                children: `Setări cookie-uri`,
+              }),
             (0, E.jsxs)(`div`, {
               id: `date-fiscale`,
               className: `mt-6`,
@@ -795,6 +901,7 @@ function wp({ href: e, label: t }) {
   );
 }
 export {
+  ConsentBanner,
   FounderSection,
   CAPACITY_NOTICE,
   SHOW_CAPACITY_NOTICE,
