@@ -1,6 +1,6 @@
 import {
   ConsentBanner,
-  FounderSection,
+  TeamSection,
   CAPACITY_NOTICE,
   SHOW_CAPACITY_NOTICE,
   _ as e,
@@ -15,7 +15,7 @@ import {
   p as l,
   r as u,
   t as d,
-} from "./MobileStickyCta-r4jCDQIo.js";
+} from "./MobileStickyCta-Mfl5UMnf.js";
 var f = e(r(), 1),
   p = (e) => e?.replace(/([a-z0-9])([A-Z])/g, `$1-$2`).toLowerCase();
 function m(e, t, n = []) {
@@ -1340,7 +1340,7 @@ function ge() {
             (0, Q.jsx)(pe, {}),
             (0, Q.jsx)(me, {}),
             (0, Q.jsx)(he, {}),
-            (0, Q.jsx)(FounderSection, {}),
+            (0, Q.jsx)(TeamSection, {}),
             (0, Q.jsx)(u, {
               id: `booking`,
               title: (0, Q.jsxs)(Q.Fragment, {

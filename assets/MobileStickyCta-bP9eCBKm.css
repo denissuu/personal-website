@@ -10,14 +10,33 @@
   }
 }
 
-/* "Cine lucrează la campania ta": poza rotundă în stânga, textul în dreapta; pe mobil una sub alta. */
-.idl-founder {
+/* "Cine lucrează la cererile dumneavoastră": 1-4 carduri centrate, oricâte ar fi.
+   2 pe rând pe mobil, 4 pe rând de la 768px; un card are cel mult 12rem. */
+.idl-team {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem 1.5rem;
+}
+.idl-member {
+  width: calc((100% - 1.5rem) / 2);
+  max-width: 12rem;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .idl-member {
+    width: calc((100% - 4.5rem) / 4);
+  }
+}
+.idl-member-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 1.25rem;
+  object-fit: cover;
+}
+/* Poza rotundă din studiul de caz (ascuns până există date reale). */
 .idl-avatar {
   width: 9rem;
   height: 9rem;
@@ -37,12 +56,6 @@
   color: var(--color-ink);
 }
 @media (min-width: 768px) {
-  .idl-founder {
-    flex-direction: row;
-    align-items: center;
-    gap: 3rem;
-    text-align: left;
-  }
   .idl-avatar {
     width: 11rem;
     height: 11rem;
@@ -59,7 +72,6 @@
   max-width: 40rem;
   margin: 0 auto;
   padding: 1rem 1.25rem;
-  padding-right: 4.5rem;
   background: var(--color-surface);
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 1.25rem;

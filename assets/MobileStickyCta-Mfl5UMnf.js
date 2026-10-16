@@ -747,13 +747,13 @@ function Sp({ id: e, title: t, text: n, form: r }) {
   });
 }
 // Secțiunea "Cine lucrează la cererile dumneavoastră" (pe ambele pagini, înainte de booking).
-// TODO(IDL): completează FOUNDER: numele real, poza reală (URL) și 2-3 rânduri reale (cine ești, de ce faci asta, oraș).
-var FOUNDER = {
-  name: `[NUME]`, // TODO(IDL): numele fondatorului
-  photo: ``, // TODO(IDL): poză reală fondator (URL). Gol = placeholder neutru, nu poză stock.
-  bio: ``, // TODO(IDL): 2-3 rânduri reale: cine ești, de ce faci asta, oraș
-};
-function FounderSection() {
+// Grila are loc pentru 1-4 oameni: adaugi un obiect în TEAM și cardul apare centrat (2 pe rând pe mobil, până la 4 pe desktop).
+// photo gol = placeholder neutru, nu poză stock. bio e opțional: 1-2 rânduri reale.
+var TEAM = [
+  { name: `Denis Ilie`, role: `Fondator`, photo: `/img/team/denis-ilie.jpg` },
+  { name: `Valentin`, role: `Dezvoltare afaceri`, photo: `/img/team/valentin.jpg` },
+];
+function TeamSection() {
   return (0, E.jsx)(`section`, {
     id: `cine-lucreaza`,
     className: `py-24 px-6 bg-canvas border-t border-black/5`,
@@ -767,46 +767,54 @@ function FounderSection() {
           className: `text-3xl md:text-5xl font-bold mb-12 text-center text-ink tracking-tight text-balance`,
           children: `Cine lucrează la cererile dumneavoastră`,
         }),
-        (0, E.jsxs)(Iu.div, {
-          initial: { opacity: 0, y: 20 },
-          whileInView: { opacity: 1, y: 0 },
-          viewport: { once: !0 },
-          transition: { duration: 0.6, ease: [0.32, 0.72, 0, 1] },
-          className: `idl-founder`,
-          children: [
-            FOUNDER.photo
-              ? (0, E.jsx)(`img`, { src: FOUNDER.photo, alt: FOUNDER.name, className: `idl-avatar` })
-              : (0, E.jsx)(`div`, {
-                  className: `idl-avatar idl-avatar-ph`,
-                  role: `img`,
-                  "aria-label": `Poza fondatorului urmează să fie adăugată`,
-                  children: (0, E.jsxs)(`svg`, {
-                    viewBox: `0 0 24 24`,
-                    width: 56,
-                    height: 56,
-                    fill: `none`,
-                    stroke: `currentColor`,
-                    strokeWidth: 1.5,
-                    strokeLinecap: `round`,
-                    strokeLinejoin: `round`,
-                    "aria-hidden": `true`,
-                    children: [(0, E.jsx)(`circle`, { cx: 12, cy: 8, r: 4 }), (0, E.jsx)(`path`, { d: `M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8` })],
-                  }),
-                }),
-            (0, E.jsxs)(`div`, {
-              className: `idl-founder-text`,
-              children: [
-                (0, E.jsxs)(`p`, { className: `text-lg md:text-xl font-semibold text-ink`, children: [FOUNDER.name, `, fondator IDL Media.`] }),
-                FOUNDER.bio && (0, E.jsx)(`p`, { className: `text-steel leading-relaxed mt-3`, children: FOUNDER.bio }),
-                (0, E.jsx)(`a`, {
-                  href: `#date-fiscale`,
-                  onClick: () => window.dispatchEvent(new Event(`idl-open-fiscal`)),
-                  className: `idl-link inline-block mt-4 text-sm text-steel transition-colors underline underline-offset-4`,
-                  children: `Date Fiscale`,
-                }),
-              ],
-            }),
-          ],
+        (0, E.jsx)(`div`, {
+          className: `idl-team`,
+          children: TEAM.map((e, t) =>
+            (0, E.jsxs)(
+              Iu.div,
+              {
+                initial: { opacity: 0, y: 20 },
+                whileInView: { opacity: 1, y: 0 },
+                viewport: { once: !0 },
+                transition: { duration: 0.6, delay: t * 0.1, ease: [0.32, 0.72, 0, 1] },
+                className: `idl-member`,
+                children: [
+                  e.photo
+                    ? (0, E.jsx)(`img`, { src: e.photo, alt: e.name, width: 400, height: 400, loading: `lazy`, className: `idl-member-photo` })
+                    : (0, E.jsx)(`div`, {
+                        className: `idl-member-photo idl-avatar-ph`,
+                        role: `img`,
+                        "aria-label": `Poza urmează să fie adăugată`,
+                        children: (0, E.jsxs)(`svg`, {
+                          viewBox: `0 0 24 24`,
+                          width: 56,
+                          height: 56,
+                          fill: `none`,
+                          stroke: `currentColor`,
+                          strokeWidth: 1.5,
+                          strokeLinecap: `round`,
+                          strokeLinejoin: `round`,
+                          "aria-hidden": `true`,
+                          children: [(0, E.jsx)(`circle`, { cx: 12, cy: 8, r: 4 }), (0, E.jsx)(`path`, { d: `M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8` })],
+                        }),
+                      }),
+                  (0, E.jsx)(`p`, { className: `mt-4 text-lg font-semibold text-ink leading-snug`, children: e.name }),
+                  (0, E.jsx)(`p`, { className: `mt-1 text-sm text-steel`, children: e.role }),
+                  e.bio && (0, E.jsx)(`p`, { className: `mt-3 text-sm text-steel leading-relaxed`, children: e.bio }),
+                ],
+              },
+              e.name,
+            ),
+          ),
+        }),
+        (0, E.jsx)(`p`, {
+          className: `mt-12 text-center`,
+          children: (0, E.jsx)(`a`, {
+            href: `#date-fiscale`,
+            onClick: () => window.dispatchEvent(new Event(`idl-open-fiscal`)),
+            className: `idl-link inline-block text-sm text-steel transition-colors underline underline-offset-4`,
+            children: `Date Fiscale`,
+          }),
         }),
       ],
     }),
@@ -920,7 +928,7 @@ function wp({ href: e, label: t }) {
 }
 export {
   ConsentBanner,
-  FounderSection,
+  TeamSection,
   CAPACITY_NOTICE,
   SHOW_CAPACITY_NOTICE,
   u as _,

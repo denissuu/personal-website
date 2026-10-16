@@ -1,6 +1,6 @@
 import {
   ConsentBanner,
-  FounderSection,
+  TeamSection,
   _ as e,
   a as t,
   c as n,
@@ -18,7 +18,7 @@ import {
   s as m,
   t as h,
   u as g,
-} from "./MobileStickyCta-r4jCDQIo.js";
+} from "./MobileStickyCta-Mfl5UMnf.js";
 var _ = e(a(), 1),
   v = new Map([
     [
@@ -1620,7 +1620,7 @@ function ne() {
             (0, V.jsx)(Y, {}),
             (0, V.jsx)(X, {}),
             (0, V.jsx)(Q, {}),
-            (0, V.jsx)(FounderSection, {}),
+            (0, V.jsx)(TeamSection, {}),
             (0, V.jsx)(p, {
               id: `schedule-call`,
               title: (0, V.jsxs)(V.Fragment, {
