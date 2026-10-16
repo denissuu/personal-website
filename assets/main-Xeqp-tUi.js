@@ -18,7 +18,7 @@ import {
   s as m,
   t as h,
   u as g,
-} from "./MobileStickyCta-iHeYPVvF.js";
+} from "./MobileStickyCta-lp5fzunT.js";
 var _ = e(a(), 1),
   v = new Map([
     [
@@ -574,7 +574,7 @@ function H() {
                   `Like-urile nu plătesc salariile. `,
                   (0, V.jsx)(`span`, {
                     className: `text-red-600 underline decoration-red-200 underline-offset-8`,
-                    children: `Programările, da.`,
+                    children: `Lucrările, da.`,
                   }),
                 ],
               }),
@@ -589,11 +589,11 @@ function H() {
                     children: (0, V.jsxs)(`p`, {
                       className: `leading-relaxed text-lg md:text-xl italic pl-6 border-l-2 border-red-200`,
                       children: [
-                        `"Am băgat bani în Ads și am primit doar like-uri, veniturile au rămas la fel." `,
+                        `„Am plătit reclame. Am primit like-uri și cereri de preț. Lucrări semnate, puține.” `,
                         (0, V.jsx)(`br`, {}),
                         (0, V.jsx)(`span`, {
                           className: `text-sm font-medium not-italic mt-4 block text-steel/70 uppercase tracking-widest`,
-                          children: `— Fraza pe care o auzim cel mai des de la cei care vin la noi.`,
+                          children: `— Dacă ați spus asta despre agenția de dinainte, citiți mai departe.`,
                         }),
                       ],
                     }),
@@ -605,9 +605,9 @@ function H() {
                     variants: { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } },
                     className: `space-y-6 font-medium text-ink`,
                     children: [
-                      `Agenții care cer mii de euro pe "branding" fără tracking.`,
-                      `Freelanceri care "se joacă" cu bugetul tău de Ads.`,
-                      `Zero sisteme de recuperare a clienților care NU au cumpărat.`,
+                      `Rapoarte cu afișări și click-uri, fără nicio lucrare semnată în ele.`,
+                      `Cereri care stau o zi până le sună cineva.`,
+                      `Oferte trimise, după care nu mai sună nimeni.`,
                     ].map((e, t) =>
                       (0, V.jsxs)(
                         r.li,
@@ -649,11 +649,11 @@ function U() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `text-xs font-bold text-steel/60 uppercase tracking-[0.3em] mb-16`,
-          children: `Construim sisteme de achiziție pentru`,
+          children: `Aducem vizite tehnice calificate pentru`,
         }),
         (0, V.jsx)(`div`, {
           className: `flex flex-wrap justify-center items-center gap-12 md:gap-20`,
-          children: [`Stomatologie`, `Optică`, `Beauty`, `Estetică`].map((e, t) =>
+          children: [`Pompe de căldură`, `Fotovoltaice`, `Baterii`, `Instalații termice`].map((e, t) =>
             (0, V.jsxs)(
               r.div,
               {
@@ -681,9 +681,9 @@ function U() {
           transition: { delay: 0.8, duration: 0.8, ease: [0.32, 0.72, 0, 1] },
           className: `mt-20 text-sm md:text-base text-steel/60 max-w-2xl mx-auto tracking-wide`,
           children: [
-            `Același sistem funcționează și pentru `,
-            (0, V.jsx)(`strong`, { className: `text-ink`, children: `alte afaceri cu servicii premium` }),
-            ` și valoare mare per client.`,
+            `Lucrăm cu firme care fac `,
+            (0, V.jsx)(`strong`, { className: `text-ink`, children: `montajul cu echipele proprii` }),
+            `.`,
           ],
         }),
       ],
@@ -695,24 +695,24 @@ function W() {
     {
       id: `01`,
       icon: (0, V.jsx)(D, { weight: `duotone`, className: `w-10 h-10 text-blue-500` }),
-      title: `Atrage`,
-      desc: `Trafic calificat prin Social Media & Ads.`,
+      title: `Aduce`,
+      desc: `Cereri din Google și Facebook pentru serviciul pe care îl vreți acum.`,
       bg: `bg-blue-50/50`,
       border: `border-blue-100`,
     },
     {
       id: `02`,
       icon: (0, V.jsx)(T, { weight: `duotone`, className: `w-10 h-10 text-teal-500` }),
-      title: `Convertește`,
-      desc: `Pagini făcute pentru un singur tratament, care separă pacienții serioși de curioși.`,
+      title: `Califică`,
+      desc: `Răspuns în 5 minute și întrebările care contează, înainte de deplasare.`,
       bg: `bg-teal-50/50`,
       border: `border-teal-100`,
     },
     {
       id: `03`,
       icon: (0, V.jsx)(N, { weight: `duotone`, className: `w-10 h-10 text-indigo-500` }),
-      title: `Menține`,
-      desc: `Sisteme de loializare și optimizare pentru venit recurent.`,
+      title: `Urmărește`,
+      desc: `Follow-up după ofertă și recontactarea cererilor vechi.`,
       bg: `bg-indigo-50/50`,
       border: `border-indigo-100`,
     },
@@ -731,7 +731,7 @@ function W() {
             viewport: { once: !0 },
             className: `text-4xl md:text-5xl font-bold text-ink inline-flex items-center justify-center gap-4 flex-wrap`,
             children: [
-              `Cum aducem pacienți noi`,
+              `Cum ajunge o cerere la vizită`,
               (0, V.jsx)(`span`, {
                 className: `relative top-1`,
                 children: (0, V.jsx)(`img`, { src: `./img/flow-logo.webp`, alt: `IDL Flow`, className: `h-8 md:h-10 object-contain` }),
@@ -776,18 +776,18 @@ function W() {
     }),
   });
 }
-// Studiu de caz: ascuns până există date reale, cu acordul clinicii.
+// Studiu de caz: ascuns până există un client real din nișă, cu acordul lui scris. Fără date inventate.
 // TODO(IDL): completează CASE_STUDY cu date reale și setează SHOW_CASE_STUDY = true. Până atunci nu se afișează.
 var SHOW_CASE_STUDY = !1,
   CASE_STUDY = {
-    clinic: `[TODO(IDL): nume clinică]`,
+    clinic: `[TODO(IDL): nume firmă]`,
     city: `[TODO(IDL): oraș]`,
     before: `[TODO(IDL): situația inițială]`,
     done: `[TODO(IDL): ce am făcut]`,
     result: `[TODO(IDL): rezultat în cifre, reale]`,
     period: `[TODO(IDL): perioada]`,
-    quote: `[TODO(IDL): citat, cu acordul clinicii]`,
-    photo: ``, // TODO(IDL): URL poză, cu acordul clinicii
+    quote: `[TODO(IDL): citat, cu acordul clientului]`,
+    photo: ``, // TODO(IDL): URL poză, cu acordul clientului
   };
 function CaseStudy() {
   let e = CASE_STUDY;
@@ -865,7 +865,7 @@ function G() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `text-3xl md:text-5xl font-bold mb-6 text-ink tracking-tight`,
-          children: `Ce construim pentru fiecare tip de clinică`,
+          children: `Ce facem pentru pompe de căldură și ce facem pentru fotovoltaice`,
         }),
         (0, V.jsx)(r.p, {
           initial: { opacity: 0, y: 20 },
@@ -873,7 +873,7 @@ function G() {
           viewport: { once: !0 },
           transition: { delay: 0.1 },
           className: `text-steel mb-20 max-w-2xl mx-auto text-lg leading-relaxed`,
-          children: `Fiecare nișă pierde pacienți în alt loc. Iată unde ne uităm și ce construim.`,
+          children: `Fiecare serviciu pierde lucrări în alt loc. Aici ne uităm și asta construim.`,
         }),
         (0, V.jsxs)(`div`, {
           className: `grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-6xl mx-auto`,
@@ -883,24 +883,24 @@ function G() {
               delay: 0,
               hover: `hover:bg-blue-50/20`,
               badgeClass: `bg-blue-100 text-blue-700`,
-              badge: `Stomatologie`,
-              title: `Stomatologie: de la curioși la programări`,
-              problem: `Multe cereri pe implanturi vin de la oameni care întreabă doar de preț, iar clinica depinde aproape doar de recomandări.`,
-              build: `Pagină dedicată ofertei, reclame Google și Meta pe oamenii care caută tratamentul, SMS automat în 60 de secunde după fiecare cerere, retargeting pentru cei nehotărâți.`,
+              badge: `Pompe de căldură`,
+              title: `Pompe de căldură: de la „cât costă” la vizită`,
+              problem: `Toamna cererile vin toate odată. Multe vor doar un preț la telefon, pentru case fără izolație.`,
+              build: `Campanii toamna și iarna, întrebări despre casă și încălzirea actuală înainte de vizită, follow-up după ofertă.`,
               measureClass: `text-blue-600`,
-              measure: `Cost per programare, rata cerere → programare, rata de prezentare la consultație.`,
+              measure: `Cost pe vizită tehnică, rata cerere → vizită, rata vizită → lucrare semnată.`,
             }),
             idlCard({
               side: 1,
               delay: 0.1,
               hover: `hover:bg-teal-50/20`,
               badgeClass: `bg-teal-100 text-teal-700`,
-              badge: `Optică Medicală`,
-              title: `Optică medicală: vânzarea după consultație`,
-              problem: `Pacienții vin pentru consultații, dar cumpără ramele și lentilele din altă parte.`,
-              build: `Pagină care explică oferta (lentile progresive, rame de brand), reclame Google și Meta pe cei care caută, retargeting pentru cei care au fost la consultație și n-au cumpărat.`,
+              badge: `Fotovoltaice și baterii`,
+              title: `Fotovoltaice: oferta care nu ajunge la semnare`,
+              problem: `Omul compară trei oferte după prețul pe kW. Iarna echipele stau.`,
+              build: `Campanii primăvara și vara, întrebări despre consum, acoperiș și baterie, follow-up 30-60 de zile.`,
               measureClass: `text-teal-600`,
-              measure: `Cost per consultație, rata consultație → vânzare, valoarea medie a unei vânzări.`,
+              measure: `Cost pe lucrare semnată, rata ofertă → semnare, valoarea medie a unei lucrări.`,
             }),
           ],
         }),
@@ -934,29 +934,29 @@ function K() {
           children: [
             {
               num: `01`,
-              title: `Audit: unde pierzi pacienți acum`,
-              desc: `Nu începem fără cifre. Analizăm afacerea ta și identificăm unde se pierd banii acum.`,
+              title: `Audit: drumul unei cereri`,
+              desc: `Urmărim o cerere de la reclamă la semnare și notăm unde se oprește.`,
             },
             {
               num: `02`,
-              title: `Site și pagini care transformă vizitele în programări`,
-              desc: `Ne asigurăm că site-ul și paginile tale îi fac pe vizitatori să ceară o programare, nu să plece.`,
+              title: `Răspuns în sub 5 minute`,
+              desc: `Mesaj la fiecare cerere, inclusiv seara și în weekend. Omul simte că a dat de o firmă serioasă.`,
             },
             {
               num: `03`,
-              title: `Conținut care răspunde la întrebări înainte de consultație`,
-              desc: `Pacientul ajunge la tine știind deja ce tratament vrea și de ce costă cât costă. Mai puține discuții despre preț, mai multe programări.`,
+              title: `Calificare, apoi calendar`,
+              desc: `Proprietar, casă, suprafață, încălzire, consum, buget, termen. Vizitele serioase intră în calendarul echipei.`,
             },
             {
               num: `04`,
-              title: `Reclame pe Google și Meta`,
-              desc: `Te punem în fața oamenilor care caută deja tratamentul pe care îl oferi, pe Google, și în fața celor din zona ta care au nevoie de el, pe Facebook și Instagram.`,
+              title: `Campanii pe sezon`,
+              desc: `Pe Google pentru cei care caută „pompă de căldură” sau „fotovoltaice”. Pe Facebook și Instagram pentru proprietarii din zonă.`,
               channels: [{ name: `Google Ads` }, { name: `Meta Ads` }],
             },
             {
               num: `05`,
-              title: `Pacienți care revin`,
-              desc: `Remindere și reactivarea pacienților care n-au mai venit de mult.`,
+              title: `Follow-up și cereri vechi`,
+              desc: `30-60 de zile după ofertă. Plus recontactarea cererilor care n-au semnat.`,
             },
           ].map((e, t) =>
             (0, V.jsxs)(
@@ -1039,7 +1039,7 @@ function K() {
             href: `#schedule-call`,
             className: `group relative inline-flex items-center justify-center px-8 py-4 bg-ink text-white rounded-full font-semibold shadow-[0_10px_40px_-10px_rgba(24,24,27,0.5)] hover:bg-black transition-colors`,
             children: [
-              (0, V.jsx)(`span`, { className: `pr-12`, children: `Aplică pentru analiza gratuită` }),
+              (0, V.jsx)(`span`, { className: `pr-12`, children: `Cereți analiza gratuită` }),
               (0, V.jsx)(`div`, {
                 className: `absolute right-2 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-transform duration-300`,
                 children: (0, V.jsx)(c, { weight: `bold` }),
@@ -1063,8 +1063,8 @@ function q() {
           viewport: { once: !0 },
           className: `text-3xl md:text-5xl font-bold mb-20 text-ink tracking-tight`,
           children: [
-            `Ce faci cu o agenție clasică și `,
-            (0, V.jsx)(`span`, { className: `text-blue-600`, children: `ce faci cu noi` }),
+            `Ce primiți de la o agenție obișnuită și `,
+            (0, V.jsx)(`span`, { className: `text-blue-600`, children: `ce primiți de la noi` }),
           ],
         }),
         (0, V.jsx)(r.div, {
@@ -1082,11 +1082,11 @@ function q() {
                   children: [
                     (0, V.jsx)(`th`, {
                       className: `p-3 md:p-8 font-semibold uppercase text-[10px] md:text-xs tracking-[0.2em] text-steel w-1/3`,
-                      children: `Caracteristică`,
+                      children: `Ce comparăm`,
                     }),
                     (0, V.jsx)(`th`, {
                       className: `p-3 md:p-8 font-semibold uppercase text-[10px] md:text-xs tracking-[0.2em] text-steel bg-black/5 w-1/3`,
-                      children: `Agenție Clasică / Freelancer`,
+                      children: `Agenție obișnuită / freelancer`,
                     }),
                     (0, V.jsx)(`th`, {
                       className: `p-3 md:p-8 font-semibold uppercase text-[10px] md:text-xs tracking-[0.2em] text-blue-800 bg-blue-50/50 w-1/3`,
@@ -1098,18 +1098,18 @@ function q() {
               (0, V.jsx)(`tbody`, {
                 className: `divide-y divide-black/5`,
                 children: [
-                  { feature: `Obiectiv Principal`, classic: `Reach, Like-uri, Impresii`, idl: `Programări și încasări` },
+                  { feature: `Ce urmărește`, classic: `Afișări, like-uri, cost pe cerere`, idl: `Vizite tehnice și lucrări semnate` },
                   {
-                    feature: `Model de Lucru`,
-                    classic: `Execuție reactivă (la cerere)`,
-                    idl: `Lucrăm pe obiective de programări, nu pe task-uri`,
+                    feature: `După ce vine cererea`,
+                    classic: `Cererea ajunge la dumneavoastră și atât`,
+                    idl: `Răspuns în 5 minute, calificare, vizită în calendar`,
                   },
                   {
-                    feature: `Tehnologie`,
-                    classic: `Postări pe Facebook`,
-                    idl: `Pagini dedicate, CRM, remindere automate, chatbot pentru programări`,
+                    feature: `După ofertă`,
+                    classic: `Nu se mai ocupă nimeni`,
+                    idl: `Follow-up 30-60 de zile`,
                   },
-                  { feature: `Comunicare`, classic: `Rapoarte lunare pe care nu le înțelegi`, idl: `Transparență totală pe vânzări` },
+                  { feature: `Raportul lunar`, classic: `Grafice cu afișări și click-uri`, idl: `Cereri, vizite, lucrări semnate și costul fiecăreia` },
                 ].map((e, t) =>
                   (0, V.jsxs)(
                     r.tr,
@@ -1154,7 +1154,7 @@ function J() {
               whileInView: { opacity: 1, y: 0 },
               viewport: { once: !0 },
               className: `text-4xl md:text-5xl font-bold mb-6 text-ink tracking-tight`,
-              children: `Trei variante de colaborare`,
+              children: `Trei variante, după unde se pierd lucrările`,
             }),
             (0, V.jsx)(r.p, {
               initial: { opacity: 0, y: 20 },
@@ -1162,7 +1162,7 @@ function J() {
               viewport: { once: !0 },
               transition: { delay: 0.1 },
               className: `text-lg text-steel leading-relaxed`,
-              children: `Fiecare clinică pornește din alt punct. După analiza gratuită îți recomandăm una dintre aceste 3 variante, în funcție de obiectivul tău de creștere.`,
+              children: `Pornim de la pasul care vă costă cel mai mult acum: cererea, vizita sau oferta.`,
             }),
           ],
         }),
@@ -1170,41 +1170,41 @@ function J() {
           className: `grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch`,
           children: [
             {
-              title: `Fundația de Conversie`,
-              desc: `Pentru clinicile care au trafic, dar pierd pacienți din cauza unei prezențe online slabe.`,
+              title: `Fundația`,
+              desc: `Pentru firmele care au cereri, dar le pierd între formular și vizită.`,
               features: [
-                `Pagină dedicată, făcută pentru programări`,
-                `Formular care separă pacienții serioși de curioși`,
-                `Optimizare Google Business Profile`,
-                `Integrare tracking și Analytics de bază`,
+                `Pagină de cerere de ofertă, făcută pentru vizite`,
+                `Întrebări care separă proprietarii serioși de cei care doar întreabă de preț`,
+                `Google Business Profile pus la punct`,
+                `Măsurarea cererilor, de la sursă la vizită`,
               ],
-              btn: `Solicită analiza gratuită`,
+              btn: `Cereți analiza gratuită`,
               popular: !1,
             },
             {
-              title: `Sistemul de Achiziție`,
-              desc: `Pentru clinicile care vor un flux predictibil de 15-30 pacienți noi lunar.`,
+              title: `Sistemul de cereri`,
+              desc: `Pentru firmele care vor cereri noi în fiecare lună și vizite doar unde se poate semna.`,
               features: [
                 `Tot ce include Fundația`,
-                `Campanii Google și Meta targetate pe intenție`,
-                `Sistem automat de Follow-up`,
-                `Retargeting pentru lead-urile nehotărâte`,
-                `Garanție de Performanță Condiționată`,
+                `Campanii Google și Meta pe serviciul de sezon`,
+                `Răspuns în 5 minute și follow-up după ofertă`,
+                `Reclame pentru cei care au cerut ofertă și n-au semnat`,
+                `Garanție cu prag scris în contract`,
               ],
-              btn: `Aplică pentru acest sistem`,
+              btn: `Aplicați pentru acest pachet`,
               popular: !0,
             },
             {
-              title: `Dominare Locală`,
-              desc: `Pentru clinicile care vor să devină prima alegere în orașul lor.`,
+              title: `Tot anul`,
+              desc: `Pentru firmele care vor echipele ocupate și în extrasezon.`,
               features: [
-                `Tot ce include Sistemul de Achiziție`,
-                `Conținut care răspunde la întrebările pacienților`,
-                `Automatizări CRM & Email Marketing`,
-                `Creșterea bugetelor pe ce funcționează`,
-                `Raportare avansată și consultanță strategică lunară`,
+                `Tot ce include Sistemul de cereri`,
+                `Conținut care răspunde la întrebările clienților înainte de vizită`,
+                `Recontactarea cererilor vechi și a clienților fără service`,
+                `Mai mult buget doar pe ce aduce lucrări semnate`,
+                `Raport detaliat și o discuție de plan în fiecare lună`,
               ],
-              btn: `Discută planul de creștere`,
+              btn: `Discutăm planul pe sezon`,
               popular: !1,
             },
           ].map((e, t) =>
@@ -1220,7 +1220,7 @@ function J() {
                   e.popular &&
                     (0, V.jsx)(`div`, {
                       className: `absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-surface text-blue-600 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase shadow-md border border-black/5`,
-                      children: `CEL MAI SOLICITAT`,
+                      children: `RECOMANDAT`,
                     }),
                   (0, V.jsx)(`h3`, { className: `text-2xl font-bold mb-4`, children: e.title }),
                   (0, V.jsx)(`p`, {
@@ -1301,7 +1301,7 @@ function Y() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `text-3xl md:text-5xl font-bold mb-20 text-center text-ink tracking-tight`,
-          children: `Este potrivit pentru tine?`,
+          children: `Pentru cine este și pentru cine nu`,
         }),
         (0, V.jsxs)(`div`, {
           className: `grid grid-cols-1 md:grid-cols-2 gap-8`,
@@ -1317,10 +1317,10 @@ function Y() {
                 (0, V.jsx)(`ul`, {
                   className: `space-y-6`,
                   children: [
-                    `Antreprenori care vor creștere predictibilă`,
-                    `Clinici care doresc un flux predictibil de pacienți noi`,
-                    `Branduri care apreciază automatizarea`,
-                    `Echipe care vor reducerea no-show și creșterea recurenței`,
+                    `Firme cu echipe proprii de montaj`,
+                    `Patroni care vor să știe câte lucrări au venit din reclame`,
+                    `Firme care pot face o vizită tehnică în aceeași săptămână`,
+                    `Firme care vor lucrări și în extrasezon`,
                   ].map((e, t) =>
                     (0, V.jsxs)(
                       `li`,
@@ -1351,10 +1351,10 @@ function Y() {
                 (0, V.jsx)(`ul`, {
                   className: `space-y-6`,
                   children: [
-                    `Cei care caută rezultate peste noapte fără efort`,
-                    `Afaceri fără un produs/serviciu clar definit`,
-                    `Cei care nu doresc să testeze și să optimizeze`,
-                    `Afaceri care nu sunt gata pentru volum nou de clienți`,
+                    `Cine vrea rezultate din prima săptămână`,
+                    `Firme fără echipă liberă pentru vizite noi`,
+                    `Cine se bate doar pe cel mai mic preț`,
+                    `Cine nu vrea să ne spună ce lucrări s-au semnat`,
                   ].map((e, t) =>
                     (0, V.jsxs)(
                       `li`,
@@ -1384,7 +1384,7 @@ function Y() {
             href: `#schedule-call`,
             className: `group relative inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-full font-semibold shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)] hover:bg-blue-700 transition-colors`,
             children: [
-              (0, V.jsx)(`span`, { className: `pr-12`, children: `Solicită o analiză gratuită` }),
+              (0, V.jsx)(`span`, { className: `pr-12`, children: `Cereți o analiză gratuită` }),
               (0, V.jsx)(`div`, {
                 className: `absolute right-2 w-10 h-10 rounded-full bg-black/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-transform duration-300`,
                 children: (0, V.jsx)(c, { weight: `bold` }),
@@ -1419,7 +1419,7 @@ function X() {
             whileInView: { opacity: 1, y: 0 },
             viewport: { once: !0 },
             className: `text-3xl md:text-5xl font-bold mb-8 tracking-tight`,
-            children: `Garanție de Performanță Condiționată`,
+            children: `Garanția se măsoară în cereri calificate, nu în click-uri`,
           }),
           (0, V.jsx)(r.p, {
             initial: { opacity: 0, y: 20 },
@@ -1427,7 +1427,7 @@ function X() {
             viewport: { once: !0 },
             transition: { delay: 0.1 },
             className: `text-xl md:text-2xl text-steel font-light mb-12 leading-relaxed`,
-            children: `Suntem atât de siguri pe sistemul nostru încât ne asumăm riscul. Dacă în primele 90 de zile nu generăm un număr minim agreat de lead-uri calificate, lucrăm complet GRATUIT (nu plătești taxa de management) încă o lună până când atingem targetul.`,
+            children: `Pragul îl scriem în contract: câte cereri calificate în primele 90 de zile și ce răspunsuri din formular le fac calificate. Dacă nu îl atingem, luna următoare nu plătiți taxa de management.`,
           }),
           (0, V.jsx)(r.div, {
             initial: { opacity: 0, y: 20 },
@@ -1437,7 +1437,7 @@ function X() {
             className: `inline-block max-w-2xl p-6 rounded-2xl border border-white/10 bg-white/5`,
             children: (0, V.jsx)(`span`, {
               className: `font-bold text-base md:text-lg leading-relaxed bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent`,
-              children: `Bugetul de reclame îl plătești tu direct platformelor, ca să ai control total. Riscul nostru e munca: dacă nu atingem pragul agreat, lucrăm o lună fără taxa de management.`,
+              children: `Bugetul de reclame îl plătiți direct platformelor, ca să aveți control total. Noi riscăm o lună de muncă.`,
             }),
           }),
         ],
@@ -1447,32 +1447,32 @@ function X() {
 }
 var Z = [
   {
-    q: `Am nevoie de cunoștințe tehnice ca să folosesc sistemul?`,
-    a: `Nu. Partea tehnică rămâne în grija noastră: pagini, reclame, tracking, automatizări. Tu te ocupi de pacienți, noi de sistemul care ți-i aduce.`,
+    q: `Trebuie să mă ocup eu de partea tehnică?`,
+    a: `Nu. Noi facem campaniile, paginile, răspunsul la cereri și follow-up-ul. Dumneavoastră și echipele faceți vizitele și montajul.`,
   },
   {
     q: `Există o perioadă contractuală minimă?`,
-    a: `Colaborăm lunar, dar reclamele și automatizările au nevoie de o perioadă de calibrare ca să strângă date reale. De aceea cerem un angajament inițial, pe care îl stabilim împreună după analiza gratuită.`,
+    a: `Colaborăm lunar. Primele luni servesc la calibrare: vedem ce cereri ajung la vizită și ce se semnează. De aceea cerem un angajament inițial, stabilit după analiza gratuită.`,
   },
   {
-    q: `Ce se întâmplă dacă am deja o prezență online, dar nu generează profit?`,
-    a: `Facem un audit al ce ai acum. Dacă site-ul și paginile existente pot fi îmbunătățite, le optimizăm ca mai mulți vizitatori să ceară o programare. Dacă sunt prea vechi sau îți limitează rezultatele, îți recomandăm să le refaci.`,
+    q: `Am deja site și reclame. Ce schimbați?`,
+    a: `Ne uităm întâi la ce aveți. Dacă site-ul aduce cereri, îl păstrăm și lucrăm pe ce se întâmplă după cerere. Dacă e vechi și pierde oameni, vă spunem direct.`,
   },
   {
     q: `În cât timp pornește totul?`,
-    a: `Conținutul organic se construiește în timp. Reclamele, odată lansate, dau primele date și primele cereri, de regulă, la scurt timp după lansare. La analiza gratuită îți spunem cum arată calendarul pentru clinica ta.`,
+    a: `Reclamele dau primele cereri, de regulă, la scurt timp după lansare. Lucrările semnate vin mai târziu, pentru că între ofertă și semnare trec săptămâni. La analiză vă spunem cum arată calendarul pentru firma dumneavoastră.`,
   },
   {
     q: `Am nevoie de buget mare de reclame?`,
-    a: `Nu neapărat. Stabilim un buget potrivit cu obiectivele tale, după analiza gratuită. În plus, remindere și reactivarea pacienților existenți aduc programări fără să plătești pentru o reclamă nouă de fiecare dată.`,
+    a: `Nu neapărat. Stabilim bugetul după analiza gratuită, pe sezon. Iar cererile vechi care n-au semnat pot aduce lucrări fără o reclamă nouă.`,
   },
   {
-    q: `Pe ce platforme rulați reclamele? Faceți și reclame în ChatGPT pentru clinici?`,
-    a: `Pentru clinici lucrăm pe Google și Meta (Facebook și Instagram). Reclamele în ChatGPT nu sunt disponibile acum pentru servicii medicale în România: politica OpenAI interzice în general reclamele pentru servicii de sănătate în afara SUA. Dacă regulile se schimbă, îți spunem noi primii. Nu-ți vindem un canal pe care nu-l poți folosi.`,
+    q: `Pe ce platforme rulați reclamele? Și în ChatGPT?`,
+    a: `Pe Google și Meta (Facebook și Instagram). ChatGPT Ads îl testăm separat, cu buget mic, după ce verificăm că firma e eligibilă. Detalii pe pagina ChatGPT Ads.`,
   },
   {
     q: `De ce o pagină simplă și nu un site mare?`,
-    a: `Pentru viteză și mai puține distrageri. O pagină simplă duce vizitatorul spre o singură acțiune: programarea. Fără meniuri și secțiuni care îl fac să plece.`,
+    a: `Omul care vine din reclamă vrea un singur lucru: o ofertă. Pagina îi cere doar ce vă trebuie pentru vizită. Fără meniuri care îl trimit în altă parte.`,
   },
 ];
 function Q() {
@@ -1491,7 +1491,7 @@ function Q() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `text-4xl md:text-5xl font-bold mb-16 text-center text-ink tracking-tight`,
-          children: `Întrebări Frecvente`,
+          children: `Întrebări frecvente`,
         }),
         (0, V.jsx)(`div`, {
           className: `space-y-4`,
@@ -1559,10 +1559,10 @@ function Q() {
 }
 var $ = {
   source: `Home – Sisteme de achiziție`,
-  title: `Solicită analiza gratuită a afacerii tale`,
-  niches: [`Clinică stomatologică`, `Optică medicală`, `Clinică de estetică`, `Salon / beauty`, `Altă clinică medicală`, `Alt domeniu`],
-  services: [`Landing page-uri pentru conversii`, `Servicii de producție & strategie de marketing`, `Paid traffic (Google, Meta)`],
-  leadName: `clinici`,
+  title: `Cereți analiza gratuită pentru firma dumneavoastră`,
+  niches: [`Pompe de căldură`, `Fotovoltaice și baterii`, `Pompe de căldură și fotovoltaice`, `Instalații termice și sanitare`, `Climatizare`, `Alt domeniu`],
+  services: [`Pagină de cerere de ofertă`, `Răspuns la cereri și calificare înainte de vizită`, `Foto, video și plan de campanii`, `Reclame Google și Facebook`],
+  leadName: `pompe-fotovoltaice`,
 };
 function ne() {
   return (
@@ -1584,30 +1584,30 @@ function ne() {
         (0, V.jsx)(d, {
           links: [
             { href: `#cum-functioneaza`, label: `Cum funcționează` },
-            { href: `#pe-nise`, label: `Pe nișe` },
+            { href: `#pe-nise`, label: `Pe servicii` },
             { href: `#pachete`, label: `Pachete` },
             { href: `#faq`, label: `Întrebări` },
           ],
-          switchTo: { href: `/chatgpt-ads`, label: `ChatGPT Ads (alte domenii)` },
+          switchTo: { href: `/chatgpt-ads`, label: `ChatGPT Ads (canal nou)` },
           cta: { href: `#schedule-call`, label: `Analiză gratuită` },
         }),
         (0, V.jsxs)(`main`, {
           children: [
             (0, V.jsx)(s, {
-              eyebrow: `Sisteme de achiziție pentru clinici`,
+              eyebrow: `Pentru firme de pompe de căldură și fotovoltaice`,
               title: (0, V.jsxs)(V.Fragment, {
                 children: [
-                  `Pacienți noi programați în fiecare săptămână. `,
-                  (0, V.jsx)(`span`, { className: `text-blue-600`, children: `Nu doar din recomandări.` }),
+                  `Noi ducem cererea până la vizită. `,
+                  (0, V.jsx)(`span`, { className: `text-blue-600`, children: `Echipele dumneavoastră fac montajul.` }),
                 ],
               }),
-              text: `Nu vindem like-uri sau postări. Construim sistemul complet care duce omul de la prima reclamă până la programare: campanii pe Google și Meta, pagini care convertesc și follow-up automat.`,
+              text: `Campaniile aduc cererile. Răspundem în 5 minute și întrebăm ce contează: proprietar, tip de casă, încălzire, buget, termen. Vizitele serioase intră direct în calendarul echipei.`,
               points: [
-                `Campanii Google și Meta, gestionate cap-coadă`,
-                `Follow-up automat: fiecare lead primește SMS în 60 de secunde`,
-                `Raportare pe programări și încasări, nu pe like-uri`,
+                `Campanii pe sezon: pompe de căldură toamna, fotovoltaice primăvara`,
+                `Follow-up 30-60 de zile după ofertă`,
+                `Raport lunar: cât a costat fiecare lucrare semnată`,
               ],
-              note: `Nu e un apel de vânzare. E o analiză de 15 minute în care vedem, cu cifre, dacă te putem ajuta să crești profitul afacerii.`,
+              note: `Nu e un apel de vânzare. În 15 minute vă arătăm la ce pas se pierd cererile acum.`,
               form: $,
             }),
             (0, V.jsx)(U, {}),
@@ -1625,18 +1625,18 @@ function ne() {
               id: `schedule-call`,
               title: (0, V.jsxs)(V.Fragment, {
                 children: [
-                  `Află în 15 minute unde pierde `,
-                  (0, V.jsx)(`span`, { className: `text-blue-600`, children: `afacerea ta clienți.` }),
+                  `15 minute ca să vedeți `,
+                  (0, V.jsx)(`span`, { className: `text-blue-600`, children: `unde vă scapă lucrările.` }),
                 ],
               }),
-              text: `Completează formularul și analizăm afacerea ta înainte de apel. Vii la discuție cu cifre concrete, nu cu o prezentare de vânzări.`,
+              text: `Cererea de vineri, oferta fără follow-up, drumul la omul fără buget. Ne uităm la toate înainte de apel.`,
               form: $,
             }),
           ],
         }),
         (0, V.jsx)(u, {
-          link: { href: `/chatgpt-ads`, label: `ChatGPT Ads pentru afacerea ta →` },
-          text: `Sisteme de achiziție pentru clinici: reclame pe Google și Meta, pagini dedicate și follow-up automat.`,
+          link: { href: `/chatgpt-ads`, label: `ChatGPT Ads pentru firma dumneavoastră →` },
+          text: `Cereri de ofertă pentru firme de pompe de căldură și fotovoltaice. Campanii, răspuns în 5 minute, calificare până la vizită.`,
         }),
         (0, V.jsx)(h, { href: `#schedule-call`, label: `Durează circa un minut` }),
         (0, V.jsx)(ConsentBanner, {}),

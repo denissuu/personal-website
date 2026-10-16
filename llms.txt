@@ -1,38 +1,34 @@
-# IDL Media - Sisteme de achiziție pacienți pentru clinici
+# IDL Media - Cereri de ofertă pentru firme de pompe de căldură și fotovoltaice
 
-> Partener de creștere pentru clinici stomatologice și optici medicale din România.
+> Lucrăm cu firme din România care montează pompe de căldură, fotovoltaice, baterii și instalații termice cu echipele proprii.
 
-IDL Media nu este o agenție clasică de social media. Nu vindem postări sau like-uri. Construim sistemul care duce omul de la prima reclamă până la programare: reclame pe Google și Meta, pagini dedicate fiecărui tratament, SMS automat după fiecare cerere și remindere pentru pacienți.
+IDL Media se ocupă de cereri până la vizita tehnică. Montajul rămâne la echipele firmei. Nu raportăm like-uri sau afișări, ci cereri, vizite tehnice și lucrări semnate.
 
-## Ce facem pentru clinici:
+## Ce facem:
 
-1. **Reclame pe Google și Meta:**
-   - Campanii pe Google (oameni care caută deja tratamentul) și pe Facebook și Instagram (oameni din zona clinicii).
-   - Reclamele în ChatGPT nu sunt disponibile pentru servicii medicale în România: politica OpenAI interzice în general reclamele pentru servicii de sănătate în afara SUA.
+1. **Campanii pe Google și Meta, pe sezon:**
+   - Pe Google, pentru oamenii care caută „pompă de căldură” sau „fotovoltaice”. Pe Facebook și Instagram, pentru proprietarii din zonă.
+   - Pompe de căldură toamna și iarna, fotovoltaice și baterii primăvara și vara.
 
-2. **Site și pagini care transformă vizitele în programări:**
-   - Pagini făcute pentru un singur tratament, care separă pacienții serioși de curioși.
-   - Formulare de calificare, tracking și optimizare Google Business Profile pentru căutări locale.
+2. **Răspuns în sub 5 minute la fiecare cerere:**
+   - Inclusiv seara și în weekend, prin SMS sau WhatsApp.
 
-3. **Follow-up automat și conținut:**
-   - SMS automat în 60 de secunde după fiecare cerere.
-   - Conținut care răspunde la întrebări înainte de consultație, ca să fie mai puține discuții despre preț.
-   - CRM, automatizări de email și chatbot pentru programări.
+3. **Calificare înainte de vizita tehnică:**
+   - Proprietar, tip de casă, suprafață, încălzire actuală, consum, buget, termen.
+   - Vizitele serioase intră direct în calendarul echipei, cu toate datele clientului.
 
-4. **Pacienți care revin:**
-   - Remindere și reactivarea pacienților care n-au mai venit de mult.
-   - Retargeting pentru pacienții nehotărâți (de exemplu la implanturi dentare sau lentile progresive).
+4. **Follow-up după ofertă și cereri vechi:**
+   - Revenim 30-60 de zile după ofertă, ca „mă mai gândesc” să nu devină tăcere.
+   - Recontactăm cererile vechi care n-au semnat și clienții fără service.
 
-## Nișe:
-- **Clinici stomatologice:** de la cereri de preț la programări, cu măsurare pe cost per programare.
-- **Optici medicale:** de la consultație la vânzarea de ochelari sau rame.
+5. **Raport lunar:**
+   - Câte cereri, câte vizite, câte lucrări semnate și cât a costat fiecare lucrare semnată.
 
 ## Garanție:
-Bugetul de reclame îl plătește clientul direct platformelor. Dacă în primele 90 de zile nu atingem pragul de lead-uri calificate agreat, lucrăm o lună fără taxa de management.
+Bugetul de reclame îl plătește clientul direct platformelor. Pragul se scrie în contract: câte cereri calificate în primele 90 de zile și ce răspunsuri din formular le fac calificate. Dacă nu atingem pragul, luna următoare clientul nu plătește taxa de management.
 
-## Alte domenii: ChatGPT Ads
-Pentru turism și cazare, magazine online, servicii locale, cursuri și software B2B: https://www.idl-media.com/chatgpt-ads
-Domeniile medical, financiar, juridic, pariuri, alcool și tutun nu sunt eligibile acum pentru reclame în ChatGPT în România.
+## ChatGPT Ads
+Un canal în plus pe lângă Google și Facebook, nu un înlocuitor. Proprietarii întreabă ChatGPT ce pompă de căldură sau ce sistem fotovoltaic să aleagă, iar reclama poate apărea sub răspuns. Verificăm întâi eligibilitatea firmei, apoi testăm 14 zile cu buget mic și decidem după cererile reale: https://www.idl-media.com/chatgpt-ads
 
 **Contact:** https://calendly.com/denisilie2/meeting
 **Website:** https://www.idl-media.com/

@@ -18,9 +18,9 @@ Error generating stack: `+e.message+`
   return rp(Md(e));
 }
 // Mesajul de capacitate apare pe ambele pagini (badge în secțiunea de booking + cardul de capacitate de pe cealaltă pagină).
-// TODO(IDL): confirmă că e adevărat; dacă nu, setează false.
+// Dezactivat: limita de capacitate nu se afișează nicăieri. Pune !0 doar dacă e confirmată.
 var CAPACITY_NOTICE = `Maximum 2 clienți noi pe lună`,
-  SHOW_CAPACITY_NOTICE = !0;
+  SHOW_CAPACITY_NOTICE = !1;
 
 // --- Meta Pixel, consimțământ (GDPR) și UTM ---
 // TODO(IDL): pune ID-ul Meta Pixel (Events Manager > Surse de date). Gol = nu se încarcă nimic, iar bannerul de cookie-uri nu apare.
@@ -77,7 +77,7 @@ function loadPixel() {
   })(window, document, `script`, `https://connect.facebook.net/en_US/fbevents.js`);
   (window.fbq(`init`, META_PIXEL_ID), window.fbq(`track`, `PageView`));
 }
-// Lead: doar după trimiterea reușită a formularului. contentName = "clinici" sau "chatgpt-ads".
+// Lead: doar după trimiterea reușită a formularului. contentName = "pompe-fotovoltaice" sau "chatgpt-ads".
 // TODO(IDL): Conversions API (CAPI) se face server-side sau prin integrarea platformei de formular (eveniment Lead cu același event_id, ca Meta să deduplice).
 function trackLead(e) {
   window.fbq && window.fbq(`track`, `Lead`, { content_name: e });
@@ -106,7 +106,7 @@ function ConsentBanner() {
       // TODO(IDL): adaugă link spre politica de cookie-uri / confidențialitate când există pagina (acum nu există).
       (0, E.jsx)(`p`, {
         className: `text-sm text-ink leading-relaxed`,
-        children: `Folosim Meta Pixel ca să măsurăm de unde vin cererile și să îmbunătățim reclamele. Îl pornim doar dacă accepți.`,
+        children: `Folosim Meta Pixel ca să măsurăm de unde vin cererile și să îmbunătățim reclamele. Îl pornim doar dacă acceptați.`,
       }),
       (0, E.jsxs)(`div`, {
         className: `idl-consent-actions`,
@@ -122,22 +122,22 @@ var ap = `https://calendly.com/denisilie2/meeting`,
   op = `Alt domeniu`,
   sp = `Mă mai interesează și…`,
   lp = [
-    `Sub 100.000 €`,
-    `100.000 – 250.000 €`,
-    `250.000 – 500.000 €`,
-    `500.000 – 1 mil. €`,
-    `1 – 3 mil. €`,
-    `3 – 10 mil. €`,
-    `Peste 10 mil. €`,
+    `Sub 500.000 lei`,
+    `500.000 – 1,25 mil. lei`,
+    `1,25 – 2,5 mil. lei`,
+    `2,5 – 5 mil. lei`,
+    `5 – 15 mil. lei`,
+    `15 – 50 mil. lei`,
+    `Peste 50 mil. lei`,
   ],
-  up = [`Sub 1.000 € / lună`, `1.000 – 3.000 € / lună`, `3.000 – 5.000 € / lună`, `Peste 5.000 € / lună`],
+  up = [`Sub 5.000 lei / lună`, `5.000 – 15.000 lei / lună`, `15.000 – 25.000 lei / lună`, `Peste 25.000 lei / lună`],
   dp = [
-    { id: `niche`, question: `În ce domeniu activezi?` },
-    { id: `services`, question: `De ce ai nevoie? Bifează tot ce te interesează.` },
-    { id: `turnover`, question: `Care este cifra de afaceri anuală a companiei?` },
-    { id: `budget`, question: `Ce buget lunar de publicitate ai în plan?` },
-    { id: `goal`, question: `Ce obiectiv vrei să atingi în următoarele 6 luni?` },
-    { id: `contact`, question: `Unde te putem contacta?` },
+    { id: `niche`, question: `Ce lucrări faceți?` },
+    { id: `services`, question: `De ce aveți nevoie? Bifați tot ce vă interesează.` },
+    { id: `turnover`, question: `Care e cifra de afaceri anuală a firmei?` },
+    { id: `budget`, question: `Ce buget lunar de reclame aveți în plan?` },
+    { id: `goal`, question: `Ce vreți să se schimbe în următoarele 6 luni?` },
+    { id: `contact`, question: `Unde vă putem contacta?` },
   ],
   fp = dp.length - 1,
   pp = [0.32, 0.72, 0, 1],
@@ -172,10 +172,10 @@ function _p({ source: e, title: t, niches: n, services: idlServices, otherNote: 
     [l, u] = (0, D.useState)(!1),
     [d, f] = (0, D.useState)(`idle`),
     p = {
-      name: a.name.trim().length < 2 ? `Scrie-ne numele tău.` : ``,
-      company: a.company.trim().length < 2 ? `Scrie numele companiei.` : ``,
-      phone: a.phone.replace(/\D/g, ``).length < 9 ? `Verifică numărul de telefon.` : ``,
-      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(a.email.trim()) ? `` : `Verifică adresa de email.`,
+      name: a.name.trim().length < 2 ? `Scrieți-ne numele dumneavoastră.` : ``,
+      company: a.company.trim().length < 2 ? `Scrieți numele firmei.` : ``,
+      phone: a.phone.replace(/\D/g, ``).length < 9 ? `Verificați numărul de telefon.` : ``,
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(a.email.trim()) ? `` : `Verificați adresa de email.`,
     },
     m = (e, t) => o((n) => ({ ...n, [e]: t })),
     h = dp[r].id,
@@ -256,7 +256,7 @@ ${e}: ${t}`).join(``)}`,
         }),
         (0, E.jsx)(`p`, {
           className: `text-steel leading-relaxed mb-8 max-w-sm mx-auto`,
-          children: `De obicei revenim în aceeași zi lucrătoare. Vrei să câștigi timp? Alege acum ora discuției de 15 minute.`,
+          children: `De obicei revenim în aceeași zi lucrătoare. Dacă vreți să câștigați timp, alegeți acum ora discuției de 15 minute.`,
         }),
         (0, E.jsxs)(`a`, {
           href: x,
@@ -264,7 +264,7 @@ ${e}: ${t}`).join(``)}`,
           rel: `noopener noreferrer`,
           className: `group relative inline-flex items-center justify-center pl-8 pr-16 py-4 bg-blue-600 text-white rounded-full font-semibold shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)] hover:bg-blue-700 active:scale-[0.98] transition-all`,
           children: [
-            `Alege ora în calendar`,
+            `Alegeți ora în calendar`,
             (0, E.jsx)(`span`, {
               className: `absolute right-2 w-10 h-10 rounded-full bg-black/10 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300`,
               children: (0, E.jsx)(Zu, { weight: `bold` }),
@@ -343,9 +343,9 @@ ${e}: ${t}`).join(``)}`,
                             error: l ? p.name : ``,
                           }),
                           (0, E.jsx)(vp, {
-                            label: `Numele companiei`,
+                            label: `Numele firmei`,
                             autoComplete: `organization`,
-                            placeholder: `Clinica Dental Plus SRL`,
+                            placeholder: `Firma Dumneavoastră SRL`,
                             value: a.company,
                             onChange: (e) => m(`company`, e.target.value),
                             error: l ? p.company : ``,
@@ -385,14 +385,14 @@ ${e}: ${t}`).join(``)}`,
                             (0, E.jsxs)(`p`, {
                               className: `sm:col-span-2 p-3.5 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 leading-relaxed`,
                               children: [
-                                `Nu am putut trimite formularul. Încearcă din nou sau`,
+                                `Nu am putut trimite formularul. Încercați din nou sau`,
                                 ` `,
                                 (0, E.jsx)(`a`, {
                                   href: `https://calendly.com/denisilie2/meeting`,
                                   target: `_blank`,
                                   rel: `noopener noreferrer`,
                                   className: `font-semibold underline underline-offset-2`,
-                                  children: `programează direct discuția`,
+                                  children: `programați direct discuția`,
                                 }),
                                 `.`,
                               ],
@@ -464,8 +464,8 @@ ${e}: ${t}`).join(``)}`,
                             g &&
                             (0, E.jsx)(`input`, {
                               autoFocus: !0,
-                              "aria-label": `Domeniul tău de activitate`,
-                              placeholder: `Scrie domeniul tău (ex: ${idlOtherExample || `imobiliare, clinică veterinară`})`,
+                              "aria-label": `Ce lucrări faceți`,
+                              placeholder: `Scrieți ce lucrări faceți (ex: ${idlOtherExample || `climatizare, izolații`})`,
                               value: a.otherNiche,
                               onChange: (e) => m(`otherNiche`, e.target.value),
                               className: ip(gp, `mt-3`),
@@ -474,8 +474,8 @@ ${e}: ${t}`).join(``)}`,
                             _ &&
                             (0, E.jsx)(`input`, {
                               autoFocus: !0,
-                              "aria-label": `Ce te mai interesează`,
-                              placeholder: `Mă mai interesează și… (ex: automatizări, SEO, filmări)`,
+                              "aria-label": `Ce vă mai interesează`,
+                              placeholder: `Mă mai interesează și… (ex: site nou, SEO, filmări)`,
                               value: a.moreServices,
                               onChange: (e) => m(`moreServices`, e.target.value),
                               className: ip(gp, `mt-3`),
@@ -484,8 +484,8 @@ ${e}: ${t}`).join(``)}`,
                             (0, E.jsx)(`textarea`, {
                               autoFocus: !0,
                               rows: 4,
-                              "aria-label": `Obiectivul tău pentru următoarele 6 luni`,
-                              placeholder: `Ex: 40 de programări noi pe lună, lansarea unui serviciu nou, dublarea cererilor de ofertă…`,
+                              "aria-label": `Ce vreți în următoarele 6 luni`,
+                              placeholder: `Ex: echipele ocupate și iarna, mai puține drumuri degeaba, 15 lucrări semnate pe lună…`,
                               value: a.goal,
                               onChange: (e) => m(`goal`, e.target.value),
                               className: ip(gp, `resize-none`),
@@ -496,7 +496,7 @@ ${e}: ${t}`).join(``)}`,
                               disabled: !v,
                               className: `mt-4 w-full group relative inline-flex items-center justify-center pl-8 pr-16 py-3.5 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 active:scale-[0.98] transition-all disabled:bg-blue-600/40 disabled:cursor-not-allowed`,
                               children: [
-                                `Continuă`,
+                                `Continuați`,
                                 (0, E.jsx)(`span`, {
                                   className: `absolute right-2 w-9 h-9 rounded-full bg-black/10 flex items-center justify-center`,
                                   children: (0, E.jsx)(Yu, { weight: `bold` }),
@@ -523,7 +523,7 @@ ${e}: ${t}`).join(``)}`,
                 : (0, E.jsx)(`span`, {}),
               (0, E.jsxs)(`span`, {
                 className: `inline-flex items-center gap-1.5 text-right`,
-                children: [(0, E.jsx)(sd, { weight: `bold`, className: `shrink-0` }), `Folosim datele doar ca să te contactăm.`],
+                children: [(0, E.jsx)(sd, { weight: `bold`, className: `shrink-0` }), `Folosim datele doar ca să vă contactăm.`],
               }),
             ],
           }),
@@ -623,9 +623,9 @@ function bp({ eyebrow: e, title: t, text: n, points: r, note: i, form: a }) {
   });
 }
 var xp = [
-  { title: `Completezi formularul`, desc: `6 pași scurți, circa un minut.` },
-  { title: `Analizăm afacerea ta`, desc: `Ne uităm la prezența online, la reclamele actuale și la nișa ta, înainte de apel.` },
-  { title: `Discuție de 15 minute`, desc: `Primești concluziile și un plan concret. Tu decizi dacă mergem mai departe.` },
+  { title: `Completați formularul`, desc: `6 pași scurți, circa un minut.` },
+  { title: `Ne uităm la firma dumneavoastră`, desc: `Site, reclame, pagina de cerere și zona în care lucrați, înainte de apel.` },
+  { title: `Discuție de 15 minute`, desc: `Primiți concluziile și un plan. Dumneavoastră decideți dacă mergem mai departe.` },
 ];
 function Sp({ id: e, title: t, text: n, form: r }) {
   let [i, a] = (0, D.useState)(`form`);
@@ -700,7 +700,7 @@ function Sp({ id: e, title: t, text: n, form: r }) {
                 className: `inline-flex p-1.5 rounded-full bg-canvas border border-black/10`,
                 children: [
                   [`form`, `Formular rapid`, ad],
-                  [`calendly`, `Programează direct`, Zu],
+                  [`calendly`, `Programați direct`, Zu],
                 ].map(([e, t, n]) =>
                   (0, E.jsxs)(
                     `button`,
@@ -727,7 +727,7 @@ function Sp({ id: e, title: t, text: n, form: r }) {
                     ? (0, E.jsx)(_p, { ...r })
                     : (0, E.jsx)(`iframe`, {
                         src: `${ap}?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=2563eb`,
-                        title: `Programează discuția strategică`,
+                        title: `Programați discuția`,
                         className: `w-full h-[1000px] md:h-[680px] rounded-2xl`,
                       }),
               }),
@@ -738,7 +738,7 @@ function Sp({ id: e, title: t, text: n, form: r }) {
     }),
   });
 }
-// Secțiunea "Cine lucrează la campania ta" (pe ambele pagini, înainte de booking).
+// Secțiunea "Cine lucrează la cererile dumneavoastră" (pe ambele pagini, înainte de booking).
 // TODO(IDL): completează FOUNDER: numele real, poza reală (URL) și 2-3 rânduri reale (cine ești, de ce faci asta, oraș).
 var FOUNDER = {
   name: `[NUME]`, // TODO(IDL): numele fondatorului
@@ -757,7 +757,7 @@ function FounderSection() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `text-3xl md:text-5xl font-bold mb-12 text-center text-ink tracking-tight text-balance`,
-          children: `Cine lucrează la campania ta`,
+          children: `Cine lucrează la cererile dumneavoastră`,
         }),
         (0, E.jsxs)(Iu.div, {
           initial: { opacity: 0, y: 20 },
@@ -893,7 +893,7 @@ function wp({ href: e, label: t }) {
             href: e,
             tabIndex: n ? 0 : -1,
             className: `inline-flex items-center justify-center gap-1 px-4 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-600 text-white hover:bg-blue-700 active:scale-95 transition-all shrink-0`,
-            children: [`Aplică`, (0, E.jsx)(Yu, { weight: `bold`, className: `w-3.5 h-3.5` })],
+            children: [`Aplicați`, (0, E.jsx)(Yu, { weight: `bold`, className: `w-3.5 h-3.5` })],
           }),
         ],
       }),

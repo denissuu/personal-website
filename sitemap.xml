@@ -3,18 +3,18 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.idl-media.com/</loc>
-    <lastmod>2026-09-30T10:00:00+00:00</lastmod>
+    <lastmod>2026-10-16T10:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.idl-media.com/img/logo.webp</image:loc>
-      <image:title>IDL Media - Agentie Marketing Stomatologie si Optica Medicala</image:title>
-      <image:caption>Sisteme automatizate de achizitie pacienti pentru clinici</image:caption>
+      <image:title>IDL Media - Cereri de oferta pentru firme de pompe de caldura si fotovoltaice</image:title>
+      <image:caption>Campanii, raspuns in 5 minute si calificare pana la vizita tehnica</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://www.idl-media.com/chatgpt-ads</loc>
-    <lastmod>2026-09-30T12:00:00+00:00</lastmod>
+    <lastmod>2026-10-16T10:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

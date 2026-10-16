@@ -15,7 +15,7 @@ import {
   p as l,
   r as u,
   t as d,
-} from "./MobileStickyCta-iHeYPVvF.js";
+} from "./MobileStickyCta-lp5fzunT.js";
 var f = e(r(), 1),
   p = (e) => e?.replace(/([a-z0-9])([A-Z])/g, `$1-$2`).toLowerCase();
 function m(e, t, n = []) {
@@ -422,7 +422,7 @@ function ue() {
                   className: `max-w-[85%] bg-blue-50/80 text-ink rounded-2xl rounded-tr-none p-3.5 border border-blue-100/80`,
                   children: (0, Q.jsx)(`p`, {
                     className: `leading-relaxed text-xs sm:text-sm`,
-                    children: `Căutăm o pensiune la munte pentru un weekend prelungit, cu doi copii mici. Ceva la maxim 3 ore de București?`,
+                    children: `Am o casă de 150 mp din 1990, cu centrală pe gaz. Merită o pompă de căldură?`,
                   }),
                 }),
                 (0, Q.jsx)(`div`, {
@@ -443,7 +443,7 @@ function ue() {
                   children: [
                     (0, Q.jsx)(`p`, {
                       className: `text-steel text-xs sm:text-sm leading-relaxed`,
-                      children: `Valea Prahovei și zona Rucăr-Bran sunt cele mai accesibile. Uită-te după locuri cu mic dejun inclus, spațiu de joacă pentru copii și anulare gratuită.`,
+                      children: `Depinde de izolație și de calorifere. Cere întâi un calcul al necesarului termic, apoi compară costul anual cu factura la gaz.`,
                     }),
                     (0, Q.jsxs)(`div`, {
                       className: `p-4 rounded-2xl bg-canvas border border-black/10`,
@@ -454,13 +454,13 @@ function ue() {
                         }),
                         (0, Q.jsx)(`h4`, {
                           className: `text-ink font-bold text-sm tracking-tight mb-1`,
-                          children: `Pensiunea Ta · Valea Prahovei`,
+                          children: `Firma Dumneavoastră · Pompe de căldură`,
                         }),
                         (0, Q.jsx)(`p`, {
                           className: `text-steel text-xs leading-relaxed mb-3`,
-                          children: `Mic dejun inclus, loc de joacă pentru copii. Rezervi direct, fără comision.`,
+                          children: `Calculul necesarului termic și ofertă după vizita tehnică.`,
                         }),
-                        (0, Q.jsx)(`span`, { className: `text-blue-600 text-xs font-semibold`, children: `Vezi disponibilitatea →` }),
+                        (0, Q.jsx)(`span`, { className: `text-blue-600 text-xs font-semibold`, children: `Cereți o vizită tehnică →` }),
                       ],
                     }),
                   ],
@@ -504,9 +504,9 @@ function de() {
                   transition: { delay: 0.1 },
                   className: `text-4xl md:text-5xl font-bold mb-6 text-ink tracking-tight font-display text-balance`,
                   children: [
-                    `Meta creează cerere.`,
+                    `Facebook trezește interesul.`,
                     ` `,
-                    (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `ChatGPT prinde cererea deja formulată.` }),
+                    (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `ChatGPT îl prinde pe omul care se informează.` }),
                   ],
                 }),
                 (0, Q.jsx)(t.p, {
@@ -515,7 +515,7 @@ function de() {
                   viewport: { once: !0 },
                   transition: { delay: 0.2 },
                   className: `text-lg text-steel leading-relaxed font-sans`,
-                  children: `Omul îi descrie lui ChatGPT exact ce are nevoie. Reclama ta apare în acea conversație, marcată ca sponsorizată, chiar în momentul în care decizia se formează.`,
+                  children: `Omul scrie în ChatGPT ce casă are și cu ce se încălzește. Reclama dumneavoastră poate apărea în acea conversație, marcată ca sponsorizată, chiar când își face planul.`,
                 }),
               ],
             }),
@@ -548,9 +548,9 @@ function de() {
                           children: [
                             (0, Q.jsx)(`span`, {
                               className: `text-[10px] font-bold uppercase tracking-widest text-red-700 bg-red-50 px-3 py-1.5 rounded-full border border-red-200`,
-                              children: `Canale mature`,
+                              children: `Canal cunoscut`,
                             }),
-                            (0, Q.jsx)(`h3`, { className: `text-2xl font-bold text-ink mt-3`, children: `Meta / TikTok Ads` }),
+                            (0, Q.jsx)(`h3`, { className: `text-2xl font-bold text-ink mt-3`, children: `Facebook și Instagram` }),
                           ],
                         }),
                         (0, Q.jsx)(`div`, {
@@ -564,15 +564,15 @@ function de() {
                       children: [
                         {
                           title: `Omul nu caută încă`,
-                          desc: `Oamenii intră pe Meta și TikTok ca să se relaxeze sau să vadă ce fac alții. Reclama ta le apare în feed și poate stârni interes înainte ca ei să caute ceva.`,
+                          desc: `Vede reclama între două postări. Poate deveni interesat, dar nu se gândea la pompa de căldură atunci.`,
                         },
                         {
-                          title: `Licitații cu mulți advertiseri`,
-                          desc: `Mulți advertiseri concurează pe aceleași audiențe, iar costul atenției poate crește de la an la an.`,
+                          title: `Multe firme pe aceiași oameni`,
+                          desc: `Firmele de instalații din zonă plătesc pentru aceiași proprietari. Costul poate crește în sezon.`,
                         },
                         {
-                          title: `Formate cunoscute`,
-                          desc: `Formatele sunt familiare și apar des în feed, așa că mesajele și creațiile trebuie reînnoite periodic.`,
+                          title: `Reclamele obosesc`,
+                          desc: `Oamenii văd des aceleași reclame, așa că mesajele trebuie schimbate periodic.`,
                         },
                       ].map((e, t) =>
                         (0, Q.jsxs)(
@@ -597,7 +597,7 @@ function de() {
                 }),
                 (0, Q.jsxs)(`div`, {
                   className: `mt-10 pt-6 border-t border-black/5 flex items-center gap-1.5 text-xs text-red-700 font-semibold`,
-                  children: [(0, Q.jsx)(se, { className: `w-4 h-4 text-red-500` }), `Tendință: costuri în creștere`],
+                  children: [(0, Q.jsx)(se, { className: `w-4 h-4 text-red-500` }), `De urmărit: costul pe cerere în sezon`],
                 }),
               ],
             }),
@@ -610,7 +610,7 @@ function de() {
               children: [
                 (0, Q.jsx)(`div`, {
                   className: `absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface text-blue-600 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase shadow-md border border-black/5 whitespace-nowrap`,
-                  children: `Oportunitate 2026`,
+                  children: `De testat în 2026`,
                 }),
                 (0, Q.jsxs)(`div`, {
                   children: [
@@ -636,16 +636,16 @@ function de() {
                       className: `space-y-6`,
                       children: [
                         {
-                          title: `Intenție clară`,
-                          desc: `Omul descrie exact ce are nevoie. Reclama ta apare când problema e deja formulată, nu în mijlocul unui scroll.`,
+                          title: `Omul se informează`,
+                          desc: `Întreabă ce sistem să aleagă pentru casa lui. Reclama apare când problema e deja formulată.`,
                         },
                         {
-                          title: `Concurență încă mică`,
-                          desc: `Formatul e nou în România. Puțini advertiseri din nișa ta rulează deja campanii aici.`,
+                          title: `Testat cu buget mic`,
+                          desc: `Pornim cu o sumă mică. Dacă aduce cereri care ajung la vizită, creștem bugetul. Dacă nu, ne oprim.`,
                         },
                         {
-                          title: `Avantajul primului venit`,
-                          desc: `Cine intră devreme strânge date, testează mesaje și află ce convertește înainte ca licitațiile să se aglomereze.`,
+                          title: `Învățați înaintea altora`,
+                          desc: `Cine testează devreme află primul ce întrebări aduc cereri bune.`,
                         },
                       ].map((e, t) =>
                         (0, Q.jsxs)(
@@ -675,13 +675,13 @@ function de() {
                       className: `flex items-center gap-1.5 font-bold text-white`,
                       children: [
                         (0, Q.jsx)(`span`, { className: `w-2 h-2 rounded-full bg-emerald-400 animate-ping` }),
-                        `Fereastră de early-adopter`,
+                        `Canal la început`,
                       ],
                     }),
                     (0, Q.jsxs)(`a`, {
                       href: `#booking`,
                       className: `inline-flex items-center gap-1 font-bold text-white hover:text-blue-100 transition-colors underline underline-offset-4`,
-                      children: [`Verifică nișa ta`, (0, Q.jsx)(E, { className: `w-3.5 h-3.5` })],
+                      children: [`Verificați eligibilitatea`, (0, Q.jsx)(E, { className: `w-3.5 h-3.5` })],
                     }),
                   ],
                 }),
@@ -694,7 +694,7 @@ function de() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `text-center text-lg font-semibold text-ink mt-16 max-w-2xl mx-auto`,
-          children: `Cele mai bune rezultate vin când le folosești împreună.`,
+          children: `ChatGPT nu înlocuiește Google și Facebook. E un canal în plus, testat separat.`,
         }),
       ],
     }),
@@ -717,7 +717,7 @@ function fe() {
               className: `inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-6 border border-blue-100/50 shadow-sm`,
               children: [
                 (0, Q.jsx)(F, { className: `w-3.5 h-3.5` }),
-                (0, Q.jsx)(`span`, { children: `Ciclul de viață al unei platforme publicitare` }),
+                (0, Q.jsx)(`span`, { children: `Cum evoluează un canal nou de reclame` }),
               ],
             }),
             (0, Q.jsxs)(t.h2, {
@@ -726,7 +726,7 @@ function fe() {
               viewport: { once: !0 },
               transition: { delay: 0.1 },
               className: `text-4xl md:text-5xl font-bold mb-6 text-ink tracking-tight font-display`,
-              children: [`De ce contează`, ` `, (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `când intri pe un canal nou` })],
+              children: [`De ce are sens un test acum,`, ` `, (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `cu buget mic` })],
             }),
             (0, Q.jsx)(t.p, {
               initial: { opacity: 0, y: 20 },
@@ -734,7 +734,7 @@ function fe() {
               viewport: { once: !0 },
               transition: { delay: 0.2 },
               className: `text-lg text-steel leading-relaxed font-sans`,
-              children: `Google Ads la început de drum, Facebook Ads în 2012, TikTok în 2020: la fiecare canal nou, primii advertiseri au avut timp să învețe canalul înainte ca licitațiile să se aglomereze. ChatGPT Ads este acum în prima fază.`,
+              children: `La un canal nou, primii care testează au timp să învețe ce funcționează. Nu știm cât durează perioada asta la ChatGPT. De aceea propunem un test mic, nu o mutare de buget.`,
             }),
           ],
         }),
@@ -743,22 +743,22 @@ function fe() {
           children: [
             {
               step: `01`,
-              phase: `Faza 1: Primii advertiseri`,
+              phase: `Faza 1: Testare`,
               window: `Acum`,
-              badge: `FEREASTRA ACTUALĂ`,
+              badge: `CANAL LA ÎNCEPUT`,
               badgeType: `active`,
-              headline: `Concurență mică • Licitații liniștite • Timp pentru testare`,
-              desc: `Puține afaceri au deja buget și proces pentru ChatGPT Ads. Cine intră acum își construiește datele și mesajele câștigătoare înainte ca licitațiile să se aglomereze.`,
+              headline: `Canal nou • Timp de testat`,
+              desc: `Formatul e nou. Un test cu buget mic arată ce întrebări aduc cereri.`,
               highlight: !0,
             },
             {
               step: `02`,
-              phase: `Faza 2: Adoptarea în masă`,
-              window: `Următoarele luni`,
+              phase: `Faza 2: Mai multe firme`,
+              window: `Mai târziu`,
               badge: `COSTURI ÎN CREȘTERE`,
               badgeType: `warning`,
-              headline: `Intră agențiile mari • Licitațiile se aglomerează`,
-              desc: `Studiile de caz încep să circule, agențiile propun canalul tuturor clienților, iar costurile se apropie treptat de cele din Google și Meta.`,
+              headline: `Intră și alte firme • Costul crește`,
+              desc: `De regulă, când un canal începe să aducă cereri, intră și concurența. Costul pe cerere crește.`,
               highlight: !1,
             },
             {
@@ -767,8 +767,8 @@ function fe() {
               window: `Pe termen lung`,
               badge: `CANAL SATURAT`,
               badgeType: `closed`,
-              headline: `Bugete mari • Avantajul timpuriu dispare`,
-              desc: `Brandurile mari mută bugete serioase în reclamele AI. Cine a intrat devreme are deja date și mesaje testate. Cine intră acum pornește de la zero, la costuri mai mari.`,
+              headline: `Bugete mari • Concurență ca pe Google`,
+              desc: `Cine a testat devreme știe deja ce mesaje aduc vizite. Cine începe atunci pornește de la zero.`,
               highlight: !1,
             },
           ].map((e, n) =>
@@ -784,7 +784,7 @@ function fe() {
                   e.highlight &&
                     (0, Q.jsx)(`div`, {
                       className: `absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-surface text-blue-600 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase shadow-md border border-black/5`,
-                      children: `FEREASTRA ACTIVĂ`,
+                      children: `AICI SUNTEM ACUM`,
                     }),
                   (0, Q.jsxs)(`div`, {
                     children: [
@@ -829,7 +829,7 @@ function fe() {
                         href: `#booking`,
                         className: `inline-flex items-center justify-between w-full text-xs font-bold text-white hover:text-blue-100 uppercase tracking-wider group`,
                         children: [
-                          (0, Q.jsx)(`span`, { children: `Intră în Faza 1` }),
+                          (0, Q.jsx)(`span`, { children: `Verificați dacă se poate` }),
                           (0, Q.jsx)(E, { className: `w-4 h-4 transition-transform group-hover:translate-x-1` }),
                         ],
                       }),
@@ -862,7 +862,7 @@ function fe() {
                       }),
                       (0, Q.jsx)(`p`, {
                         className: `text-sm text-steel mt-1`,
-                        children: `Implementăm fiecare campanie cap-coadă, așa că lucrăm cu puțini clienți în același timp.`,
+                        children: `Facem fiecare campanie cap-coadă, așa că lucrăm cu puține firme în același timp.`,
                       }),
                     ],
                   }),
@@ -871,7 +871,7 @@ function fe() {
               (0, Q.jsx)(`a`, {
                 href: `#booking`,
                 className: `shrink-0 px-6 py-3 rounded-full text-xs font-bold bg-ink text-white hover:bg-black transition-colors uppercase tracking-wider shadow-sm`,
-                children: `Aplică pentru analiză`,
+                children: `Aplicați pentru analiză`,
               }),
             ],
           }),
@@ -883,38 +883,38 @@ function pe() {
   let e = [
     {
       icon: (0, Q.jsx)(idlMapPin, { className: `w-8 h-8 text-teal-600` }),
-      title: `Turism, cazare & experiențe`,
-      subtitle: `Pensiuni, hoteluri, agenții de turism, evenimente`,
-      desc: `Oamenii îi cer lui ChatGPT să le planifice weekendul sau concediul. Locul tău apare ca opțiune concretă chiar când se decid unde să meargă.`,
-      metrics: `Potrivit pentru: cazare și experiențe cu rezervare directă`,
+      title: `Pompe de căldură`,
+      subtitle: `Case cu centrală pe gaz`,
+      desc: `Omul întreabă dacă merită pompa de căldură la casa lui și cât ar plăti iarna.`,
+      metrics: `Potrivit pentru: firme care fac și calculul necesarului termic`,
     },
     {
       icon: (0, Q.jsx)(ae, { className: `w-8 h-8 text-blue-600` }),
-      title: `E-commerce cu produse căutate`,
-      subtitle: `Branduri D2C și magazine de nișă`,
-      desc: `Oamenii cer comparații, alternative și recomandări de produse. Reclama ta apare în conversația în care se ia decizia de cumpărare.`,
-      metrics: `Potrivit pentru: coș mediu peste 200 RON`,
+      title: `Fotovoltaice`,
+      subtitle: `Case la curte, viitori prosumatori`,
+      desc: `Omul întreabă câți kW îi trebuie și în cât timp își scoate banii.`,
+      metrics: `Potrivit pentru: firme care se ocupă și de dosarul de prosumator`,
     },
     {
       icon: (0, Q.jsx)(A, { className: `w-8 h-8 text-indigo-600` }),
-      title: `Servicii B2B & high-ticket`,
-      subtitle: `Software, consultanță, servicii pentru companii (fără servicii financiare sau juridice)`,
-      desc: `Antreprenorii și managerii folosesc ChatGPT zilnic pentru research. Un singur contract câștigat poate acoperi costul campaniei pe luni întregi.`,
-      metrics: `Potrivit pentru: contracte peste 2.000 €`,
+      title: `Baterii`,
+      subtitle: `Clienți care au deja panouri`,
+      desc: `Omul întreabă dacă merită bateria și ce capacitate îi trebuie.`,
+      metrics: `Potrivit pentru: firme care montează și pe sisteme existente`,
     },
     {
       icon: (0, Q.jsx)(L, { className: `w-8 h-8 text-blue-700` }),
-      title: `Cursuri, academii & educație`,
-      subtitle: `Formare profesională și programe premium`,
-      desc: `Oamenii cer de la AI planuri de învățare și recomandări de cursuri. Programul tău apare ca opțiune concretă, în momentul potrivit.`,
-      metrics: `Potrivit pentru: programe cu ofertă validată`,
+      title: `Case noi`,
+      subtitle: `Proprietari care construiesc acum`,
+      desc: `Omul alege încălzirea înainte de finisaje: pompă de căldură, pardoseală, panouri.`,
+      metrics: `Potrivit pentru: firme care pot intra pe șantier înainte de finisaje`,
     },
     {
       icon: (0, Q.jsx)(idlWrench, { className: `w-8 h-8 text-teal-600` }),
-      title: `Servicii locale`,
-      subtitle: `Instalatori, centrale termice, fotovoltaice, amenajări, service auto`,
-      desc: `Când i se strică centrala sau vrea panouri solare, omul întreabă ChatGPT de unde să înceapă. Firma ta apare exact atunci.`,
-      metrics: `Potrivit pentru: lucrări cu valoare mare per client`,
+      title: `Service`,
+      subtitle: `Clienți cu pompă de căldură sau invertor care nu merg bine`,
+      desc: `Omul întreabă de ce i-a crescut factura sau ce înseamnă o eroare pe invertor.`,
+      metrics: `Potrivit pentru: firme cu echipă de service`,
     },
   ];
   return (0, Q.jsx)(`section`, {
@@ -940,9 +940,9 @@ function pe() {
               transition: { delay: 0.1 },
               className: `text-4xl md:text-5xl font-bold mb-6 text-ink tracking-tight font-display`,
               children: [
-                `Unde funcționează`,
+                `Ce întreabă proprietarii în ChatGPT`,
                 ` `,
-                (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `cel mai bine ChatGPT Ads` }),
+                (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `înainte să sune` }),
               ],
             }),
             (0, Q.jsx)(t.p, {
@@ -951,7 +951,7 @@ function pe() {
               viewport: { once: !0 },
               transition: { delay: 0.2 },
               className: `text-lg text-steel leading-relaxed font-sans`,
-              children: `ChatGPT Ads nu e pentru oricine. Are cel mai mult sens pentru afacerile cu o ofertă validată în piață și o valoare mare per client.`,
+              children: `„Pompă de căldură sau centrală?” „Câți kW îmi trebuie?” „Merită bateria?” Sunt întrebări puse înainte de o cerere de ofertă.`,
             }),
           ],
         }),
@@ -993,7 +993,7 @@ function pe() {
         }),
         (0, Q.jsx)(`p`, {
           className: `text-center text-xs text-steel/70 mt-12 max-w-3xl mx-auto leading-relaxed`,
-          children: `Medical, financiar, juridic, pariuri, alcool și tutun nu sunt eligibile acum în România. Îți spunem sincer dacă domeniul tău intră sau nu.`,
+          children: `Înainte de orice test, verificăm dacă firma și site-ul sunt eligibile. Dacă nu sunt, vă spunem.`,
         }),
       ],
     }),
@@ -1023,9 +1023,9 @@ function me() {
               transition: { delay: 0.1 },
               className: `text-4xl md:text-5xl font-bold mb-6 text-ink tracking-tight font-display`,
               children: [
-                `De la zero la primele lead-uri,`,
+                `Nu vă cerem să credeți pe cuvânt.`,
                 ` `,
-                (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `în 3 etape` }),
+                (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `Testăm 14 zile.` }),
               ],
             }),
             (0, Q.jsx)(t.p, {
@@ -1034,7 +1034,7 @@ function me() {
               viewport: { once: !0 },
               transition: { delay: 0.2 },
               className: `text-lg text-steel leading-relaxed font-sans`,
-              children: `ChatGPT Ads face parte din sistemul nostru complet de achiziție: reclamă, pagină care convertește și follow-up automat. Tu aprobi, noi executăm.`,
+              children: `Verificăm, lansăm, măsurăm. La final vedeți cereri și vizite reale din contul dumneavoastră, nu estimări.`,
             }),
           ],
         }),
@@ -1043,38 +1043,38 @@ function me() {
           children: [
             {
               num: `01`,
-              title: `Audit & maparea întrebărilor`,
+              title: `Verificare și întrebările proprietarilor`,
               timeline: `Săptămâna 1`,
               badge: `Cercetare`,
-              desc: `Aflăm ce întreabă clienții tăi ideali în ChatGPT înainte să cumpere și unde apare intenția reală de cumpărare în nișa ta.`,
+              desc: `Aflăm ce întreabă proprietarii în ChatGPT înainte să ceară ofertă. Și ce întrebări arată că omul e aproape de decizie.`,
               deliverables: [
-                `Lista întrebărilor cu intenție mare din nișa ta`,
-                `Verificarea eligibilității domeniului tău și a site-ului (acces pentru boții OpenAI, tracking)`,
-                `Unghiuri de mesaj pentru fiecare tip de întrebare`,
+                `Lista întrebărilor puse înainte de o cerere de ofertă`,
+                `Verificarea eligibilității firmei și a site-ului (acces pentru boții OpenAI, măsurare)`,
+                `Mesaje separate pentru pompe de căldură, fotovoltaice și baterii`,
               ],
             },
             {
               num: `02`,
-              title: `Configurare & lansare`,
+              title: `Configurare și lansare`,
               timeline: `Săptămâna 1 – 2`,
               badge: `Lansare`,
-              desc: `Construim campania, pagina de destinație și tracking-ul de conversii, ca să știi exact ce aduce fiecare leu investit.`,
+              desc: `Facem campania, pagina de cerere și măsurarea, ca să știți ce aduce fiecare leu.`,
               deliverables: [
                 `Structura campaniei și reclamele`,
-                `Landing page dedicat & tracking conversii`,
-                `Follow-up automat al lead-urilor (SMS / WhatsApp / CRM)`,
+                `Pagină de cerere de ofertă, cu întrebări de calificare`,
+                `Răspuns la fiecare cerere în 5 minute (SMS / WhatsApp)`,
               ],
             },
             {
               num: `03`,
-              title: `Sprint de test 14 zile`,
+              title: `Test de 14 zile`,
               timeline: `Săptămâna 2 – 4`,
               badge: `Decizie`,
-              desc: `Rulăm un test cu buget mic și structură completă. La final primești un raport cu cifre reale: câte afișări, câte clickuri, câte lead-uri și cât a costat fiecare. Plus recomandarea noastră clară: continuăm sau oprim.`,
+              desc: `Testăm cu buget mic. Raportul arată câte cereri, câte vizite tehnice și cât a costat fiecare. Semnările vin mai târziu. Plus recomandarea noastră: continuăm sau oprim.`,
               deliverables: [
-                `Cifre reale din contul tău, nu estimări`,
-                `Comparație cu Google și Meta pe aceeași ofertă`,
-                `Recomandare de continuare sau oprire`,
+                `Cifre din contul dumneavoastră, nu estimări`,
+                `Comparație cu Google și Facebook pe aceeași ofertă`,
+                `Recomandare: continuăm, creștem bugetul sau oprim`,
               ],
             },
           ].map((e, n) =>
@@ -1137,7 +1137,7 @@ function me() {
             href: `#booking`,
             className: `group relative inline-flex items-center justify-center px-8 py-4 bg-ink text-white rounded-full font-semibold shadow-[0_10px_40px_-10px_rgba(24,24,27,0.5)] hover:bg-black transition-colors`,
             children: [
-              (0, Q.jsx)(`span`, { className: `pr-12`, children: `Aplică pentru analiza gratuită` }),
+              (0, Q.jsx)(`span`, { className: `pr-12`, children: `Cereți analiza gratuită` }),
               (0, Q.jsx)(`div`, {
                 className: `absolute right-2 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-[1px] transition-transform duration-300`,
                 children: (0, Q.jsx)(E, { className: `w-4 h-4 text-white` }),
@@ -1154,31 +1154,31 @@ function he() {
     i = [
       {
         q: `Chiar se pot face reclame în ChatGPT?`,
-        a: `Da, pentru domeniile eligibile. Reclamele apar direct în conversații, marcate clar ca sponsorizate, separat de răspunsul ChatGPT. Formatul este nou în România, iar disponibilitatea și regulile se pot schimba.`,
+        a: `Da, pentru domeniile eligibile. Reclamele apar în conversație, marcate ca sponsorizate, separat de răspunsul ChatGPT. Formatul e nou în România, iar regulile se pot schimba.`,
       },
       {
-        q: `Ce domenii nu pot face reclame în ChatGPT?`,
-        a: `În România nu sunt eligibile acum: servicii medicale (inclusiv stomatologie, optică și estetică), servicii financiare (credite, asigurări, investiții), servicii juridice, pariuri, alcool și tutun, plus produse cu promisiuni de sănătate nesusținute. Merg bine turismul, magazinele online, serviciile locale, cursurile și software-ul. Regulile se schimbă des, așa că verificăm eligibilitatea pentru fiecare afacere înainte să lucrăm.`,
+        q: `O firmă de pompe de căldură sau fotovoltaice poate face reclame acolo?`,
+        a: `Instalațiile și fotovoltaicele intră la servicii locale, care sunt eligibile acum. Regulile se schimbă des, așa că verificăm firma și site-ul înainte să pornim. Nu promitem aprobarea.`,
       },
       {
-        q: `Cum diferă de o reclamă pe Google Search?`,
-        a: `Pe Google, omul primește o listă de linkuri și reclame și compară singur. În ChatGPT, descrie în detaliu ce are nevoie, iar reclama ta apare în contextul acelei conversații. Mesajul tău ajunge la cineva care și-a formulat deja problema.`,
+        q: `Cum diferă de o reclamă pe Google?`,
+        a: `Pe Google, omul primește o listă de linkuri și compară singur. În ChatGPT își descrie casa și ce vrea. Reclama apare în acea conversație, la cineva care și-a formulat deja problema.`,
       },
       {
-        q: `Cât timp mai durează perioada cu concurență mică?`,
-        a: `Nimeni nu știe exact. Estimarea noastră e de câteva luni, până când agențiile mari își mută bugetele de test.`,
+        q: `Cât timp rămâne canalul la început?`,
+        a: `Nu știe nimeni. De aceea nu vă cerem să mutați bugetul de pe Google sau Facebook. Testăm cu o sumă mică.`,
       },
       {
         q: `Ce buget minim este necesar?`,
-        a: `Minimul zilnic pentru România nu e publicat de OpenAI; apare în cont după aprobare. Pentru un prim test de 14 zile îți recomandăm un buget cu care să strângi date reale, pe care îl stabilim împreună după analiză.`,
+        a: `OpenAI nu publică un minim zilnic pentru România; apare în cont după aprobare. Pentru testul de 14 zile stabilim împreună o sumă cu care strângem date reale.`,
       },
       {
         q: `Lucrați doar cu ChatGPT Ads?`,
-        a: `Nu. ChatGPT Ads face parte din sistemul nostru complet de achiziție, alături de Google Ads, Meta Ads, landing page-uri care convertesc și follow-up automat. Dacă are sens pentru afacerea ta, combinăm canalele.`,
+        a: `Nu. ChatGPT e un canal în plus pe lângă Google și Facebook, nu un înlocuitor. Toate cererile trec prin același răspuns în 5 minute și aceeași calificare.`,
       },
       {
         q: `Ce se întâmplă după ce completez formularul?`,
-        a: `Verificăm dacă domeniul tău e eligibil, analizăm afacerea și nișa ta, apoi te contactăm pentru o discuție de 15 minute. Îți spunem sincer dacă ChatGPT Ads are sens pentru tine acum. Dacă nu are, îți spunem și asta.`,
+        a: `Verificăm dacă firma și site-ul sunt eligibile și ne uităm la zona în care lucrați. Apoi vă sunăm pentru o discuție de 15 minute. Dacă ChatGPT Ads nu are sens acum, vă spunem.`,
       },
     ],
     a = (t) => {
@@ -1206,7 +1206,7 @@ function he() {
               viewport: { once: !0 },
               transition: { delay: 0.1 },
               className: `text-4xl md:text-5xl font-bold mb-6 text-center text-ink tracking-tight font-display`,
-              children: [`Ce trebuie să știi despre`, ` `, (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `ChatGPT Ads` })],
+              children: [`Ce trebuie să știți despre`, ` `, (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `ChatGPT Ads` })],
             }),
             (0, Q.jsx)(t.p, {
               initial: { opacity: 0, y: 20 },
@@ -1214,7 +1214,7 @@ function he() {
               viewport: { once: !0 },
               transition: { delay: 0.2 },
               className: `text-steel text-lg leading-relaxed text-center`,
-              children: `Răspunsuri scurte la întrebările pe care le primim cel mai des.`,
+              children: `Răspunsuri scurte, fără promisiuni.`,
             }),
           ],
         }),
@@ -1275,18 +1275,18 @@ function he() {
 }
 var $ = {
   source: `ChatGPT Ads`,
-  title: `Verifică potențialul ChatGPT Ads în nișa ta`,
+  title: `Verificați dacă ChatGPT Ads merge pentru firma dumneavoastră`,
   niches: [
-    `Turism & cazare`,
-    `Magazin online`,
-    `Servicii locale (instalații, fotovoltaice, amenajări, service auto)`,
-    `Cursuri & educație`,
-    `Software & servicii B2B`,
+    `Pompe de căldură`,
+    `Fotovoltaice și baterii`,
+    `Pompe de căldură și fotovoltaice`,
+    `Instalații termice și sanitare`,
+    `Climatizare`,
     `Alt domeniu`,
   ],
-  services: [`Landing page-uri pentru conversii`, `Servicii de producție & strategie de marketing`, `Paid traffic (Google, Meta, ChatGPT Ads)`],
-  otherNote: `Unele domenii nu pot face acum reclame în ChatGPT în România (medical, financiar, juridic, pariuri, alcool și tutun). Verificăm eligibilitatea gratuit înainte de orice discuție despre buget.`,
-  otherExample: `imobiliare, transport`,
+  services: [`Pagină de cerere de ofertă`, `Răspuns la cereri și calificare înainte de vizită`, `Foto, video și plan de campanii`, `Reclame Google, Facebook și ChatGPT`],
+  otherNote: `Verificăm gratuit dacă firma și site-ul sunt eligibile, înainte de orice discuție despre buget.`,
+  otherExample: `climatizare, izolații`,
   leadName: `chatgpt-ads`,
 };
 function ge() {
@@ -1322,17 +1322,17 @@ function ge() {
               eyebrow: `ChatGPT Ads · canal nou în România`,
               title: (0, Q.jsxs)(Q.Fragment, {
                 children: [
-                  `Clienții tăi cer recomandări în ChatGPT. `,
-                  (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `Fii acolo înaintea concurenței.` }),
+                  `„Pompă de căldură sau centrală pe gaz?” `,
+                  (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `Omul întreabă întâi ChatGPT.` }),
                 ],
               }),
-              text: `Reclamele din ChatGPT apar direct în conversație, exact când cineva descrie problema pe care o rezolvi. Canalul e la început, concurența e încă mică, iar cine intră primul învață cel mai repede ce aduce clienți.`,
+              text: `Seara, după ce vine factura la gaz, omul întreabă ChatGPT ce să-și pună. Primește un răspuns. Sub el poate apărea reclama firmei dumneavoastră, marcată ca sponsorizată.`,
               points: [
-                `Setup complet: campanie, landing page și tracking de conversii`,
-                `Lead-urile ajung instant la tine, cu follow-up automat în 60 de secunde`,
-                `Raportare pe lead-uri și vânzări, nu pe click-uri`,
+                `Apăreți în momentul în care omul se informează`,
+                `Omul primește răspuns de la firmă în 5 minute, nu a doua zi`,
+                `Vedeți câte cereri din ChatGPT au ajuns la vizită`,
               ],
-              note: `Analiza e gratuită. Îți spunem sincer dacă ChatGPT Ads are sens pentru afacerea ta acum și ce buget ar fi realist.`,
+              note: `Analiza e gratuită. Dacă ChatGPT Ads nu are sens acum pentru firma dumneavoastră, vă spunem.`,
               form: $,
             }),
             (0, Q.jsx)(de, {}),
@@ -1345,20 +1345,20 @@ function ge() {
               id: `booking`,
               title: (0, Q.jsxs)(Q.Fragment, {
                 children: [
-                  `Află dacă ChatGPT Ads `,
-                  (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `are sens pentru afacerea ta.` }),
+                  `Aflați dacă ChatGPT Ads `,
+                  (0, Q.jsx)(`span`, { className: `text-blue-600`, children: `are sens pentru firma dumneavoastră.` }),
                 ],
               }),
-              text: `Completează formularul în circa un minut. Verificăm dacă domeniul tău e eligibil și, înainte de apel, îți analizăm nișa. Îți spunem direct ce potențial vedem și cum am porni.`,
+              text: `Completați formularul în circa un minut. Verificăm dacă firma e eligibilă și ne uităm la zona în care lucrați. La apel vă spunem direct ce vedem și cum am porni.`,
               form: $,
             }),
           ],
         }),
         (0, Q.jsx)(s, {
           link: { href: `/`, label: `← Toate serviciile IDL Media` },
-          text: `Sisteme de achiziție clienți: reclame în ChatGPT, Google și Meta, pagini dedicate și follow-up automat.`,
+          text: `Cereri de ofertă din ChatGPT, Google și Facebook. Răspuns în 5 minute și calificare până la vizită.`,
         }),
-        (0, Q.jsx)(d, { href: `#booking`, label: `Verifică nișa ta în circa un minut` }),
+        (0, Q.jsx)(d, { href: `#booking`, label: `Verificați eligibilitatea în circa un minut` }),
         (0, Q.jsx)(ConsentBanner, {}),
       ],
     })
