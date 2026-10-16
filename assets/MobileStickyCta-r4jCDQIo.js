@@ -40,27 +40,19 @@ function setConsent(e) {
     localStorage.setItem(CONSENT_KEY, e);
   } catch {}
 }
-// UTM-urile se păstrează în sessionStorage și pleacă cu formularul ca "câmpuri ascunse". Nu ajung niciodată în URL.
-function saveUtm() {
-  try {
-    let e = new URLSearchParams(location.search);
-    UTM_KEYS.forEach((t) => {
-      let n = e.get(t);
-      n && sessionStorage.setItem(t, n);
-    });
-  } catch {}
-}
+// UTM-urile se citesc din adresa paginii la trimitere și pleacă cu formularul ca "câmpuri ascunse".
+// Nu se salvează nimic în browser (fără consimțământ, Legea 506/2004 nu permite stocarea pentru atribuire).
 function getUtm() {
   let e = {};
   try {
-    UTM_KEYS.forEach((t) => {
-      let n = sessionStorage.getItem(t);
-      n && (e[t] = n);
+    let t = new URLSearchParams(location.search);
+    UTM_KEYS.forEach((n) => {
+      let r = t.get(n);
+      r && (e[n] = r);
     });
   } catch {}
   return e;
 }
-saveUtm();
 // Pixelul se încarcă doar după "Accept". PageView pleacă imediat după inițializare.
 function loadPixel() {
   if (!META_PIXEL_ID || window.fbq) return;
@@ -103,10 +95,12 @@ function ConsentBanner() {
     role: `dialog`,
     "aria-label": `Cookie-uri`,
     children: [
-      // TODO(IDL): adaugă link spre politica de cookie-uri / confidențialitate când există pagina (acum nu există).
-      (0, E.jsx)(`p`, {
+      (0, E.jsxs)(`p`, {
         className: `text-sm text-ink leading-relaxed`,
-        children: `Folosim Meta Pixel ca să măsurăm de unde vin cererile și să îmbunătățim reclamele. Îl pornim doar dacă acceptați.`,
+        children: [
+          `Folosim Meta Pixel ca să măsurăm de unde vin cererile și să îmbunătățim reclamele. Îl pornim doar dacă acceptați. `,
+          (0, E.jsx)(`a`, { href: `/politica-cookies.html`, className: `underline underline-offset-4`, children: `Politica de cookies` }),
+        ],
       }),
       (0, E.jsxs)(`div`, {
         className: `idl-consent-actions`,
@@ -523,7 +517,21 @@ ${e}: ${t}`).join(``)}`,
                 : (0, E.jsx)(`span`, {}),
               (0, E.jsxs)(`span`, {
                 className: `inline-flex items-center gap-1.5 text-right`,
-                children: [(0, E.jsx)(sd, { weight: `bold`, className: `shrink-0` }), `Folosim datele doar ca să vă contactăm.`],
+                children: [
+                  (0, E.jsx)(sd, { weight: `bold`, className: `shrink-0` }),
+                  (0, E.jsxs)(`span`, {
+                    children: [
+                      `Folosim datele doar pentru cererea dumneavoastră. `,
+                      (0, E.jsx)(`a`, {
+                        href: `/politica-de-confidentialitate.html`,
+                        target: `_blank`,
+                        rel: `noopener`,
+                        className: `underline underline-offset-4`,
+                        children: `Detalii`,
+                      }),
+                    ],
+                  }),
+                ],
               }),
             ],
           }),
@@ -829,6 +837,16 @@ function Cp({ link: e, text: idlFooterText }) {
           className: `border-t border-white/10 pt-10 flex flex-col items-center`,
           children: [
             (0, E.jsx)(`p`, { className: `text-sm`, children: `© 2026 IDL Media. Toate drepturile rezervate.` }),
+            (0, E.jsx)(`div`, {
+              className: `mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm`,
+              children: [
+                [`/politica-de-confidentialitate.html`, `Politica de confidențialitate`],
+                [`/politica-cookies.html`, `Politica de cookies`],
+                [`/termeni-si-conditii.html`, `Termeni și condiții`],
+              ].map(([e, t]) =>
+                (0, E.jsx)(`a`, { href: e, className: `text-steel hover:text-white transition-colors underline underline-offset-4`, children: t }, e),
+              ),
+            }),
             META_PIXEL_ID &&
               (0, E.jsx)(`button`, {
                 onClick: () => window.dispatchEvent(new Event(`idl-consent-open`)),
@@ -872,7 +890,7 @@ function wp({ href: e, label: t }) {
     }, []),
     (0, E.jsx)(`div`, {
       className: ip(
-        `md:hidden fixed bottom-0 inset-x-0 z-40 p-3.5 pr-20 bg-surface/95 backdrop-blur-md border-t border-black/10 shadow-[0_-10px_30px_rgba(0,0,0,0.06)] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]`,
+        `md:hidden fixed bottom-0 inset-x-0 z-40 p-3.5 bg-surface/95 backdrop-blur-md border-t border-black/10 shadow-[0_-10px_30px_rgba(0,0,0,0.06)] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]`,
         n ? `translate-y-0` : `translate-y-full`,
       ),
       "aria-hidden": !n,
