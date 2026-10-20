@@ -734,7 +734,7 @@ function W() {
               `Cum ajunge o cerere la vizită`,
               (0, V.jsx)(`span`, {
                 className: `relative top-1`,
-                children: (0, V.jsx)(`img`, { src: `./img/flow-logo.webp`, alt: `IDL Flow`, className: `h-8 md:h-10 object-contain` }),
+                children: (0, V.jsxs)(`picture`, { children: [(0, V.jsx)(`source`, { srcSet: `./img/flow-logo.webp`, type: `image/webp` }), (0, V.jsx)(`img`, { src: `./img/flow-logo.png`, alt: `IDL Flow`, className: `h-8 md:h-10 object-contain` })] }),
               }),
             ],
           }),
@@ -925,7 +925,7 @@ function K() {
             `Cum funcționează `,
             (0, V.jsx)(`span`, {
               className: `relative top-1`,
-              children: (0, V.jsx)(`img`, { src: `./img/flow-logo.webp`, alt: `IDL Flow`, className: `h-8 md:h-12 object-contain` }),
+              children: (0, V.jsxs)(`picture`, { children: [(0, V.jsx)(`source`, { srcSet: `./img/flow-logo.webp`, type: `image/webp` }), (0, V.jsx)(`img`, { src: `./img/flow-logo.png`, alt: `IDL Flow`, className: `h-8 md:h-12 object-contain` })] }),
             }),
           ],
         }),

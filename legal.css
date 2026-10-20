@@ -38,3 +38,4 @@ tr:last-child td { border-bottom: 0; }
 mark.todo { background: var(--todo); color: inherit; padding: 0 4px; border-radius: 4px; }
 footer { border-top: 1px solid var(--line); padding-top: 24px; padding-bottom: 40px; color: var(--steel); font-size: 0.9rem; }
 footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 8px; }
+picture { display: contents; }
