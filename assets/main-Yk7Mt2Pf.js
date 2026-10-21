@@ -1461,7 +1461,7 @@ var Z = [
   },
   {
     q: `Există o perioadă contractuală minimă?`,
-    a: `Pentru Sistemul de Achiziție și Dominare Locală, da: 3 luni, apoi prelungire lunară. Dacă încheiați mai devreme, lunile rămase se plătesc. Recomandăm 6-9 luni, pentru că marketingul bun are nevoie de timp, testare și optimizare.`,
+    a: `Pentru Sistemul de Achiziție și Dominare Locală, da: 3 luni, apoi prelungire lunară. Recomandăm 6-9 luni, pentru că marketingul bun are nevoie de timp, testare și optimizare.`,
   },
   {
     q: `Am deja site și reclame. Ce schimbați?`,
