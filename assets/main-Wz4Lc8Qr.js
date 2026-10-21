@@ -940,23 +940,23 @@ function K() {
             {
               num: `02`,
               title: `Răspuns automat la fiecare cerere`,
-              desc: `La fiecare formular completat pleacă automat un SMS și un email către client, iar persoanele desemnate din firma dumneavoastră sunt notificate instantaneu.`,
+              desc: `La fiecare formular completat pleacă un SMS și un email către client, iar echipa dumneavoastră este notificată.`,
             },
             {
               num: `03`,
               title: `Calificare, apoi apelul dumneavoastră`,
-              desc: `Formularul întreabă proprietar, casă, încălzire, consum, buget, termen. Echipa dumneavoastră sună fiecare cerere în aceeași zi lucrătoare, cu minimum 3 încercări, și programează vizita.`,
+              desc: `Formularul pune întrebările care contează. Echipa dumneavoastră sună fiecare cerere în aceeași zi lucrătoare și programează vizita.`,
             },
             {
               num: `04`,
               title: `Campanie Meta pe sezon`,
-              desc: `Pe Facebook și Instagram, pentru proprietarii din zonă. Google Business Profile pus la punct, ca firma să apară și în căutările locale.`,
+              desc: `Pe Facebook și Instagram, pentru proprietarii din zonă. Plus Google Business Profile pus la punct.`,
               channels: [{ name: `Meta Ads` }],
             },
             {
               num: `05`,
               title: `Raport săptămânal și optimizare`,
-              desc: `Numărul de cereri și costul pe cerere, plus un apel de 30 de minute în care stabilim ce optimizăm.`,
+              desc: `Numărul de cereri și costul fiecăreia, plus un apel lunar în care stabilim ce optimizăm.`,
             },
           ].map((e, t) =>
             (0, V.jsxs)(
@@ -1102,14 +1102,14 @@ function q() {
                   {
                     feature: `După ce vine cererea`,
                     classic: `Cererea ajunge la dumneavoastră și atât`,
-                    idl: `SMS și email automat către client, notificare instantanee către echipă, formular de calificare`,
+                    idl: `SMS și email automat, notificare către echipă, formular de calificare`,
                   },
                   {
                     feature: `Garanția`,
                     classic: `Plătiți și sperați`,
                     idl: `Prag de cereri calificate, stabilit după primele 30 de zile`,
                   },
-                  { feature: `Raportul`, classic: `Grafice cu afișări și click-uri`, idl: `Raport săptămânal: numărul de cereri, costul pe cerere și un apel de 30 de minute` },
+                  { feature: `Raportul`, classic: `Grafice cu afișări și click-uri`, idl: `Raport săptămânal cu numărul de cereri și costul fiecăreia` },
                 ].map((e, t) =>
                   (0, V.jsxs)(
                     r.tr,
@@ -1171,7 +1171,7 @@ function J() {
           children: [
             {
               title: `Fundația de Conversie`,
-              desc: `Setup unic, fără abonament lunar. Pentru firmele care au cereri, dar le pierd între formular și vizită.`,
+              desc: `Setup unic. Pentru firmele care au cereri, dar le pierd între formular și vizită.`,
               features: [
                 `Pagină de cerere de ofertă, făcută pentru vizite`,
                 `Întrebări care separă proprietarii serioși de cei care doar întreabă de preț`,
@@ -1183,27 +1183,27 @@ function J() {
             },
             {
               title: `Sistemul de Achiziție`,
-              desc: `Setup plus management lunar. Pentru firmele care vor cereri noi în fiecare lună și un sistem care le califică.`,
+              desc: `Setup plus abonament lunar. Pentru firmele care vor cereri noi în fiecare lună și un sistem care le califică.`,
               features: [
                 `Tot ce include Fundația de Conversie`,
                 `Campanie Meta Ads pe serviciul de sezon`,
-                `SMS și email automat către fiecare cerere, plus notificare instantanee către echipa dumneavoastră`,
-                `Materiale pentru reclame: 3 la setup și 2 noi pe lună`,
-                `Acces la sistemul de urmărire a cererilor: statusuri, apeluri, note`,
-                `Raport săptămânal și apel de 30 de minute la final de lună`,
-                `Garanție: luna 4 de management gratuită dacă pragul de cereri calificate nu e atins`,
+                `SMS și email automat la fiecare cerere, notificare instantanee către echipă`,
+                `Materiale pentru reclame: 3 la setup, 2 noi pe lună`,
+                `Acces la sistemul de urmărire a cererilor`,
+                `Raport săptămânal și apel lunar de 30 de minute`,
+                `Garanție: luna 4 gratuită dacă nu atingem pragul`,
               ],
               btn: `Aplicați pentru acest pachet`,
               popular: !0,
             },
             {
               title: `Dominare Locală`,
-              desc: `Setup plus management lunar avansat. Pentru firmele care vor echipele ocupate și în extrasezon.`,
+              desc: `Setup plus abonament lunar avansat. Pentru firmele care vor echipele ocupate și în extrasezon.`,
               features: [
                 `Tot ce include Sistemul de Achiziție`,
-                `4 materiale video scurte (Reels/Shorts) pe lună, montate și publicate de noi din filmările dumneavoastră`,
-                `8 postări grafice pe lună pentru profilul firmei`,
-                `Panou de raportare: cereri pe săptămână și pe lună, cereri calificate, statusuri și timp până la prima actualizare`,
+                `4 video scurte (Reels/Shorts) pe lună, din filmările dumneavoastră`,
+                `8 postări grafice pe lună`,
+                `Panou de raportare cu cererile și statusurile lor`,
               ],
               btn: `Discutăm planul pe sezon`,
               popular: !1,
@@ -1292,7 +1292,7 @@ function J() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `mt-16 max-w-3xl mx-auto text-center text-base text-steel leading-relaxed`,
-          children: `Sistemul de Achiziție și Dominare Locală au o perioadă contractuală minimă de 3 luni. În realitate, recomandăm 6-9 luni, pentru că marketingul bun are nevoie de timp, testare și optimizare.`,
+          children: `Sistemul de Achiziție și Dominare Locală au o perioadă minimă de 3 luni. Recomandăm 6-9 luni, pentru că marketingul bun are nevoie de timp, testare și optimizare.`,
         }),
       ],
     }),
@@ -1436,7 +1436,7 @@ function X() {
             viewport: { once: !0 },
             transition: { delay: 0.1 },
             className: `text-xl md:text-2xl text-steel font-light mb-12 leading-relaxed`,
-            children: `Garanția se aplică la Sistemul de Achiziție și Dominare Locală. Pragul de cereri calificate se stabilește împreună, după primele 30 de zile de campanie; dacă nu vă înțelegeți cu noi, este 65% din cererile calificate din acele 30 de zile. Dacă media lunară din primele 3 luni este sub prag, luna 4 de management este gratuită. Condiții: buget de reclame de minimum 450 EUR/lună, materialele și aprobările la timp, apelarea fiecărei cereri în aceeași zi lucrătoare (minimum 3 încercări) și statusul actualizat în sistem. Cerere calificată: formular complet, cu consimțământ, răspunsuri acceptate, telefon valid, fără duplicat în ultimele 90 de zile.`,
+            children: `Pragul de cereri calificate se stabilește după primele 30 de zile. Dacă media lunară din primele 3 luni e sub prag, luna 4 de management este gratuită. Se aplică la Sistemul de Achiziție și Dominare Locală, cu buget de minimum 450 EUR/lună și cereri apelate în aceeași zi lucrătoare. Detaliile sunt în contract.`,
           }),
           (0, V.jsx)(r.div, {
             initial: { opacity: 0, y: 20 },
@@ -1457,11 +1457,11 @@ function X() {
 var Z = [
   {
     q: `Trebuie să mă ocup eu de partea tehnică?`,
-    a: `Nu. Noi facem campania, pagina, formularul și secvența automată de SMS și email. Dumneavoastră sunați fiecare cerere în aceeași zi lucrătoare (minimum 3 încercări) și actualizați statusul în sistem, apoi echipele fac vizitele și montajul.`,
+    a: `Nu. Noi facem campania, pagina, formularul și mesajele automate. Dumneavoastră sunați fiecare cerere în aceeași zi lucrătoare, apoi echipele fac vizitele și montajul.`,
   },
   {
     q: `Există o perioadă contractuală minimă?`,
-    a: `Pentru Sistemul de Achiziție și Dominare Locală, da: 3 luni obligatorii, apoi prelungire automată din lună în lună, cu preaviz de 30 de zile. Dacă încheiați în primele 3 luni, abonamentele rămase până la 3 rămân datorate. Fundația de Conversie este un setup unic, fără abonament. Recomandăm în realitate 6-9 luni: primele luni servesc la calibrare, iar marketingul bun are nevoie de timp, testare și optimizare.`,
+    a: `Pentru Sistemul de Achiziție și Dominare Locală, da: 3 luni, apoi prelungire lunară. Dacă încheiați mai devreme, lunile rămase se plătesc. Recomandăm 6-9 luni, pentru că marketingul bun are nevoie de timp, testare și optimizare.`,
   },
   {
     q: `Am deja site și reclame. Ce schimbați?`,
@@ -1469,15 +1469,15 @@ var Z = [
   },
   {
     q: `În cât timp pornește totul?`,
-    a: `Pagina și sistemele se livrează în 7-10 zile lucrătoare de la primirea tuturor materialelor. Reclamele dau primele cereri, de regulă, la scurt timp după lansare. Lucrările semnate vin mai târziu, pentru că între ofertă și semnare trec săptămâni. La analiză vă spunem cum arată calendarul pentru firma dumneavoastră.`,
+    a: `Pagina și sistemele sunt gata în 7-10 zile lucrătoare de la primirea materialelor. Reclamele dau primele cereri, de regulă, la scurt timp după lansare. Lucrările semnate vin mai târziu, pentru că între ofertă și semnare trec săptămâni. La analiză vă spunem cum arată calendarul pentru firma dumneavoastră.`,
   },
   {
     q: `Am nevoie de buget mare de reclame?`,
-    a: `Nu un buget mare, dar garanția cere minimum 450 EUR/lună în reclame, plătiți direct platformelor. Stabilim suma exactă după analiza gratuită, pe sezon.`,
+    a: `Nu neapărat mare, dar garanția cere minimum 450 EUR/lună în reclame, plătiți direct platformelor. Suma exactă o stabilim după analiza gratuită.`,
   },
   {
     q: `Pe ce platforme rulați reclamele? Și în ChatGPT?`,
-    a: `Pe Meta (Facebook și Instagram). Google Business Profile îl punem la punct, dar Google Ads nu face parte din colaborarea standard. ChatGPT Ads îl testăm separat, cu buget mic, după ce verificăm că firma e eligibilă. Detalii pe pagina ChatGPT Ads.`,
+    a: `Pe Meta (Facebook și Instagram). Google Ads nu face parte din colaborarea standard. ChatGPT Ads îl testăm separat, cu buget mic, după ce verificăm că firma e eligibilă. Detalii pe pagina ChatGPT Ads.`,
   },
   {
     q: `De ce o pagină simplă și nu un site mare?`,
@@ -1610,10 +1610,10 @@ function ne() {
                   (0, V.jsx)(`span`, { className: `text-blue-600`, children: `Echipa dumneavoastră sună, face vizita și montajul.` }),
                 ],
               }),
-              text: `Campania Meta aduce cererile. Formularul întreabă ce contează: proprietar, tip de casă, încălzire, buget, termen. La fiecare cerere pleacă automat un SMS și un email, iar echipa dumneavoastră este notificată instantaneu ca să sune în aceeași zi lucrătoare.`,
+              text: `Campania Meta aduce cererile, iar formularul le califică. La fiecare cerere pleacă automat un SMS și un email, iar echipa dumneavoastră este notificată instantaneu.`,
               points: [
                 `Campanie Meta pe serviciul de sezon: pompe de căldură toamna, fotovoltaice primăvara`,
-                `SMS și email automat la fiecare cerere, notificare instantanee către echipă`,
+                `SMS și email automat la fiecare cerere`,
                 `Raport săptămânal: câte cereri și cât costă fiecare`,
               ],
               note: `Nu e un apel de vânzare. În 15 minute vă arătăm la ce pas se pierd cererile acum.`,
