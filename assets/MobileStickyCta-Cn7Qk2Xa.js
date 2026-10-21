@@ -25,11 +25,15 @@ var CAPACITY_NOTICE = `Maximum 2 clienți noi pe lună`,
 // --- Meta Pixel, consimțământ (GDPR) și UTM ---
 // TODO(IDL): pune ID-ul Meta Pixel (Events Manager > Surse de date). Gol = nu se încarcă nimic, iar bannerul de cookie-uri nu apare.
 // În proiectul sursă Vite valoarea ar veni din import.meta.env.VITE_META_PIXEL_ID; în acest repo nu există build, deci e constantă.
+var GDPR_TEXT = `Sunt de acord ca IDL Media să mă contacteze telefonic, pe WhatsApp sau pe email, ca să răspundă cererii mele, și să îmi prelucreze datele din formular conform Politicii de confidențialitate.`;
 var META_PIXEL_ID = ``,
   CONSENT_KEY = `idl_consent`,
   UTM_KEYS = [`utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `fbclid`];
+// Alegerea expiră după 12 luni, apoi bannerul apare din nou.
 function getConsent() {
   try {
+    let e = Number(localStorage.getItem(CONSENT_KEY + `_ts`));
+    if (e && Date.now() - e > 365 * 864e5) return null;
     return localStorage.getItem(CONSENT_KEY);
   } catch {
     return null;
@@ -37,8 +41,20 @@ function getConsent() {
 }
 function setConsent(e) {
   try {
-    localStorage.setItem(CONSENT_KEY, e);
+    (localStorage.setItem(CONSENT_KEY, e), localStorage.setItem(CONSENT_KEY + `_ts`, String(Date.now())));
   } catch {}
+}
+// La refuz/retragere ștergem cookie-urile Meta de pe domeniul nostru (_fbp, _fbc), pe toate variantele de domeniu.
+function clearMetaCookies() {
+  let e = location.hostname.split(`.`),
+    t = [``, location.hostname];
+  for (let n = 1; n < e.length - 1; n++) t.push(`.` + e.slice(n).join(`.`));
+  (t.push(`.` + e.slice(-2).join(`.`)),
+    [`_fbp`, `_fbc`].forEach((n) =>
+      t.forEach((r) => {
+        document.cookie = `${n}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/` + (r ? `; domain=${r}` : ``);
+      }),
+    ));
 }
 // UTM-urile se citesc din adresa paginii la trimitere și pleacă cu formularul ca "câmpuri ascunse".
 // Nu se salvează nimic în browser (fără consimțământ, Legea 506/2004 nu permite stocarea pentru atribuire).
@@ -81,6 +97,7 @@ function ConsentBanner() {
       if (!META_PIXEL_ID) return;
       let e = getConsent();
       e === `granted` ? loadPixel() : e !== `denied` && t(!0);
+      location.hash === `#setari-cookie` && t(!0);
       let n = () => t(!0);
       return (window.addEventListener(`idl-consent-open`, n), () => window.removeEventListener(`idl-consent-open`, n));
     }, []),
@@ -88,7 +105,10 @@ function ConsentBanner() {
   )
     return null;
   let n = (e) => {
-    (setConsent(e), e === `granted` ? loadPixel() : window.fbq && window.fbq(`consent`, `revoke`), t(!1));
+    let r = !!window.fbq;
+    (setConsent(e), t(!1));
+    if (e === `granted`) loadPixel();
+    else (clearMetaCookies(), r && location.reload());
   };
   return (0, E.jsxs)(`div`, {
     className: `idl-consent`,
@@ -98,7 +118,7 @@ function ConsentBanner() {
       (0, E.jsxs)(`p`, {
         className: `text-sm text-ink leading-relaxed`,
         children: [
-          `Folosim Meta Pixel ca să măsurăm de unde vin cererile și să îmbunătățim reclamele. Îl pornim doar dacă acceptați. `,
+          `Folosim Meta Pixel (cookie-uri de marketing) ca să măsurăm de unde vin cererile și să îmbunătățim reclamele. Îl pornim doar dacă acceptați. Dacă refuzați, nu se setează niciun cookie de marketing, iar site-ul funcționează la fel. Puteți schimba alegerea oricând din „Setări cookie-uri”. `,
           (0, E.jsx)(`a`, { href: `/politica-cookies.html`, className: `underline underline-offset-4`, children: `Politica de cookies` }),
         ],
       }),
@@ -161,6 +181,7 @@ function _p({ source: e, title: t, niches: n, services: idlServices, otherNote: 
       phone: ``,
       email: ``,
       website: ``,
+      gdpr: !1,
     }),
     [s, c] = (0, D.useState)([]),
     [l, u] = (0, D.useState)(!1),
@@ -170,6 +191,7 @@ function _p({ source: e, title: t, niches: n, services: idlServices, otherNote: 
       company: a.company.trim().length < 2 ? `Scrieți numele firmei.` : ``,
       phone: a.phone.replace(/\D/g, ``).length < 9 ? `Verificați numărul de telefon.` : ``,
       email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(a.email.trim()) ? `` : `Verificați adresa de email.`,
+      gdpr: a.gdpr ? `` : `Bifați acordul ca să putem răspunde cererii.`,
     },
     m = (e, t) => o((n) => ({ ...n, [e]: t })),
     h = dp[r].id,
@@ -197,7 +219,7 @@ function _p({ source: e, title: t, niches: n, services: idlServices, otherNote: 
         v && i(r + 1);
         return;
       }
-      if (p.name || p.company || p.phone || p.email) {
+      if (p.name || p.company || p.phone || p.email || p.gdpr) {
         u(!0);
         return;
       }
@@ -216,13 +238,15 @@ function _p({ source: e, title: t, niches: n, services: idlServices, otherNote: 
         budget: a.budget,
         goal: a.goal.trim(),
         source: e,
+        gdpr_consent: `DA: ${GDPR_TEXT}`,
+        gdpr_consent_version: `politica-confidentialitate 2026-10-21`,
         submission_date: new Date().toLocaleString(`ro-RO`),
         ...getUtm(),
       };
       try {
         (await hp({
           ...n,
-          message: `Lead nou (${e}):\nNume: ${n.from_name}\nCompanie: ${n.company}\nEmail: ${n.from_email}\nTelefon: ${n.phone}\nWebsite: ${n.website}\nDomeniu: ${n.niche}\nServicii: ${n.services}\nCifră de afaceri: ${n.turnover}\nBuget: ${n.budget}\nObiectiv 6 luni: ${n.goal}${Object.entries(getUtm()).map(([e, t]) => `
+          message: `Lead nou (${e}):\nNume: ${n.from_name}\nCompanie: ${n.company}\nEmail: ${n.from_email}\nTelefon: ${n.phone}\nWebsite: ${n.website}\nDomeniu: ${n.niche}\nServicii: ${n.services}\nCifră de afaceri: ${n.turnover}\nBuget: ${n.budget}\nObiectiv 6 luni: ${n.goal}\nAcord contactare: ${n.gdpr_consent} (${n.gdpr_consent_version})${Object.entries(getUtm()).map(([e, t]) => `
 ${e}: ${t}`).join(``)}`,
         }),
           trackLead(idlLeadName),
@@ -374,6 +398,38 @@ ${e}: ${t}`).join(``)}`,
                               value: a.website,
                               onChange: (e) => m(`website`, e.target.value),
                             }),
+                          }),
+                          (0, E.jsxs)(`div`, {
+                            className: `sm:col-span-2`,
+                            children: [
+                              (0, E.jsxs)(`label`, {
+                                className: `flex items-start gap-3 text-xs text-steel leading-relaxed cursor-pointer`,
+                                children: [
+                                  (0, E.jsx)(`input`, {
+                                    type: `checkbox`,
+                                    required: !0,
+                                    checked: a.gdpr,
+                                    onChange: (e) => m(`gdpr`, e.target.checked),
+                                    "aria-invalid": l && !!p.gdpr,
+                                    className: `mt-0.5 w-4 h-4 shrink-0 accent-blue-600`,
+                                  }),
+                                  (0, E.jsxs)(`span`, {
+                                    children: [
+                                      `Sunt de acord ca IDL Media să mă contacteze telefonic, pe WhatsApp sau pe email, ca să răspundă cererii mele, și să îmi prelucreze datele din formular conform `,
+                                      (0, E.jsx)(`a`, {
+                                        href: `/politica-de-confidentialitate.html`,
+                                        target: `_blank`,
+                                        rel: `noopener`,
+                                        className: `underline underline-offset-2`,
+                                        children: `Politicii de confidențialitate`,
+                                      }),
+                                      `. Mă pot răzgândi oricând, scriind la contact@idl-media.com.`,
+                                    ],
+                                  }),
+                                ],
+                              }),
+                              l && p.gdpr && (0, E.jsx)(`p`, { role: `alert`, className: `mt-1.5 text-xs text-red-600`, children: p.gdpr }),
+                            ],
                           }),
                           d === `error` &&
                             (0, E.jsxs)(`p`, {
