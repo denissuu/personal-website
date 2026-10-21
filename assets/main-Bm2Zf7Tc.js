@@ -641,7 +641,7 @@ function de() {
                         },
                         {
                           title: `Testat cu buget mic`,
-                          desc: `Pornim cu o sumă mică. Dacă aduce cereri care ajung la vizită, creștem bugetul. Dacă nu, ne oprim.`,
+                          desc: `Pornim cu o sumă mică. Dacă aduce cereri calificate, creștem bugetul. Dacă nu, ne oprim.`,
                         },
                         {
                           title: `Învățați înaintea altora`,
@@ -694,7 +694,7 @@ function de() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `text-center text-lg font-semibold text-ink mt-16 max-w-2xl mx-auto`,
-          children: `ChatGPT nu înlocuiește Google și Facebook. E un canal în plus, testat separat.`,
+          children: `ChatGPT nu înlocuiește Facebook și Instagram. E un canal în plus, testat separat.`,
         }),
       ],
     }),
@@ -1034,7 +1034,7 @@ function me() {
               viewport: { once: !0 },
               transition: { delay: 0.2 },
               className: `text-lg text-steel leading-relaxed font-sans`,
-              children: `Verificăm, lansăm, măsurăm. La final vedeți cereri și vizite reale din contul dumneavoastră, nu estimări.`,
+              children: `Verificăm, lansăm, măsurăm. La final vedeți cereri reale din contul dumneavoastră, nu estimări.`,
             }),
           ],
         }),
@@ -1062,7 +1062,7 @@ function me() {
               deliverables: [
                 `Structura campaniei și reclamele`,
                 `Pagină de cerere de ofertă, cu întrebări de calificare`,
-                `Răspuns la fiecare cerere în 5 minute (SMS / WhatsApp)`,
+                `SMS și email automat la fiecare cerere`,
               ],
             },
             {
@@ -1070,10 +1070,10 @@ function me() {
               title: `Test de 14 zile`,
               timeline: `Săptămâna 2 – 4`,
               badge: `Decizie`,
-              desc: `Testăm cu buget mic. Raportul arată câte cereri, câte vizite tehnice și cât a costat fiecare. Semnările vin mai târziu. Plus recomandarea noastră: continuăm sau oprim.`,
+              desc: `Testăm cu buget mic. Raportul arată câte cereri au venit și cât a costat fiecare. Vizitele și semnările vin mai târziu. Plus recomandarea noastră: continuăm sau oprim.`,
               deliverables: [
                 `Cifre din contul dumneavoastră, nu estimări`,
-                `Comparație cu Google și Facebook pe aceeași ofertă`,
+                `Comparație cu Facebook și Instagram pe aceeași ofertă`,
                 `Recomandare: continuăm, creștem bugetul sau oprim`,
               ],
             },
@@ -1166,7 +1166,7 @@ function he() {
       },
       {
         q: `Cât timp rămâne canalul la început?`,
-        a: `Nu știe nimeni. De aceea nu vă cerem să mutați bugetul de pe Google sau Facebook. Testăm cu o sumă mică.`,
+        a: `Nu știe nimeni. De aceea nu vă cerem să mutați bugetul de pe Facebook sau Instagram. Testăm cu o sumă mică.`,
       },
       {
         q: `Ce buget minim este necesar?`,
@@ -1174,7 +1174,7 @@ function he() {
       },
       {
         q: `Lucrați doar cu ChatGPT Ads?`,
-        a: `Nu. ChatGPT e un canal în plus pe lângă Google și Facebook, nu un înlocuitor. Toate cererile trec prin același răspuns în 5 minute și aceeași calificare.`,
+        a: `Nu. ChatGPT e un canal în plus pe lângă Facebook și Instagram, nu un înlocuitor. Toate cererile trec prin aceeași secvență automată de SMS și email și aceeași calificare.`,
       },
       {
         q: `Ce se întâmplă după ce completez formularul?`,
@@ -1284,7 +1284,7 @@ var $ = {
     `Climatizare`,
     `Alt domeniu`,
   ],
-  services: [`Pagină de cerere de ofertă`, `Răspuns la cereri și calificare înainte de vizită`, `Foto, video și plan de campanii`, `Reclame Google, Facebook și ChatGPT`],
+  services: [`Pagină de cerere de ofertă`, `Formular de calificare înainte de vizită`, `Foto, video și plan de campanii`, `Reclame Facebook, Instagram și ChatGPT`],
   otherNote: `Verificăm gratuit dacă firma și site-ul sunt eligibile, înainte de orice discuție despre buget.`,
   otherExample: `climatizare, izolații`,
   leadName: `chatgpt-ads`,
@@ -1329,8 +1329,8 @@ function ge() {
               text: `Seara, după ce vine factura la gaz, omul întreabă ChatGPT ce să-și pună. Primește un răspuns. Sub el poate apărea reclama firmei dumneavoastră, marcată ca sponsorizată.`,
               points: [
                 `Apăreți în momentul în care omul se informează`,
-                `Omul primește răspuns de la firmă în 5 minute, nu a doua zi`,
-                `Vedeți câte cereri din ChatGPT au ajuns la vizită`,
+                `Omul primește automat un SMS și un email, iar echipa dumneavoastră e notificată`,
+                `Vedeți câte cereri vin din ChatGPT și cât costă fiecare`,
               ],
               note: `Analiza e gratuită. Dacă ChatGPT Ads nu are sens acum pentru firma dumneavoastră, vă spunem.`,
               form: $,
@@ -1356,7 +1356,7 @@ function ge() {
         }),
         (0, Q.jsx)(s, {
           link: { href: `/`, label: `← Toate serviciile IDL Media` },
-          text: `Cereri de ofertă din ChatGPT, Google și Facebook. Răspuns în 5 minute și calificare până la vizită.`,
+          text: `Cereri de ofertă din ChatGPT și Meta. SMS și email automat la fiecare cerere și calificare prin formular.`,
         }),
         (0, Q.jsx)(d, { href: `#booking`, label: `Verificați eligibilitatea în circa un minut` }),
         (0, Q.jsx)(ConsentBanner, {}),

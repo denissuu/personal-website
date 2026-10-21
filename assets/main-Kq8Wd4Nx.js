@@ -649,7 +649,7 @@ function U() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: !0 },
           className: `text-xs font-bold text-steel/60 uppercase tracking-[0.3em] mb-16`,
-          children: `Aducem vizite tehnice calificate pentru`,
+          children: `Aducem cereri calificate pentru`,
         }),
         (0, V.jsx)(`div`, {
           className: `flex flex-wrap justify-center items-center gap-12 md:gap-20`,
@@ -696,7 +696,7 @@ function W() {
       id: `01`,
       icon: (0, V.jsx)(D, { weight: `duotone`, className: `w-10 h-10 text-blue-500` }),
       title: `Aduce`,
-      desc: `Cereri din Google și Facebook pentru serviciul pe care îl vreți acum.`,
+      desc: `Cereri din Facebook și Instagram pentru serviciul pe care îl vreți acum.`,
       bg: `bg-blue-50/50`,
       border: `border-blue-100`,
     },
@@ -704,7 +704,7 @@ function W() {
       id: `02`,
       icon: (0, V.jsx)(T, { weight: `duotone`, className: `w-10 h-10 text-teal-500` }),
       title: `Califică`,
-      desc: `Răspuns în 5 minute și întrebările care contează, înainte de deplasare.`,
+      desc: `Un formular cu întrebările care contează, înainte să sunați și să vă deplasați.`,
       bg: `bg-teal-50/50`,
       border: `border-teal-100`,
     },
@@ -712,7 +712,7 @@ function W() {
       id: `03`,
       icon: (0, V.jsx)(N, { weight: `duotone`, className: `w-10 h-10 text-indigo-500` }),
       title: `Urmărește`,
-      desc: `Follow-up după ofertă și recontactarea cererilor vechi.`,
+      desc: `Raport săptămânal cu numărul de cereri și costul fiecăreia.`,
       bg: `bg-indigo-50/50`,
       border: `border-indigo-100`,
     },
@@ -731,7 +731,7 @@ function W() {
             viewport: { once: !0 },
             className: `text-4xl md:text-5xl font-bold text-ink inline-flex items-center justify-center gap-4 flex-wrap`,
             children: [
-              `Cum ajunge o cerere la vizită`,
+              `Cum ajunge o cerere la echipa dumneavoastră`,
               (0, V.jsx)(`span`, {
                 className: `relative top-1`,
                 children: (0, V.jsxs)(`picture`, { children: [(0, V.jsx)(`source`, { srcSet: `./img/flow-logo.webp`, type: `image/webp` }), (0, V.jsx)(`img`, { src: `./img/flow-logo.png`, alt: `IDL Flow`, className: `h-8 md:h-10 object-contain` })] }),
@@ -886,9 +886,9 @@ function G() {
               badge: `Pompe de căldură`,
               title: `Pompe de căldură: de la „cât costă” la vizită`,
               problem: `Toamna cererile vin toate odată. Multe vor doar un preț la telefon, pentru case fără izolație.`,
-              build: `Campanii toamna și iarna, întrebări despre casă și încălzirea actuală înainte de vizită, follow-up după ofertă.`,
+              build: `Campanie toamna și iarna, întrebări despre casă și încălzirea actuală în formular, înainte de vizită.`,
               measureClass: `text-blue-600`,
-              measure: `Cost pe vizită tehnică, rata cerere → vizită, rata vizită → lucrare semnată.`,
+              measure: `Numărul de cereri calificate și costul pe cerere calificată.`,
             }),
             idlCard({
               side: 1,
@@ -898,9 +898,9 @@ function G() {
               badge: `Fotovoltaice și baterii`,
               title: `Fotovoltaice: oferta care nu ajunge la semnare`,
               problem: `Omul compară trei oferte după prețul pe kW. Iarna echipele stau.`,
-              build: `Campanii primăvara și vara, întrebări despre consum, acoperiș și baterie, follow-up 30-60 de zile.`,
+              build: `Campanie primăvara și vara, întrebări despre consum, acoperiș și baterie în formular.`,
               measureClass: `text-teal-600`,
-              measure: `Cost pe lucrare semnată, rata ofertă → semnare, valoarea medie a unei lucrări.`,
+              measure: `Numărul de cereri calificate și costul pe cerere calificată.`,
             }),
           ],
         }),
@@ -939,24 +939,24 @@ function K() {
             },
             {
               num: `02`,
-              title: `Răspuns în sub 5 minute`,
-              desc: `Mesaj la fiecare cerere, inclusiv seara și în weekend. Omul simte că a dat de o firmă serioasă.`,
+              title: `Răspuns automat la fiecare cerere`,
+              desc: `La fiecare formular completat pleacă automat un SMS și un email către client, iar persoanele desemnate din firma dumneavoastră sunt notificate.`,
             },
             {
               num: `03`,
-              title: `Calificare, apoi calendar`,
-              desc: `Proprietar, casă, suprafață, încălzire, consum, buget, termen. Vizitele serioase intră în calendarul echipei.`,
+              title: `Calificare, apoi apelul dumneavoastră`,
+              desc: `Formularul întreabă proprietar, casă, încălzire, consum, buget, termen. Echipa dumneavoastră sună fiecare cerere în aceeași zi, cu minimum 3 încercări, și programează vizita.`,
             },
             {
               num: `04`,
-              title: `Campanii pe sezon`,
-              desc: `Pe Google pentru cei care caută „pompă de căldură” sau „fotovoltaice”. Pe Facebook și Instagram pentru proprietarii din zonă.`,
-              channels: [{ name: `Google Ads` }, { name: `Meta Ads` }],
+              title: `Campanie Meta pe sezon`,
+              desc: `Pe Facebook și Instagram, pentru proprietarii din zonă. Google Business Profile pus la punct, ca firma să apară și în căutările locale.`,
+              channels: [{ name: `Meta Ads` }],
             },
             {
               num: `05`,
-              title: `Follow-up și cereri vechi`,
-              desc: `30-60 de zile după ofertă. Plus recontactarea cererilor care n-au semnat.`,
+              title: `Raport săptămânal și optimizare`,
+              desc: `Numărul de cereri și costul pe cerere, plus un apel de 30 de minute în care stabilim ce optimizăm.`,
             },
           ].map((e, t) =>
             (0, V.jsxs)(
@@ -1098,18 +1098,18 @@ function q() {
               (0, V.jsx)(`tbody`, {
                 className: `divide-y divide-black/5`,
                 children: [
-                  { feature: `Ce urmărește`, classic: `Afișări, like-uri, cost pe cerere`, idl: `Vizite tehnice și lucrări semnate` },
+                  { feature: `Ce urmărește`, classic: `Afișări, like-uri, cost pe cerere`, idl: `Cereri calificate și cost pe cerere` },
                   {
                     feature: `După ce vine cererea`,
                     classic: `Cererea ajunge la dumneavoastră și atât`,
-                    idl: `Răspuns în 5 minute, calificare, vizită în calendar`,
+                    idl: `SMS și email automat către client, notificare către echipă, formular de calificare`,
                   },
                   {
-                    feature: `După ofertă`,
-                    classic: `Nu se mai ocupă nimeni`,
-                    idl: `Follow-up 30-60 de zile`,
+                    feature: `Garanția`,
+                    classic: `Plătiți și sperați`,
+                    idl: `Prag de cereri calificate, stabilit după primele 30 de zile`,
                   },
-                  { feature: `Raportul lunar`, classic: `Grafice cu afișări și click-uri`, idl: `Cereri, vizite, lucrări semnate și costul fiecăreia` },
+                  { feature: `Raportul`, classic: `Grafice cu afișări și click-uri`, idl: `Raport săptămânal: numărul de cereri, costul pe cerere și un apel de 30 de minute` },
                 ].map((e, t) =>
                   (0, V.jsxs)(
                     r.tr,
@@ -1170,39 +1170,38 @@ function J() {
           className: `grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch`,
           children: [
             {
-              title: `Fundația`,
+              title: `Fundația de Conversie`,
               desc: `Pentru firmele care au cereri, dar le pierd între formular și vizită.`,
               features: [
                 `Pagină de cerere de ofertă, făcută pentru vizite`,
                 `Întrebări care separă proprietarii serioși de cei care doar întreabă de preț`,
                 `Google Business Profile pus la punct`,
-                `Măsurarea cererilor, de la sursă la vizită`,
+                `Meta Pixel pentru măsurarea cererilor, unde este cazul`,
               ],
               btn: `Cereți analiza gratuită`,
               popular: !1,
             },
             {
-              title: `Sistemul de cereri`,
-              desc: `Pentru firmele care vor cereri noi în fiecare lună și vizite doar unde se poate semna.`,
+              title: `Sistemul de Achiziție`,
+              desc: `Pentru firmele care vor cereri noi în fiecare lună și un sistem care le califică.`,
               features: [
-                `Tot ce include Fundația`,
-                `Campanii Google și Meta pe serviciul de sezon`,
-                `Răspuns în 5 minute și follow-up după ofertă`,
-                `Reclame pentru cei care au cerut ofertă și n-au semnat`,
-                `Garanție cu prag scris în contract`,
+                `Tot ce include Fundația de Conversie`,
+                `Campanie Meta Ads pe serviciul de sezon`,
+                `SMS și email automat la fiecare cerere, plus notificare către echipa dumneavoastră`,
+                `Raport săptămânal și apel de 30 de minute`,
+                `Garanție de cereri calificate, cu prag stabilit după primele 30 de zile`,
               ],
               btn: `Aplicați pentru acest pachet`,
               popular: !0,
             },
             {
-              title: `Tot anul`,
+              title: `Dominare Locală`,
               desc: `Pentru firmele care vor echipele ocupate și în extrasezon.`,
               features: [
-                `Tot ce include Sistemul de cereri`,
+                `Tot ce include Sistemul de Achiziție`,
                 `Conținut care răspunde la întrebările clienților înainte de vizită`,
-                `Recontactarea cererilor vechi și a clienților fără service`,
-                `Mai mult buget doar pe ce aduce lucrări semnate`,
-                `Raport detaliat și o discuție de plan în fiecare lună`,
+                `Dashboard cu cererile și costul lor`,
+                `Buget redistribuit între campanii, după cum performează`,
               ],
               btn: `Discutăm planul pe sezon`,
               popular: !1,
@@ -1286,6 +1285,13 @@ function J() {
             ),
           ),
         }),
+        (0, V.jsx)(r.p, {
+          initial: { opacity: 0, y: 20 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: !0 },
+          className: `mt-16 max-w-3xl mx-auto text-center text-base text-steel leading-relaxed`,
+          children: `Perioada contractuală minimă este de 3 luni. În realitate, recomandăm 6-9 luni, pentru că marketingul bun are nevoie de timp, testare și optimizare.`,
+        }),
       ],
     }),
   });
@@ -1319,6 +1325,7 @@ function Y() {
                   children: [
                     `Firme cu echipe proprii de montaj`,
                     `Patroni care vor să știe câte lucrări au venit din reclame`,
+                    `Firme care pot suna fiecare cerere în aceeași zi`,
                     `Firme care pot face o vizită tehnică în aceeași săptămână`,
                     `Firme care vor lucrări și în extrasezon`,
                   ].map((e, t) =>
@@ -1427,7 +1434,7 @@ function X() {
             viewport: { once: !0 },
             transition: { delay: 0.1 },
             className: `text-xl md:text-2xl text-steel font-light mb-12 leading-relaxed`,
-            children: `Pragul îl scriem în contract: câte cereri calificate în primele 90 de zile și ce răspunsuri din formular le fac calificate. Dacă nu îl atingem, luna următoare nu plătiți taxa de management.`,
+            children: `Pragul de cereri calificate se stabilește după primele 30 de zile de campanie; implicit, este 65% din cererile calificate obținute în acea perioadă. Cerere calificată: formular complet, cu consimțământ, răspunsuri acceptate, telefon valid și fără duplicat în ultimele 90 de zile. Garanția cere un buget de reclame de minimum 450 EUR/lună și apelarea fiecărei cereri în aceeași zi, cu minimum 3 încercări. Dacă nu atingem pragul, luna următoare nu plătiți taxa de management.`,
           }),
           (0, V.jsx)(r.div, {
             initial: { opacity: 0, y: 20 },
@@ -1448,11 +1455,11 @@ function X() {
 var Z = [
   {
     q: `Trebuie să mă ocup eu de partea tehnică?`,
-    a: `Nu. Noi facem campaniile, paginile, răspunsul la cereri și follow-up-ul. Dumneavoastră și echipele faceți vizitele și montajul.`,
+    a: `Nu. Noi facem campania, pagina, formularul și secvența automată de SMS și email. Dumneavoastră sunați fiecare cerere în aceeași zi (minimum 3 încercări), apoi echipele fac vizitele și montajul.`,
   },
   {
     q: `Există o perioadă contractuală minimă?`,
-    a: `Colaborăm lunar. Primele luni servesc la calibrare: vedem ce cereri ajung la vizită și ce se semnează. De aceea cerem un angajament inițial, stabilit după analiza gratuită.`,
+    a: `Da. Contractul are o perioadă minimă de 3 luni, cu prelungire automată după ea. Dacă încheiați colaborarea în perioada minimă, lunile rămase până la 3 rămân datorate integral. Recomandăm în realitate 6-9 luni: primele luni servesc la calibrare, iar marketingul bun are nevoie de timp, testare și optimizare.`,
   },
   {
     q: `Am deja site și reclame. Ce schimbați?`,
@@ -1464,11 +1471,11 @@ var Z = [
   },
   {
     q: `Am nevoie de buget mare de reclame?`,
-    a: `Nu neapărat. Stabilim bugetul după analiza gratuită, pe sezon. Iar cererile vechi care n-au semnat pot aduce lucrări fără o reclamă nouă.`,
+    a: `Nu un buget mare, dar garanția cere minimum 450 EUR/lună în reclame, plătiți direct platformelor. Stabilim suma exactă după analiza gratuită, pe sezon.`,
   },
   {
     q: `Pe ce platforme rulați reclamele? Și în ChatGPT?`,
-    a: `Pe Google și Meta (Facebook și Instagram). ChatGPT Ads îl testăm separat, cu buget mic, după ce verificăm că firma e eligibilă. Detalii pe pagina ChatGPT Ads.`,
+    a: `Pe Meta (Facebook și Instagram). Google Business Profile îl punem la punct, dar Google Ads nu face parte din colaborarea standard. ChatGPT Ads îl testăm separat, cu buget mic, după ce verificăm că firma e eligibilă. Detalii pe pagina ChatGPT Ads.`,
   },
   {
     q: `De ce o pagină simplă și nu un site mare?`,
@@ -1561,7 +1568,7 @@ var $ = {
   source: `Home – Sisteme de achiziție`,
   title: `Cereți analiza gratuită pentru firma dumneavoastră`,
   niches: [`Pompe de căldură`, `Fotovoltaice și baterii`, `Pompe de căldură și fotovoltaice`, `Instalații termice și sanitare`, `Climatizare`, `Alt domeniu`],
-  services: [`Pagină de cerere de ofertă`, `Răspuns la cereri și calificare înainte de vizită`, `Foto, video și plan de campanii`, `Reclame Google și Facebook`],
+  services: [`Pagină de cerere de ofertă`, `Formular de calificare înainte de vizită`, `Foto, video și plan de campanii`, `Reclame Facebook și Instagram`],
   leadName: `pompe-fotovoltaice`,
 };
 function ne() {
@@ -1597,15 +1604,15 @@ function ne() {
               eyebrow: `Pentru firme de pompe de căldură și fotovoltaice`,
               title: (0, V.jsxs)(V.Fragment, {
                 children: [
-                  `Noi ducem cererea până la vizită. `,
-                  (0, V.jsx)(`span`, { className: `text-blue-600`, children: `Echipele dumneavoastră fac montajul.` }),
+                  `Noi aducem cererile calificate. `,
+                  (0, V.jsx)(`span`, { className: `text-blue-600`, children: `Echipa dumneavoastră sună, face vizita și montajul.` }),
                 ],
               }),
-              text: `Campaniile aduc cererile. Răspundem în 5 minute și întrebăm ce contează: proprietar, tip de casă, încălzire, buget, termen. Vizitele serioase intră direct în calendarul echipei.`,
+              text: `Campania Meta aduce cererile. Formularul întreabă ce contează: proprietar, tip de casă, încălzire, buget, termen. La fiecare cerere pleacă automat un SMS și un email, iar echipa dumneavoastră este notificată ca să sune în aceeași zi.`,
               points: [
-                `Campanii pe sezon: pompe de căldură toamna, fotovoltaice primăvara`,
-                `Follow-up 30-60 de zile după ofertă`,
-                `Raport lunar: cât a costat fiecare lucrare semnată`,
+                `Campanie Meta pe serviciul de sezon: pompe de căldură toamna, fotovoltaice primăvara`,
+                `SMS și email automat la fiecare cerere, notificare către echipă`,
+                `Raport săptămânal: câte cereri și cât costă fiecare`,
               ],
               note: `Nu e un apel de vânzare. În 15 minute vă arătăm la ce pas se pierd cererile acum.`,
               form: $,
@@ -1629,14 +1636,14 @@ function ne() {
                   (0, V.jsx)(`span`, { className: `text-blue-600`, children: `unde vă scapă lucrările.` }),
                 ],
               }),
-              text: `Cererea de vineri, oferta fără follow-up, drumul la omul fără buget. Ne uităm la toate înainte de apel.`,
+              text: `Cererea de vineri, oferta rămasă fără răspuns, drumul la omul fără buget. Ne uităm la toate înainte de apel.`,
               form: $,
             }),
           ],
         }),
         (0, V.jsx)(u, {
           link: { href: `/chatgpt-ads`, label: `ChatGPT Ads pentru firma dumneavoastră →` },
-          text: `Cereri de ofertă pentru firme de pompe de căldură și fotovoltaice. Campanii, răspuns în 5 minute, calificare până la vizită.`,
+          text: `Cereri de ofertă pentru firme de pompe de căldură și fotovoltaice. Campanie Meta, SMS și email automat, calificare prin formular.`,
         }),
         (0, V.jsx)(h, { href: `#schedule-call`, label: `Durează circa un minut` }),
         (0, V.jsx)(ConsentBanner, {}),
